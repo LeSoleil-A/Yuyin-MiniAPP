@@ -1,0 +1,4 @@
+<view onTap="handleTap" class="navBtn">
+  <image class="img" mode="scaleToFill" src="{{imgSrc}}"/>
+  <text class="txt">{{text}}</text> 
+</view>

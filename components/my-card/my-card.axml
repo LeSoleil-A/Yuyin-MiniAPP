@@ -1,0 +1,17 @@
+<view class="wrapper">
+  <view class="StaText">{{name}}</view>
+  <image class="StaImage" mode="scaleToFill" src="{{ImageSrc}}"/>
+
+  <scroll-view scroll-y="{{true}}" class="scrollDetail">
+      <text class="Detail">{{Detail}}</text>
+  </scroll-view>
+
+  <scroll-view scroll-x="{{true}}" class="scrollType">
+    <view class="Item">
+      <image class="ItemIcon" mode="scaleToFill" src="{{itemIcon}}"/>
+      <text class="ItemText">{{itemName}}</text>
+    </view>
+  </scroll-view>
+
+  <button class="DISbutton" onTap="btnTap">点亮场馆</button>
+</view>

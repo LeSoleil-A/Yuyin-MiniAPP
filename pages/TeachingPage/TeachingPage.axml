@@ -1,0 +1,36 @@
+<view class="wrapper">
+
+  <video class="TeachingVideo"
+      src="{{teaching.src}}"
+      controls="{{true}}"
+      show-play-btn="{{false}}"
+      show-center-play-btn="{{true}}"
+  />
+
+  <button class="DISbutton" onTap="btnTap">上传视频</button>
+
+  <view class="square">
+    <view class="header">
+				<image class="squareIcon" mode="scaleToFill" src="/pages/TeachingPage/image/ListIcon.png"/>
+        <view class="Title">视频广场</view>
+		</view>
+
+    <scroll-view scroll-y="{{true}}" class="scrollType">
+      <video class="VideoItem" a:for="{{array}}"
+        src="{{item.src}}"
+        controls="{{true}}"
+        show-play-btn="{{false}}"
+        show-center-play-btn="{{true}}"
+      />
+    </scroll-view>
+  </view>
+
+  <popup show="{{showBottom}}" position="bottom" onClose="onPopupClose">
+    <view class="boxBottom">
+      <view class="btnZone">
+        <button class="DISbutton" onTap="FromCamera">拍摄视频</button>
+        <button class="DISbutton" onTap="FromAlbum">从相册中选择</button>
+      </view>
+    </view>
+  </popup>
+</view>

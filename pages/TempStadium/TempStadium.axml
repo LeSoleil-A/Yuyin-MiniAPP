@@ -1,0 +1,3 @@
+<view class="temp">
+  <my-card class="wrapper" name="杭州市体育馆" ImageSrc="/pages/index/image/stadium.png"></my-card>
+</view>

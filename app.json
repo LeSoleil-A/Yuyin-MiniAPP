@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/TempStadium/TempStadium",
+    "pages/TeachingPage/TeachingPage",
+    "pages/ChosenVideoPage/ChosenVideoPage"
+  ],
+  "window": {
+    "transparentTitle": "always"
+  }
+}

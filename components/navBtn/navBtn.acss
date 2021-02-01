@@ -1,0 +1,22 @@
+.navBtn{
+  width: 80px;
+  height: 80px;
+  background-color: #ff6699;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto auto;
+}
+.img{
+  width: 30px;
+  height: 30px;
+  margin-left:auto;
+  margin-right:auto;  
+}
+.txt{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+  color: white;
+}

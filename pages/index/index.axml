@@ -1,0 +1,9 @@
+
+<view class="wrapper">
+  <button class="btnTest" onTap="showCard">测试：杭州站</button>
+
+  <view class="navZone">
+    <navbtn imgSrc="/pages/index/image/video.png" text="视频广场" navTo="video"/>
+    <navbtn imgSrc="/pages/index/image/video.png" text="我的" navTo="mine"/>
+  </view>
+</view>
