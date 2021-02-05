@@ -1,12 +1,13 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/TempStadium/TempStadium",
-    "pages/TeachingPage/TeachingPage",
-    "pages/ChosenVideoPage/ChosenVideoPage",
-    "pages/canvas/canvas/canvas"
-  ],
-  "window": {
-    "transparentTitle": "always"
-  }
+    "pages": [
+        "pages/index/index",
+        "pages/TempStadium/TempStadium",
+        "pages/TeachingPage/TeachingPage",
+        "pages/ChosenVideoPage/ChosenVideoPage",
+        "pages/canvas/canvas/canvas",
+        "pages/MinePage/MinePage"
+    ],
+    "window": {
+        "transparentTitle": "always"
+    }
 }

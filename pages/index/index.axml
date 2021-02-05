@@ -4,6 +4,6 @@
 
   <view class="navZone">
     <navbtn imgSrc="/pages/index/image/video.png" text="视频广场" navTo="video"/>
-    <navbtn imgSrc="/pages/index/image/video.png" text="我的" navTo="mine"/>
+    <navbtn imgSrc="/pages/index/image/video.png" text="我的" navTo="../MinePage/MinePage"/>
   </view>
 </view>
