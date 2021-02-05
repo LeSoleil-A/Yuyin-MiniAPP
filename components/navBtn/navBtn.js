@@ -11,7 +11,10 @@ Component({
   didUnmount() {},
   methods: {
     handleTap(e){
-      console.log("Click on " + this.props.navTo);
+      console.log(this.props.navTo);
+      my.navigateTo({
+        url: this.props.navTo
+      });;
     },
   },
 });

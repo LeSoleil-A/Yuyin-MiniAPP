@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.titleZone{
+  width: 100vw;
+  margin-top: 12vh;
+}
+.medalZone{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20vh;
+  width: 100vw;
+  margin-top: 20px;
+}
+.zoneTitle{
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 20px;
+  letter-spacing: 1px;
+}
+.scrollType{
+  height: 80px;
+  width: 94vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+.medalItem{
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.medalIcon{
+  height: 70px;
+  width: 70px;
+}
+.zoneBtm{
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+.square {
+  height: 360px;
+  width: 100vw;
+  margin: auto auto;
+  margin-bottom: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Title {
+  color: white;
+  text-align: left;
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: 350;
+  letter-spacing: 1px;
+  font-style: Pingfang sc;
+}
+.squareIcon {
+  height: 22px;
+  width: 22px;
+  margin-left: 15px;
+}
+.VideoItem {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 90px;
+  width: 155px;
+}
+.scrollTypeS{
+  height: 330px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
