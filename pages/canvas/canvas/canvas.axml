@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="canvas-view">
+    <canvas id="canvas" width="610" height="610" class="canvas" />
+  </view>
+  <video width="400px" height="300px" id="videoInput" src="./movies.mp4"></video>
+  <button type="primary" onTap="drawImage">
+  按钮
+  </button>>
+</view>

@@ -1,0 +1,9 @@
+{
+  "current": 0,
+  "modes": [
+    {
+      "title": "视频剪辑测试",
+      "page": "pages/canvas/canvas/canvas"
+    }
+  ]
+}

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/TempStadium/TempStadium",
     "pages/TeachingPage/TeachingPage",
-    "pages/ChosenVideoPage/ChosenVideoPage"
+    "pages/ChosenVideoPage/ChosenVideoPage",
+    "pages/canvas/canvas/canvas"
   ],
   "window": {
     "transparentTitle": "always"
