@@ -4,7 +4,6 @@
         "pages/TempStadium/TempStadium",
         "pages/TeachingPage/TeachingPage",
         "pages/ChosenVideoPage/ChosenVideoPage",
-        "pages/canvas/canvas/canvas",
         "pages/MinePage/MinePage"
     ],
     "window": {

@@ -1,4 +1,14 @@
-<view class="avatar">
-  <image class="user-image" mode="scaleToFill" src="{{userImage}}"/>
-  <text class="user-name">{{userName}}</text>
+
+<view class="avatar" a:if="{{!canIUse}}">
+<button open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='userInfo'>
+  点击获取头像
+  <!-- <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/> -->
+</button>
+  
+  <text class="user-name">{{nickName}}</text>
+</view>
+
+<view class="avatar" a:else>
+  <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/>
+  <text class="user-name">{{nickName}}</text>
 </view>
