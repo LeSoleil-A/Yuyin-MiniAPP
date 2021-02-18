@@ -3,9 +3,12 @@
     <usertitle />
   </view>
   <view class="medalZone">
-    <text class="zoneTitle">已获得勋章</text>
+    <view class="textZone">
+      <text class="zoneTitle">已获得勋章</text>
+      <text class="zoneMore" onTap="seeMore">查看更多勋章》</text>
+    </view>
     <scroll-view scroll-x="{{true}}" class="scrollType">
-      <view class="medalItem">
+      <view class="medalItem" onTap="medalTest">
         <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
       </view>
       <view class="medalItem">
@@ -21,7 +24,6 @@
         <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
       </view>
     </scroll-view>
-    <text class="zoneBtm" onTap="lightMore">去点亮更多</text>
   </view>
   <view class="square">
     <view class="header">

@@ -1,0 +1,10 @@
+<view class="wrapper">
+  <text class="textGet">获得</text>
+  <view class="medalImg"> 奖章图片 </view>
+  <text class="medalName">{{medalName}}</text>
+  <text class="textMedal">勋章</text>
+  <view class="btnZone">
+    <button class="DISbutton" onTap="btnBack">开心收下</button>
+    <button class="DISbutton" onTap="btnShare">一键分享</button>
+  </view>
+</view>

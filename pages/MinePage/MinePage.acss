@@ -8,20 +8,33 @@
   width: 100vw;
   margin-top: 12vh;
 }
-.medalZone{
+.medalZone{ 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20vh;
+  height: 16vh;
   width: 100vw;
   margin-top: 20px;
+}
+.textZone{
+  height: 20px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
 }
 .zoneTitle{
   color: white;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 550;
   margin-left: 20px;
   letter-spacing: 1px;
+}
+.zoneMore{
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-left: auto;
+  margin-right: 10px;
 }
 .scrollType{
   height: 80px;

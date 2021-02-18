@@ -1,0 +1,7 @@
+<view class="wrapper">
+  <view class="medalWall">
+    
+  </view>
+
+  <button class="DISbutton" onTap="btnTap">一键分享</button>
+</view>

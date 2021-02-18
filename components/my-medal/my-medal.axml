@@ -1,0 +1,6 @@
+<view class="wrapper">
+  <view class="medalZone">
+    
+  </view>
+  <button class="DISbutton" onTap="btnTap">一键分享</button>
+</view>

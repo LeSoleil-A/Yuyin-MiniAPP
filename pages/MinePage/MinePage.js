@@ -42,7 +42,14 @@ Page({
     ],
   },
   onLoad() { },
-  lightMore() {
-    console.log("Tap on lightMore!")
+  seeMore() {
+    my.navigateTo({
+      url: '../MedalWallPage/MedalWallPage'
+    });
+  },
+  medalTest(){
+    my.navigateTo({
+      url: '../MedalTestPage/MedalTestPage'
+    });
   }
 });
