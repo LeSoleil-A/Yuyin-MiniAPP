@@ -4,44 +4,44 @@ Page({
     teaching: {
       src: "XNDM0OTQzMDc2OA==",
     },
-    array: [{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },{
-      src: "XNDM0OTQzMDc2OA==",
-    }, {
-      src: "XNDM0OTQzMDc2OA==",
-    },
-    ],
+    // array: [{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },{
+    //   src: "XNDM0OTQzMDc2OA==",
+    // }, {
+    //   src: "XNDM0OTQzMDc2OA==",
+    // },
+    // ],
   },
   onLoad() {
     this.setData({
@@ -62,6 +62,9 @@ Page({
     this.setData({
       showBottom: false,
     });
+  },
+  ToTikTok(){
+    console.log("Jump to Tiktok!");
   },
   FromCamera() {
     my.chooseVideo({

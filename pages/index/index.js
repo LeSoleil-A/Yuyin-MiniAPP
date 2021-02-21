@@ -32,4 +32,9 @@ Page({
       url: '../TempStadium/TempStadium'
     });
   },
+  getMedal(){
+    my.navigateTo({
+      url: '../getMedalTest/getMedalTest'
+    });
+  }
 });

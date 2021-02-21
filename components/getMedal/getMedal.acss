@@ -1,0 +1,70 @@
+.wrapper{
+  border-style: solid;
+  border-color: white; 
+  height: 60vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  border-radius: 8px;
+}
+.textGet{
+  font-size: 16px;
+  font-weight: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  color: white;
+  letter-spacing: 1px;
+}
+.medalImg{
+  border-style: solid;
+  border-color: white; 
+  width: 50vw;
+  height: 26vh;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+}
+.medalName{
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+}
+.textMedal{
+  font-size: 16px;
+  font-weight: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  color: white;
+  letter-spacing: 1px;
+}
+.btnZone{
+  height: 12vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto auto;
+}
+.DISbutton {
+  width: 150px;
+  height: 36px;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ff6699;
+  color: #FFFFFF;
+  border-radius: 8px;
+  line-height: 2;
+  font-size: 19px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  font-style: Pingfang sc;
+}

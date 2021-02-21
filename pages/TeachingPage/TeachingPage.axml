@@ -1,5 +1,7 @@
 <view class="wrapper">
 
+  <text class="titleText">踢一踢，踢进亚运的球门</text>
+
   <video class="TeachingVideo"
       src="{{teaching.src}}"
       controls="{{true}}"
@@ -9,7 +11,21 @@
 
   <button class="DISbutton" onTap="btnTap">上传视频</button>
 
-  <view class="square">
+  <text class="jumpText" onTap="ToTikTok">打开抖音，观看更多相关视频》</text>
+
+  <popup show="{{showBottom}}" position="bottom" onClose="onPopupClose">
+    <view class="boxBottom">
+      <text class="popupText">请上传20秒以内的视频</text>
+      <view class="btnZone">
+        <button class="POPbutton" onTap="FromCamera">拍摄视频</button>
+        <button class="POPbutton" onTap="FromAlbum">从相册中选择</button>
+      </view>
+    </view>
+  </popup>
+
+</view>
+
+  <!-- <view class="square">
     <view class="header">
 				<image class="squareIcon" mode="scaleToFill" src="/pages/TeachingPage/image/ListIcon.png"/>
         <view class="Title">视频广场</view>
@@ -33,4 +49,4 @@
       </view>
     </view>
   </popup>
-</view>
+</view> -->
