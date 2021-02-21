@@ -47,7 +47,7 @@ class FileHelper {
   }
 
   static async uploadVideo(videoPath, videoKey) {
-    //imageKey为上传后在Oss的路径地址
+    //videoKey为上传后在Oss的路径地址
     console.log("A Video has Been Upload To Ali-Oss:")
     const http = new HTTP()
     //先拿到后端给予的签名数据与policy数据，才能上传文件至OSS
@@ -60,7 +60,7 @@ class FileHelper {
     const policy = params.policy
     const signature = params.signature
     return new Promise((resolve, reject) => {
-      FileHelper._uploadVideo(resolve, reject, imagePath, imageKey, policy, signature)
+      FileHelper._uploadVideo(resolve, reject, videoPath, videoKey, policy, signature)
     })
   }
 
@@ -90,7 +90,7 @@ class FileHelper {
   }
 
   static async uploadAudio(audioPath, audioKey) {
-    //imageKey为上传后在Oss的路径地址
+    //audioKey为上传后在Oss的路径地址
     console.log("An Audio has Been Upload To Ali-Oss:")
     const http = new HTTP()
     //先拿到后端给予的签名数据与policy数据，才能上传文件至OSS
