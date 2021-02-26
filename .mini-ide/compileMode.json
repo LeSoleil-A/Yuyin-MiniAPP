@@ -1,0 +1,8 @@
+{
+  "modes": [
+    {
+      "title": "FromCard",
+      "page": "pages/TempStadium/TempStadium"
+    }
+  ]
+}

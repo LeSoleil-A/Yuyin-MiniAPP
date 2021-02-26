@@ -3,6 +3,8 @@ import { UserModel } from '/models/usermodel'
 var userModel = new UserModel()
 Page({
   data: {
+    show: true,
+    maskZindex: 10,
   },
   onLoad(query) {
     // 页面加载
@@ -29,12 +31,17 @@ Page({
   },
   showCard(){
     my.navigateTo({
-      url: '../TempStadium/TempStadium'
+      url: '../TempStadium/TempStadium?id=1'
     });
   },
   getMedal(){
     my.navigateTo({
       url: '../getMedalTest/getMedalTest'
+    });
+  },
+  maskClick(){
+    this.setData({
+      show: false
     });
   }
 });

@@ -34,7 +34,6 @@ class HTTP {
         const code = res.status.toString()
         if (code.startsWith('2')) {
           console.log("Request Success")
-          console.log("Res.data", res.data)
           resolve(res.data)
         }
         else {
