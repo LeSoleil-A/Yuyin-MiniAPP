@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "navbtn":"/components/navBtn/navBtn",
-    "mask": "mini-ali-ui/es/mask/index",
-    "my-card":"/components/my-card/my-card"
+    "modal": "mini-ali-ui/es/modal/index",
+    "my-card":"/components/my-card/my-card",
+    "getmedal":"/components/getMedal/getMedal"
   }
 }

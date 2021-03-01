@@ -1,5 +1,4 @@
-<view class="wrapper">
-  <view class="textZone">
+ <view class="textZone">
     <text class="StaText">{{name}}</text>
     <text class="lightText">已点亮</text>
     <image class="lightImg" mode="scaleToFill" src="/components/my-card/image/lighten.png"/>
@@ -11,9 +10,8 @@
   </scroll-view>
 
   <view class="Item">
-      <image class="ItemIcon" mode="scaleToFill" src="{{itemIcon}}"/>
-      <text class="ItemText">{{itemName}}</text>
+      <image class="ItemIcon" mode="aspectFit" src="{{itemIcon}}"/>
+      <view class="ItemText">{{itemName}}</view>
   </view>
   
-  <button class="DISbutton" onTap="btnTap">点亮场馆</button>
-</view>
+ <button class="DISbutton" onTap="btnTap">点亮场馆</button>

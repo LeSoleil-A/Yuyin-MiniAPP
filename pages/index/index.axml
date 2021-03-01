@@ -8,4 +8,24 @@
     <navbtn imgSrc="/pages/index/image/video.png" text="我的" navTo="../MinePage/MinePage"/>
   </view>
   
+  <modal
+    class="modalVenue"
+		show="{{show}}"
+		onModalClose="onModalClose"
+    advice="{{true}}"
+    disableScroll="{{ false }}"
+		>
+		<my-card class="card" Detail="{{venueDetail.venue_description}}" name="{{venueDetail.venue_name}}" ImageSrc="{{venueDetail.venue_description_image}}" itemIcon="{{venueDetail.venue_template_icon}}" itemName="{{venueDetail.venue_sports}}"></my-card>
+	</modal>
+
+  <modal
+    class="modalMedal"
+		show="{{showMedal}}"
+		onModalClose="onModalMedalClose"
+    advice="{{true}}"
+    disableScroll="{{ false }}"
+		>
+		<getmedal class="card" medalName="漫步杭城·西湖区"></getmedal>
+	</modal>
+
 </view>

@@ -10,6 +10,7 @@
     "pages/getMedalTest/getMedalTest"
   ],
   "window": {
-    "transparentTitle": "always"
+    "transparentTitle": "always",
+    "disableScroll": true
   }
 }

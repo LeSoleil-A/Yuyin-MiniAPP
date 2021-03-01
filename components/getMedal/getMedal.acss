@@ -1,13 +1,3 @@
-.wrapper{
-  border-style: solid;
-  border-color: white; 
-  height: 60vh;
-  width: 70vw;
-  display: flex;
-  flex-direction: column;
-  margin: auto auto;
-  border-radius: 8px;
-}
 .textGet{
   font-size: 16px;
   font-weight: 100px;
@@ -20,8 +10,8 @@
 .medalImg{
   border-style: solid;
   border-color: white; 
-  width: 50vw;
-  height: 26vh;
+  width: 203px;
+  height: 237px;
   color: white;
   margin-left: auto;
   margin-right: auto;
@@ -46,8 +36,8 @@
   letter-spacing: 1px;
 }
 .btnZone{
-  height: 12vh;
-  width: 70vw;
+  height: 130px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

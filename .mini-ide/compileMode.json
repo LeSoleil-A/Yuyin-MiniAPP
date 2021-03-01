@@ -3,6 +3,10 @@
     {
       "title": "FromCard",
       "page": "pages/TempStadium/TempStadium"
+    },
+    {
+      "title": "test",
+      "page": "pages/TeachingPage/TeachingPage"
     }
   ]
 }

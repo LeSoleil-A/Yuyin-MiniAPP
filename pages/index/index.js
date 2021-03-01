@@ -1,10 +1,15 @@
 var app = getApp()
 import { UserModel } from '/models/usermodel'
 var userModel = new UserModel()
+
+import { VenueModel } from '../../models/venuemodel'
+var venueModel = new VenueModel()
+
 Page({
   data: {
-    show: true,
-    maskZindex: 10,
+    show: false,
+    showMedal: false,
+    venueDetail:null
   },
   onLoad(query) {
     // 页面加载
@@ -29,19 +34,28 @@ Page({
       path: 'pages/index/index',
     };
   },
-  showCard(){
-    my.navigateTo({
-      url: '../TempStadium/TempStadium?id=1'
+  async showCard(){
+    const id = 3
+    const res = await venueModel.getVenueDetail(id)
+    console.log(res)
+    this.setData({
+      venueDetail:res,
+      show: true,
     });
   },
   getMedal(){
-    my.navigateTo({
-      url: '../getMedalTest/getMedalTest'
+    this.setData({
+      showMedal: true,
     });
   },
-  maskClick(){
+  onModalClose() {
     this.setData({
-      show: false
+      show: false,
+    });
+  },
+  onModalMedalClose() {
+    this.setData({
+      showMedal: false,
     });
   }
 });
