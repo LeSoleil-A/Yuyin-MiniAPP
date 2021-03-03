@@ -1,0 +1,4 @@
+<view class="wallMedal">
+  <image class="img" mode="scaleToFill" src="{{imageSrc}}"/>
+  <view class="name">{{medalName}}</view>
+</view>

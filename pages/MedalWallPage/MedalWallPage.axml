@@ -1,6 +1,24 @@
 <view class="wrapper">
   <view class="medalWall">
-    
+    <image class="userImg" mode="scaleToFill" src="../../components/wall-medal/image/testMedal.png"/>
+    <view class="userName"> XXX的勋章墙 </view>
+    <view class="medalZone">
+      <view class="medalColumn">
+        <view class="medal" a:for="{{arrayFirst}}">
+          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+        </view>
+      </view>
+      <view class="medalColumn">
+        <view class="medal" a:for="{{arraySecond}}">
+          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+        </view>
+      </view>
+      <view class="medalColumn">
+        <view class="medal" a:for="{{arrayThird}}">
+          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+        </view>
+      </view>
+    </view>
   </view>
 
   <button class="DISbutton" onTap="btnTap">一键分享</button>

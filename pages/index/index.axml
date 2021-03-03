@@ -15,7 +15,7 @@
     advice="{{true}}"
     disableScroll="{{ false }}"
 		>
-		<my-card class="card" Detail="{{venueDetail.venue_description}}" name="{{venueDetail.venue_name}}" ImageSrc="{{venueDetail.venue_description_image}}" itemIcon="{{venueDetail.venue_template_icon}}" itemName="{{venueDetail.venue_sports}}"></my-card>
+		<my-card class="card" venueId="{{venueDetail.venue_id}}" detail="{{venueDetail.venue_description}}" name="{{venueDetail.venue_name}}" imageSrc="{{venueDetail.venue_description_image}}" itemIcon="{{venueDetail.venue_template_icon}}" itemName="{{venueDetail.venue_sports}}"></my-card>
 	</modal>
 
   <modal

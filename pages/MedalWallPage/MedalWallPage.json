@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "wall-medal":"/components/wall-medal/wall-medal"
+  }
+}

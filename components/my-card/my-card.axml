@@ -3,10 +3,10 @@
     <text class="lightText">已点亮</text>
     <image class="lightImg" mode="scaleToFill" src="/components/my-card/image/lighten.png"/>
   </view>
-  <image class="StaImage" mode="scaleToFill" src="{{ImageSrc}}"/>
+  <image class="StaImage" mode="scaleToFill" src="{{imageSrc}}"/>
 
   <scroll-view scroll-y="{{true}}" class="scrollDetail">
-      <text class="Detail">{{Detail}}</text>
+      <text class="Detail">{{detail}}</text>
   </scroll-view>
 
   <view class="Item">
