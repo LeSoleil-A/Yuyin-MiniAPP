@@ -10,6 +10,15 @@ class VenueModel extends HTTP {
       method:'get'
     })
   }
+
+  async getLitDetail() {
+    return this.request({
+      url: 'v1/venue/litinfo', 
+      data: {
+      },
+      method:'get'
+    })
+  }
 }
 
 

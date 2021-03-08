@@ -1,6 +1,7 @@
  <view class="textZone">
     <text class="StaText">{{name}}</text>
-    <text class="lightText">已点亮</text>
+    <text class="lightText" style="display:{{isLit?'none':'block'}};">未点亮</text>
+    <text class="lightText" style="display:{{isLit?'block':'none'}};">已点亮</text>
     <image class="lightImg" mode="scaleToFill" src="/components/my-card/image/lighten.png"/>
   </view>
   <image class="StaImage" mode="scaleToFill" src="{{imageSrc}}"/>
