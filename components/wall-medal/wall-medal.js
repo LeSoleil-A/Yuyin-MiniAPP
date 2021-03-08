@@ -5,31 +5,44 @@ var medalModel = new MedalModel()
 Component({
   mixins: [],
   data: {
-    medalDetail: null
+    medalDetail: null,
+    medalWallName: "",
+    medalName: "",
+    medalCondition: "",
+    medalImgSrc: ""
   },
   props: {
-    medalName: "",
     medalId: "",
-    medalCondition: "",
-    venueList: []
+    medalIsLit: "",
+    medalLitVenue: []
   },
   async didMount(){
     const res = await medalModel.getMedalDetail(this.props.medalId)
-    console.log(res)
     this.setData({
       medalDetail: res,
+      medalName: res.medal_name,
+      medalWallName: app.globalData.medalTotal[this.props.medalId-1].medalWallName,
+      medalCondition: app.globalData.medalTotal[this.props.medalId-1].medalCondition
     });
+    if(this.props.medalIsLit){
+      this.setData({
+        medalImgSrc: res.medal_color_icon,
+      });
+    } else {
+      this.setData({
+        medalImgSrc: res.medal_gray_icon,
+      });
+    }
   },
   didUnmount() {},
   methods: {
     toTapMedal(e){
       this.props.onTapMedal ({
-        showModal: true,
         medalIdTap: this.props.medalId,
-        medalImgSrcTap: this.data.medalDetail.medal_color_icon,
-        medalNameTap: this.data.medalDetail.medal_name,
-        medalConditionTap: this.props.medalCondition,
-        venueIdListTap: this.props.venueList
+        medalNameTap: this.data.medalName,
+        medalImgSrcTap: this.data.medalImgSrc,
+        medalIsLitTap: this.props.medalIsLit,
+        medalLitVenueTap: this.props.medalLitVenue
       })
     }
   },

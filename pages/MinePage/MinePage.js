@@ -152,9 +152,6 @@ Page({
           })
         }
       }
-
-      console.log('venueLitTap', this.data.venueLitTap)
-      console.log('venueNotLitTap', this.data.venueNotLitTap) 
     })
 
     this.setData({
