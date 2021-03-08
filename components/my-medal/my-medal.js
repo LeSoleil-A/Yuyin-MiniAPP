@@ -10,9 +10,6 @@ Component({
     medalImgSrc: "",
     medalName: "",
     medalCondition: "",
-    venueList: [],
-    medalIsLit: false,
-    medalLitVenue: [],
     venueLitList: [],
     venueNotLitList: []
   },

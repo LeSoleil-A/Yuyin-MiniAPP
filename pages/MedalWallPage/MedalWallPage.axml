@@ -7,9 +7,8 @@
         <view class="medal" a:for="{{arrayFirst}}">
           <wall-medal 
             medalId="{{item.medalId}}" 
-            medalName="{{item.medalName}}" 
-            medalCondition="{{item.medalCondition}}" 
-            venueList="{{item.venueList}}"
+            medalIsLit="{{item.medalIsLit}}"
+            medalLitVenue="{{item.medalLitVenue}}"
             onTapMedal="onTapMedal">
           </wall-medal>
         </view>
@@ -52,7 +51,8 @@
       medalName="{{medalNameTap}}" 
       medalImgSrc="{{medalImgSrcTap}}" 
       medalCondition="{{medalConditionTap}}" 
-      venueList={{venueListTap}} >
+      venueLitList={{venueLitTap}}
+      venueNotLitList={{venueNotLitTap}}  >
     </my-medal>
 	</modal>
 
