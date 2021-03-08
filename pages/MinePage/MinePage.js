@@ -9,14 +9,20 @@ Page({
     canIUseAuthButton: true,
     medalGet: [],
     medalNotGet: [],
+
     showModal: false,
     tapMedal: null,
+    medalIsLitTap: false,
+    medalLitVenueTap: [],
     medalNameTap: "",
     medalImgSrcTap: null,
     medalConditionTap: "",
-    venueListTap: [],
+    venueLitTap: [],
+    venueNotLitTap: [],
+
     src: "XNDM0OTQzMDc2OA==",
   },
+
   async onLoad() {
 
     // 得到勋章的点亮情况
@@ -35,7 +41,10 @@ Page({
     });
     
     // 根据上述编号分别获取勋章详情，以便后面区分彩色与灰色图片；同时将勋章的进度及已点亮场馆进行存储
-    // medalGet中应包含：medal_id, medal_name, medal_color_icon, progress, litVenue
+    /* medalGet中应包含：
+        medal_id, medal_name, medalImgSrc(color), medalIsLit, 
+        progress, litVenue, medalCondition, venueList, 
+        proHidden*/
     const resGet = [];
     const getItem = [];
     tempGet.forEach((item) => {
@@ -51,6 +60,7 @@ Page({
           medalId : item.medal_id,
           medalName : item.medal_name,
           medalImgSrc: item.medal_color_icon,
+          medalIsLit: true,
           progress: res[item.medal_id-1].progress,
           litVenue: res[item.medal_id-1].litVenue,
           medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
@@ -63,9 +73,12 @@ Page({
       this.setData({
         medalGet: getItem
       });
-      console.log('medalGet: ' , this.data.medalGet)
     })
 
+    /* medalNotGet中应包含：
+        medal_id, medal_name, medalImgSrc(gray), medalIsLit, 
+        progress, litVenue, medalCondition, venueList, 
+        proHidden*/
     const resNotGet = [];
     const notGetItem = [];
     tempNotGet.forEach((item) => {
@@ -74,13 +87,15 @@ Page({
     Promise.all(resNotGet).then((resNotGet)=>{
       resNotGet.forEach((item) => {
         var proHidden = false;
-        if (item.medal_id<=12 && item.medal_id>=1){
+        // 里程碑勋章及杭州勋章不含进度条
+        if ((item.medal_id<=12 && item.medal_id>=1) || (item.medal_id==20)){
           proHidden = true
         }
         var resNotGetItem = {
           medalId : item.medal_id,
           medalName : item.medal_name,
           medalImgSrc: item.medal_gray_icon,
+          medalIsLit: false,
           progress: res[item.medal_id-1].progress,
           litVenue: res[item.medal_id-1].litVenue,
           medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
@@ -93,22 +108,59 @@ Page({
       this.setData({
         medalNotGet: notGetItem
       });
-      // console.log('medalNotGet: ' , this.data.medalNotGet)
     })
   },
+
+  // 处理勋章点击事件
   onTapMedal(res){
-    console.log('res: ', res)
+    // 获取子组件传回的勋章信息
+    // console.log('res: ', res)
+    // 将该勋章所包含的所有场馆信息存在temp里
     let temp = []
     res.venueIdListTap.forEach((item) => {
       temp.push(venueModel.getVenueDetail(item))
     });
-    Promise.all(temp).then((e)=>{
-      this.setData({
-        venueListTap: e,
-      });
+    Promise.all(temp).then((venueList)=>{
+      /* 将场馆分为已点亮和未点亮两部分传递给子组件 */
+      // 如果勋章已点亮，则所有的场馆都已点亮
+      if(res.medalIsLitTap){
+        this.setData({
+          venueLitTap: venueList
+        })
+      } 
+      // 如果是含进度条的勋章，则将场馆分类
+      else if(res.venueIdListTap.length!=0){
+        // 如果全都没点亮
+        if(res.medalLitVenueTap.length==0){
+          this.setData({
+            venueNotLitTap: venueList
+          })
+        } else {
+          var tempLit = [];
+          var tempNotLit = [];
+          venueList.forEach(element => {
+            // 如果此场馆已被点亮，则存在tempLit中，否在存在tempNotLit中
+            if(res.medalLitVenueTap.indexOf(element.venue_id)!=-1){
+              tempLit.push(element)
+            } else {
+              tempNotLit.push(element)
+            }
+          });
+          this.setData({
+            venueLitTap: tempLit,
+            venueNotLitTap: tempNotLit
+          })
+        }
+      }
+
+      console.log('venueLitTap', this.data.venueLitTap)
+      console.log('venueNotLitTap', this.data.venueNotLitTap) 
     })
+
     this.setData({
       showModal: true,
+      medalIsLitTap: res.medalIsLit,
+      medalLitVenueTap: res.litVenue,
       medalNameTap: res.medalNameTap,
       medalImgSrcTap: res.medalImgSrcTap,
       medalConditionTap: res.medalConditionTap
@@ -117,10 +169,13 @@ Page({
   onModalClose(){
     this.setData({
       showModal: false,
+      medalIsLitTap: false,
+      medalLitVenueTap: [],
       medalNameTap: "",
       medalImgSrcTap: null,
       medalConditionTap: "",
-      venueListTap: [],
+      venueLitTap: [],
+      venueNotLitTap: []
     })
   },
   seeMore() {

@@ -36,7 +36,10 @@
       medalName="{{medalNameTap}}" 
       medalImgSrc="{{medalImgSrcTap}}" 
       medalCondition="{{medalConditionTap}}" 
-      venueList={{venueListTap}} >
+      medalIsLit="{{medalIsLitTap}}"
+      medalLitVenue="{{medalLitVenueTap}}"
+      venueLitList={{venueLitTap}}
+      venueNotLitList={{venueNotLitTap}} >
     </my-medal>
 	</modal>
 </view>
