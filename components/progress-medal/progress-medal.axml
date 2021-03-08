@@ -1,0 +1,6 @@
+<view class="proMedal" onTap="toTapMedal">
+  <image class="img" mode="scaleToFill" src="{{medalDetail.medalImgSrc}}"/>
+  <view class="progress-bar" hidden="{{medalDetail.proHidden}}">
+    <view class="progress" style="width:{{medalDetail.progress}}%;"></view>
+  </view>
+</view>

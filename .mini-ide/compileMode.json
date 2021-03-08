@@ -11,6 +11,14 @@
     {
       "title": "wall",
       "page": "pages/MedalWallPage/MedalWallPage"
+    },
+    {
+      "title": "medalDetail",
+      "page": "pages/MedalTestPage/MedalTestPage"
+    },
+    {
+      "title": "minePage",
+      "page": "pages/MinePage/MinePage"
     }
   ]
 }

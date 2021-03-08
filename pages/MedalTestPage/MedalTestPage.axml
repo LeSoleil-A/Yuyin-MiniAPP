@@ -1,3 +1,3 @@
 <view class="temp">
-  <my-medal></my-medal>
+  <my-medal medalName="{{medalName}}" medalImgSrc="{{medalImgSrc}}" medalCondition="{{medalCondition}}" venueIdList={{venueIdList}} ></my-medal>
 </view>

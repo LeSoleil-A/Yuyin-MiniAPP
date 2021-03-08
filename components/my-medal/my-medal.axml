@@ -1,6 +1,11 @@
-<view class="wrapper">
-  <view class="medalZone">
-    
-  </view>
-  <button class="DISbutton" onTap="btnTap">一键分享</button>
-</view>
+    <image class="medalImg" mode="scaleToFill" src="{{medalImgSrc}}"/>
+    <view class="medalTextZone">
+      <view class="medalName">{{medalName}}</view>
+      <view class="medalCondition" >{{medalCondition}}</view>
+    </view>
+    <view class="venueZone">
+      <view class="venueView" a:for="{{venueList}}">
+        <image class="venueItem" mode="scaleToFill" src="{{item.venue_punch_color_image}}"/>
+      </view>
+    </view>
+  <!-- <button class="DISbutton" onTap="btnTap">一键分享</button> -->

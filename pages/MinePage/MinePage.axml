@@ -8,20 +8,11 @@
       <text class="zoneMore" onTap="seeMore">查看更多勋章》</text>
     </view>
     <scroll-view scroll-x="{{true}}" class="scrollType">
-      <view class="medalItem" onTap="medalTest">
-        <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
+      <view class="medalItem" a:for="{{medalGet}}">
+        <progress-medal onTapMedal="onTapMedal" medalDetail="{{item}}"/>
       </view>
-      <view class="medalItem">
-        <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
-      </view>
-      <view class="medalItem">
-        <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
-      </view>
-      <view class="medalItem">
-        <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
-      </view>
-      <view class="medalItem">
-        <image class="medalIcon" mode="scaleToFill" src="{{medalIcon}}"/>
+      <view class="medalItem" a:for="{{medalNotGet}}">
+        <progress-medal onTapMedal="onTapMedal" medalDetail="{{item}}"/>
       </view>
     </scroll-view>
   </view>
@@ -30,7 +21,22 @@
       <view class="Title">作品列表</view>
     </view>
     <scroll-view scroll-y="{{true}}" class="scrollTypeS">
-      <video class="VideoItem" a:for="{{array}}" src="{{item.src}}" controls="{{true}}" show-play-btn="{{false}}" show-center-play-btn="{{true}}" />
+      <video class="VideoItem" a:for="{{15}}" src="{{src}}" controls="{{true}}" show-play-btn="{{false}}" show-center-play-btn="{{true}}" />
     </scroll-view>
   </view>
+
+  <modal
+    class="modalMedal"
+		show="{{showModal}}"
+		onModalClose="onModalClose"
+    advice="{{true}}"
+    disableScroll="{{ false }}"
+		>
+    <my-medal class="card" 
+      medalName="{{medalNameTap}}" 
+      medalImgSrc="{{medalImgSrcTap}}" 
+      medalCondition="{{medalConditionTap}}" 
+      venueList={{venueListTap}} >
+    </my-medal>
+	</modal>
 </view>

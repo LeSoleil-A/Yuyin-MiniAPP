@@ -1,21 +1,60 @@
-.wrapper{
-  border-style: solid;
-  border-color: white; 
-  width: 86vw;
-  height: 76vh;
+.medalImg{
+  height: 180px;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 20px;
+}
+.medalTextZone{
+  height: 70px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto auto;
 }
-.medalZone{
-  border-color: white;
-  border-style: solid;
-  height: 66vh;
-  width: 70vw;
+.medalName{
+  width: 240px;
+  height: 34px;
   margin-left: auto;
   margin-right: auto; 
-  border-radius: 8px;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.medalCondition{
+  width: 240px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: center;
+  word-wrap:break-word;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.venueZone{
+  height: 150px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.venueView{
+  width: 72px;
+  display: flex;
+}
+.venueItem{
+  margin: auto auto;
+  height: 70px;
+  width: 70px;
 }
 .DISbutton {
   width: 150px;

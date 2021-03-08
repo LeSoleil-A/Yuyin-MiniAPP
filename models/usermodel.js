@@ -30,6 +30,24 @@ class UserModel extends HTTP {
       method:'post'
     })
   }
+
+  async getLitVenue(){
+     return await this.request({
+      url: 'v1/venue/litinfo', 
+      data: {
+      },
+      method:'get'
+    })
+  }
+
+  async getLitMedal(){
+     return await this.request({
+      url: 'v1/medal/get', 
+      data: {
+      },
+      method:'get'
+    })
+  }
 }
 
 

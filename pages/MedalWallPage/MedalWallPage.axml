@@ -1,25 +1,59 @@
 <view class="wrapper">
   <view class="medalWall">
-    <image class="userImg" mode="scaleToFill" src="../../components/wall-medal/image/testMedal.png"/>
-    <view class="userName"> XXX的勋章墙 </view>
+    <image class="userImg" mode="scaleToFill" src="{{userImageSrc}}"/>
+    <view class="userName"> {{nickName}}的勋章墙 </view>
     <view class="medalZone">
       <view class="medalColumn">
         <view class="medal" a:for="{{arrayFirst}}">
-          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+          <wall-medal 
+            medalId="{{item.medalId}}" 
+            medalName="{{item.medalName}}" 
+            medalCondition="{{item.medalCondition}}" 
+            venueList="{{item.venueList}}"
+            onTapMedal="onTapMedal">
+          </wall-medal>
         </view>
       </view>
       <view class="medalColumn">
         <view class="medal" a:for="{{arraySecond}}">
-          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+          <wall-medal 
+            medalId="{{item.medalId}}" 
+            medalName="{{item.medalName}}" 
+            medalCondition="{{item.medalCondition}}"
+            venueList="{{item.venueList}}"
+            onTapMedal="onTapMedal">
+          </wall-medal>
         </view>
       </view>
       <view class="medalColumn">
         <view class="medal" a:for="{{arrayThird}}">
-          <wall-medal imageSrc="{{item.imageSrc}}" medalName="{{item.medalName}}"></wall-medal>
+          <wall-medal
+            medalId="{{item.medalId}}" 
+            medalName="{{item.medalName}}" 
+            medalCondition="{{item.medalCondition}}" 
+            venueList="{{item.venueList}}"
+            onTapMedal="onTapMedal">
+          </wall-medal>
         </view>
       </view>
     </view>
   </view>
 
   <button class="DISbutton" onTap="btnTap">一键分享</button>
+
+  <modal
+    class="modalMedal"
+		show="{{showModal}}"
+		onModalClose="onModalClose"
+    advice="{{true}}"
+    disableScroll="{{ false }}"
+		>
+    <my-medal class="card" 
+      medalName="{{medalNameTap}}" 
+      medalImgSrc="{{medalImgSrcTap}}" 
+      medalCondition="{{medalConditionTap}}" 
+      venueList={{venueListTap}} >
+    </my-medal>
+	</modal>
+
 </view>

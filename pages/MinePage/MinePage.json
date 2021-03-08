@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "usertitle":"/components/userTitle/userTitle"
+    "usertitle":"/components/userTitle/userTitle",
+    "progress-medal":"/components/progress-medal/progress-medal",
+    "modal": "mini-ali-ui/es/modal/index",
+    "my-medal": "/components/my-medal/my-medal"
   }
 }

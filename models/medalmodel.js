@@ -10,6 +10,15 @@ class MedalModel extends HTTP {
       method:'get'
     })
   }
+
+  async getMedalLit() {
+    return await this.request({
+      url: 'v1/medal/get', 
+      data: {
+      },
+      method:'get'
+    })
+  }
 }
 
 
