@@ -17,20 +17,18 @@
         <view class="medal" a:for="{{arraySecond}}">
           <wall-medal 
             medalId="{{item.medalId}}" 
-            medalName="{{item.medalName}}" 
-            medalCondition="{{item.medalCondition}}"
-            venueList="{{item.venueList}}"
+            medalIsLit="{{item.medalIsLit}}"
+            medalLitVenue="{{item.medalLitVenue}}"
             onTapMedal="onTapMedal">
           </wall-medal>
         </view>
       </view>
       <view class="medalColumn">
         <view class="medal" a:for="{{arrayThird}}">
-          <wall-medal
+          <wall-medal 
             medalId="{{item.medalId}}" 
-            medalName="{{item.medalName}}" 
-            medalCondition="{{item.medalCondition}}" 
-            venueList="{{item.venueList}}"
+            medalIsLit="{{item.medalIsLit}}"
+            medalLitVenue="{{item.medalLitVenue}}"
             onTapMedal="onTapMedal">
           </wall-medal>
         </view>

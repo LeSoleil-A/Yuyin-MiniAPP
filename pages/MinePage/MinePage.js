@@ -52,10 +52,10 @@ Page({
     });
     Promise.all(resGet).then((resGet)=>{
       resGet.forEach((item) => {
-        var proHidden = false;
-        if (item.medal_id<=12 && item.medal_id>=1){
-          proHidden = true
-        }
+        // var proHidden = false;
+        // if (item.medal_id<=12 && item.medal_id>=1){
+        //   proHidden = true
+        // }
         var resGetItem = {
           medalId : item.medal_id,
           medalName : item.medal_name,
@@ -65,7 +65,7 @@ Page({
           litVenue: res[item.medal_id-1].litVenue,
           medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
           venueList: app.globalData.medalTotal[item.medal_id-1].venueList,
-          proHidden: proHidden
+          // proHidden: proHidden
         };
         getItem.push(resGetItem);
       });
@@ -86,11 +86,11 @@ Page({
     });
     Promise.all(resNotGet).then((resNotGet)=>{
       resNotGet.forEach((item) => {
-        var proHidden = false;
-        // 里程碑勋章及杭州勋章不含进度条
-        if ((item.medal_id<=12 && item.medal_id>=1) || (item.medal_id==20)){
-          proHidden = true
-        }
+        // var proHidden = false;
+        // // 里程碑勋章及杭州勋章不含进度条
+        // if ((item.medal_id<=12 && item.medal_id>=1) || (item.medal_id==20)){
+        //   proHidden = true
+        // }
         var resNotGetItem = {
           medalId : item.medal_id,
           medalName : item.medal_name,
@@ -100,7 +100,7 @@ Page({
           litVenue: res[item.medal_id-1].litVenue,
           medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
           venueList: app.globalData.medalTotal[item.medal_id-1].venueList,
-          proHidden: proHidden
+          // proHidden: proHidden
         };
         notGetItem.push(resNotGetItem);
       });

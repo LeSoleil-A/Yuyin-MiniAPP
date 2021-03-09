@@ -58,92 +58,92 @@ Page({
     let tempFirst = []
     let tempSecond = []
     let tempThird = []
-    // 判断运动天数勋章：找到最小的未点亮序号
+    // 判断运动天数勋章：找到最大的已点亮序号
     var itemFirst = null
-    if(listMedal[7].isLit==false){
+    if(listMedal[11].isLit==true){
+      itemFirst = {
+        medalId: 12,
+        medalIsLit: true
+      }
+    } else if(listMedal[10].isLit==true){
+      itemFirst = {
+        medalId: 11,
+        medalIsLit: true
+      }
+    } else if(listMedal[9].isLit==true){
+      itemFirst = {
+        medalId: 10,
+        medalIsLit: true
+      }
+    } else if(listMedal[8].isLit==true){
+      itemFirst = {
+        medalId: 9,
+        medalIsLit: true
+      }
+    } else if(listMedal[7].isLit==true){
+      itemFirst = {
+        medalId: 8,
+        medalIsLit: true
+      }
+    } else {
       itemFirst = {
         medalId: 8,
         medalIsLit: false
       }
-    } else if(listMedal[8].isLit==false){
-      itemFirst = {
-        medalId: 9,
-        medalIsLit: false
-      }
-    } else if(listMedal[9].isLit==false){
-      itemFirst = {
-        medalId: 10,
-        medalIsLit: false
-      }
-    } else if(listMedal[10].isLit==false){
-      itemFirst = {
-        medalId: 11,
-        medalIsLit: false
-      }
-    } else if(listMedal[11].isLit==false){
-      itemFirst = {
-        medalId: 12,
-        medalIsLit: false
-      }
-    } else {
-      itemFirst = {
-        medalId: 12,
-        medalIsLit: true
-      }
     }
     tempFirst.push(itemFirst);
 
-    // 判断场馆数勋章：找到最小的未点亮序号
+    // 判断场馆数勋章：找到最大的已点亮序号
     var itemSecond = null
-    if(listMedal[0].isLit==false){
+    if(listMedal[3].isLit==true){
+      itemSecond = {
+        medalId: 4,
+        medalIsLit: true
+      }
+    } else if(listMedal[2].isLit==true){
+      itemSecond = {
+        medalId: 3,
+        medalIsLit: true
+      }
+    } else if(listMedal[1].isLit==true){
+      itemSecond = {
+        medalId: 2,
+        medalIsLit: true
+      }
+    } else if(listMedal[0].isLit==true){
+      itemSecond = {
+        medalId: 1,
+        medalIsLit: true
+      }
+    } else {
       itemSecond = {
         medalId: 1,
         medalIsLit: false
       }
-    } else if(listMedal[1].isLit==false){
-      itemSecond = {
-        medalId: 2,
-        medalIsLit: false
-      }
-    } else if(listMedal[2].isLit==false){
-      itemSecond = {
-        medalId: 3,
-        medalIsLit: false
-      }
-    } else if(listMedal[3].isLit==false){
-      itemSecond = {
-        medalId: 4,
-        medalIsLit: false
-      }
-    } else {
-      itemSecond = {
-        medalId: 4,
-        medalIsLit: true
-      }
     }
     tempSecond.push(itemSecond);
 
-    // 判断重复打卡勋章：找到最小的未点亮序号
+    // 判断重复打卡勋章：找到最大的已点亮序号
     var itemThird = null
-    if(listMedal[4].isLit==false){
-      itemThird = {
-        medalId: 5,
-        medalIsLit: false
-      }
-    } else if(listMedal[5].isLit==false){
-      itemThird = {
-        medalId: 6,
-        medalIsLit: false
-      }
-    } else if(listMedal[6].isLit==false){
-      itemThird = {
-        medalId: 7,
-        medalIsLit: false
-      }
-    } else {
+    if(listMedal[6].isLit==true){
       itemThird = {
         medalId: 7,
         medalIsLit: true
+      }
+    } else if(listMedal[5].isLit==true){
+      itemThird = {
+        medalId: 6,
+        medalIsLit: true
+      }
+    } else if(listMedal[4].isLit==true){
+      itemThird = {
+        medalId: 5,
+        medalIsLit: true
+      }
+    } else {
+      itemThird = {
+        medalId: 5,
+        medalIsLit: false
       }
     }
     tempThird.push(itemThird);
