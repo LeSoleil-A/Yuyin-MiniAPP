@@ -64,7 +64,7 @@ App({
       medalId: 13,
       medalWallName: "体育满绩",
       medalCondition: "点亮所有大学运动场馆",
-      venueList: [1, 7, 2]
+      venueList: [1, 7, 12]
     },{
       medalId: 14,
       medalWallName: "西子湖畔",

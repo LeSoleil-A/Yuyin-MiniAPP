@@ -8,7 +8,13 @@
       <text class="zoneMore" onTap="seeMore">查看更多勋章》</text>
     </view>
     <scroll-view scroll-x="{{true}}" class="scrollType">
+      <view class="medalItem" a:for="{{medalGetMax}}">
+        <progress-medal onTapMedal="onTapMedal" medalDetail="{{item}}"/>
+      </view>
       <view class="medalItem" a:for="{{medalGet}}">
+        <progress-medal onTapMedal="onTapMedal" medalDetail="{{item}}"/>
+      </view>
+      <view class="medalItem" a:for="{{medalGetMin}}">
         <progress-medal onTapMedal="onTapMedal" medalDetail="{{item}}"/>
       </view>
       <view class="medalItem" a:for="{{medalNotGet}}">

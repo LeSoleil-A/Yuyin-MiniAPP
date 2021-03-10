@@ -19,6 +19,10 @@
     {
       "title": "minePage",
       "page": "pages/MinePage/MinePage"
+    },
+    {
+      "title": "test1",
+      "page": "pages/TeachingPage/TeachingPage"
     }
   ]
 }

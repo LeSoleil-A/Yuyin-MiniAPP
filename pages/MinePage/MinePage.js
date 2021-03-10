@@ -8,6 +8,8 @@ Page({
   data: {
     canIUseAuthButton: true,
     medalGet: [],
+    medalGetMax: [],
+    medalGetMin: [],
     medalNotGet: [],
 
     showModal: false,
@@ -29,24 +31,123 @@ Page({
     const res = await medalModel.getMedalLit();
 
     // 将已经得到的和没有得到的勋章分组
+    // tempGetOne, tempGetTwo, tempGetThree: 已经点亮的里程碑勋章
+    // indexOne, indexTwo, indexThree: 里程碑勋章里面的最大号
+    // other: 获得的其他勋章
+    let tempGetOne = [];
+    let tempGetTwo = [];
+    let tempGetThree = [];
+    let indexOne = 0;
+    let indexTwo = 0;
+    let indexThree = 0;
     let tempGet = [];
     let tempNotGet = [];
     res.forEach((item) => {
-      console.log('get: ' , item.isLit)
       if (item.isLit==false){
         tempNotGet.push(item)
       } else {
-        tempGet.push(item)
+        if(item.id>=8 && item.id<=12){
+          tempGetOne.push(item)
+          indexOne = item.id
+        } else if(item.id>=1 && item.id<=4) {
+          tempGetTwo.push(item)
+          indexTwo = item.id
+        } else if(item.id>=5 && item.id<=7) {
+          tempGetThree.push(item)
+          indexThree = item.id
+        } else {
+          tempGet.push(item)
+        }
       }
     });
+
+    // 将最大值pop出，然后将数组逆序
+    tempGetOne.pop();
+    tempGetOne.reverse();
+    tempGetTwo.pop();
+    tempGetTwo.reverse();
+    tempGetThree.pop();
+    tempGetThree.reverse();
     
     // 根据上述编号分别获取勋章详情，以便后面区分彩色与灰色图片；同时将勋章的进度及已点亮场馆进行存储
     /* medalGet中应包含：
         medal_id, medal_name, medalImgSrc(color), medalIsLit, 
         progress, litVenue, medalCondition, venueList, 
         proHidden*/
+    // resGet: 获得的成就类勋章
+    // resGetMax: 获得的最大的里程碑类勋章
+    // resGetMin: 获得的较小的里程碑类勋章，且顺序由大到小
     const resGet = [];
+    const resGetMax = [];
+    const resGetMin = [];
     const getItem = [];
+    const getItemMax = [];
+    const getItemMin = [];
+    if(indexOne!=0){
+      resGetMax.push(medalModel.getMedalDetail(indexOne))
+    }
+    if(indexTwo!=0){
+      resGetMax.push(medalModel.getMedalDetail(indexTwo))
+    }
+    if(indexThree!=0){
+      resGetMax.push(medalModel.getMedalDetail(indexThree))
+    }
+    Promise.all(resGetMax).then((resGetMax)=>{
+      resGetMax.forEach((item) => {
+        var resGetItem = {
+          medalId : item.medal_id,
+          medalName : item.medal_name,
+          medalImgSrc: item.medal_color_icon,
+          medalIsLit: true,
+          progress: res[item.medal_id-1].progress,
+          litVenue: res[item.medal_id-1].litVenue,
+          medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
+          venueList: app.globalData.medalTotal[item.medal_id-1].venueList,
+        };
+        getItemMax.push(resGetItem);
+      });
+      
+      this.setData({
+        medalGetMax: getItemMax
+      });
+      console.log('medalGetMax: ', this.data.medalGetMax)
+    })
+
+    tempGetOne.forEach((item) => {
+      resGetMin.push(medalModel.getMedalDetail(item.id))
+    });
+    tempGetTwo.forEach((item) => {
+      resGetMin.push(medalModel.getMedalDetail(item.id))
+    });
+    tempGetThree.forEach((item) => {
+      resGetMin.push(medalModel.getMedalDetail(item.id))
+    });
+    Promise.all(resGetMin).then((resGetMin)=>{
+      resGetMin.forEach((item) => {
+        // var proHidden = false;
+        // if (item.medal_id<=12 && item.medal_id>=1){
+        //   proHidden = true
+        // }
+        var resGetItem = {
+          medalId : item.medal_id,
+          medalName : item.medal_name,
+          medalImgSrc: item.medal_color_icon,
+          medalIsLit: true,
+          progress: res[item.medal_id-1].progress,
+          litVenue: res[item.medal_id-1].litVenue,
+          medalCondition: app.globalData.medalTotal[item.medal_id-1].medalCondition,
+          venueList: app.globalData.medalTotal[item.medal_id-1].venueList,
+          // proHidden: proHidden
+        };
+        getItemMin.push(resGetItem);
+      });
+      
+      this.setData({
+        medalGetMin: getItemMin
+      });
+      console.log('medalGetMin: ', this.data.medalGetMin)
+    })
+
     tempGet.forEach((item) => {
       resGet.push(medalModel.getMedalDetail(item.id))
     });
@@ -73,6 +174,7 @@ Page({
       this.setData({
         medalGet: getItem
       });
+      console.log('medalGet: ', this.data.medalGet)
     })
 
     /* medalNotGet中应包含：
