@@ -246,4 +246,7 @@ Page({
   btnTap(){
     console.log(this.data.nickName)
   },
+  tapShare() {
+    console.log('Tap button to share!')
+  },
 });

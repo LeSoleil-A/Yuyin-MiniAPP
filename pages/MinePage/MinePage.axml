@@ -35,7 +35,8 @@
     class="modalMedal"
 		show="{{showModal}}"
 		onModalClose="onModalClose"
-    advice="{{true}}"
+    onMaskClick="onModalClose"
+    showClose="{{true}}"
     disableScroll="{{ false }}"
 		>
     <my-medal class="card" 
@@ -45,5 +46,7 @@
       venueLitList={{venueLitTap}}
       venueNotLitList={{venueNotLitTap}} >
     </my-medal>
+
+    <button class="btnShare" onTap="tapBtn">一键分享</button>
 	</modal>
 </view>

@@ -110,7 +110,6 @@ Page({
       this.setData({
         medalGetMax: getItemMax
       });
-      console.log('medalGetMax: ', this.data.medalGetMax)
     })
 
     tempGetOne.forEach((item) => {
@@ -145,7 +144,6 @@ Page({
       this.setData({
         medalGetMin: getItemMin
       });
-      console.log('medalGetMin: ', this.data.medalGetMin)
     })
 
     tempGet.forEach((item) => {
@@ -174,7 +172,6 @@ Page({
       this.setData({
         medalGet: getItem
       });
-      console.log('medalGet: ', this.data.medalGet)
     })
 
     /* medalNotGet中应包含：
@@ -276,6 +273,9 @@ Page({
       venueLitTap: [],
       venueNotLitTap: []
     })
+  },
+  tapBtn() {
+    console.log('Tap button to share!')
   },
   seeMore() {
     my.navigateTo({
