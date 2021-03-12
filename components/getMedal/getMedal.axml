@@ -1,8 +1,10 @@
   <view class="textGet">获得</view>
-  <view class="medalImg"> 奖章图片 </view>
+  <view class="medalImg"> 
+    <image mode="scaleToFill" src="{{modalImgSrc}}" class="iconImg"/>
+   </view>
   <view class="medalName">{{medalName}}</view>
   <view class="textMedal">勋章</view>
   <view class="btnZone">
-    <button class="DISbutton" onTap="btnBack">开心收下</button>
+    <button class="DISbutton" onTap="_onModalClose">开心收下</button>
     <button class="DISbutton" onTap="btnShare">一键分享</button>
   </view>

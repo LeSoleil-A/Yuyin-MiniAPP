@@ -5,8 +5,15 @@ var userModel = new UserModel()
 import { VenueModel } from '../../models/venuemodel'
 var venueModel = new VenueModel()
 
+import { MedalModel } from '../../models/medalmodel'
+var medalModel = new MedalModel()
+
 Page({
   data: {
+    medal_id: -1,
+    medalName: "勋章名称",
+    modalImgSrc: "",
+    showMedal: false,
     show: false,
     curr_isLit: false,
     water_bgc:"#FF9088",
@@ -238,15 +245,23 @@ Page({
     ]
   },
   onModalClose() {
-    console.log("close")
+    // console.log("close")
     this.setData({
       show: false,
     });
   },
-  onLoad (query) {
+  onModalMedalClose() {
+    this.setData({
+      showMedal: false,
+    });
+  },
+  onShow (query) {
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
     this.getToken()
     this.fetchMuseumsAndLitDetail()
+    if (this.data.medal_id >= 0) {
+      this.fetchMedalDetail(this.data.medal_id)
+    }
   },
   getToken() {
     my.getAuthCode({
@@ -271,6 +286,17 @@ Page({
     }
     this.setData({
       museums : old_museums
+    })
+  },
+  async fetchMedalDetail(medalID) {
+    const res = await medalModel.getMedalDetail(medalID)
+    this.setData({
+      medalName: res.medal_name,
+      modalImgSrc: res.medal_color_icon,
+    })
+    console.log(res.medal_color_icon)
+    this.setData({
+      showMedal: true,
     })
   },
   async showCard(id){
