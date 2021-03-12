@@ -29,7 +29,10 @@ Page({
     arrayThird: []
   },
 
-  async onLoad(){
+  onLoad(){
+  },
+
+  async onShow(){
     // 获取用户信息，之后要改为直接从前面获取
     my.getOpenUserInfo({
         fail: (res) => {

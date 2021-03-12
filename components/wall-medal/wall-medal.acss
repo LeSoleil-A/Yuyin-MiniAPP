@@ -14,7 +14,7 @@
 .name{
   color: white;
   height: 17px;
-  width: 48px;
+  width: 50px;
   margin-left: auto;
   margin-right: auto;
   font: 600;

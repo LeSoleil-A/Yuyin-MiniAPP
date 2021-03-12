@@ -16,7 +16,7 @@ Component({
   methods: {
     btnTap(e){
       my.navigateTo({
-        url: '../FinishPage/FinishPage?venueId='+this.props.venueId
+        url: '../../pages/FinishPage/FinishPage?venueId='+this.props.venueId
       });      
     },
   },

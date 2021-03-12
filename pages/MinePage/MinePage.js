@@ -25,7 +25,11 @@ Page({
     src: "XNDM0OTQzMDc2OA==",
   },
 
-  async onLoad() {
+  onLoad(){
+
+  },
+
+  async onShow() {
 
     // 得到勋章的点亮情况
     const res = await medalModel.getMedalLit();
