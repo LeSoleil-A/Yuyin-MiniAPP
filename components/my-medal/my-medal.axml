@@ -5,10 +5,16 @@
     </view>
     <view class="venueZone">
       <view class="venueView" a:for="{{venueLitList}}">
-        <image class="venueItem" mode="scaleToFill" src="{{item.venue_punch_color_image}}"/>
+        <venueimg 
+          class="venueItem" 
+          srcImg="{{item.venue_punch_color_image}}" 
+          venueId="{{item.venue_id}}"/>
       </view>
       <view class="venueView" a:for="{{venueNotLitList}}">
-        <image class="venueItem" mode="scaleToFill" src="{{item.venue_punch_gray_image}}"/>
+        <venueimg 
+          class="venueItem" 
+          srcImg="{{item.venue_punch_gray_image}}" 
+          venueId="{{item.venue_id}}"/>
       </view>
     </view>
-  <!-- <button class="DISbutton" onTap="btnTap">一键分享</button> -->
+  

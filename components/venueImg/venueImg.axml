@@ -1,0 +1,5 @@
+<image
+  class="venueItem"
+  mode="scaleToFill" 
+  src="{{srcImg}}"
+  onTap="tapImg"/>
