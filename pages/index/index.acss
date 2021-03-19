@@ -84,6 +84,106 @@
   width: 130px;
 }
 
+.intro-view {
+  position: fixed;
+  background-color:  rgba(0, 0, 0, 0.618);
+  top:15%;
+  left:8%;
+  right:8%;
+  bottom: 30%;
+  border-radius: 8px;
+  /* width:75%; */
+}
+
+.intro-title {
+  /* 欢迎进入新手引导 */
+
+  /* position: absolute; */
+  width: 210px;
+  height: 23px;
+  margin-top: 56px;
+  margin-left: 22px;
+
+  font-family: PingFang TC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.intro-text {
+  /* 1 点击任意场馆 进入本场馆运动挑战 */
+  /* position: absolute; */
+  width: 210.56px;
+  height: 44.8px;
+  margin-left: 22px;
+  margin-top: 10px;
+
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.skipBtn {
+  /* 跳过 */
+  position: absolute;
+  width: 36px;
+  height: 20px;
+  right: 7%;
+  top: 6%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.0);
+
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.confirm-btn {
+  /* Rectangle 89 */
+  /* width: 86px; */
+  height: 45px;
+  /* width: 90px; */
+  left: 35%;
+  right: 35%;
+  position: fixed;
+  bottom: 35%;
+  /* justify-content: center; */
+  /* margin-top: 40px; */
+
+  background: #FF9088;
+  border-radius: 8px;  
+  /* 确认 */
+  border: none;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 42px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
 .route-button {
   color: white;
   position: fixed;

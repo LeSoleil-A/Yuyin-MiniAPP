@@ -10,6 +10,7 @@ var medalModel = new MedalModel()
 
 Page({
   data: {
+    showIntro: false,
     medal_id: -1,
     medalName: "勋章名称",
     modalImgSrc: "",
@@ -255,12 +256,30 @@ Page({
       showMedal: false,
     });
   },
+  confirmBtnTapped() {
+    this.setData({
+      showIntro: false,
+    });
+  },
   onShow (query) {
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
     this.getToken()
     this.fetchMuseumsAndLitDetail()
     if (this.data.medal_id >= 0) {
       this.fetchMedalDetail(this.data.medal_id)
+    }
+    my.clearStorageSync();
+    let res = my.getStorageSync({ key: 'isFirstTime' });
+    if (res.data == null) {
+      this.setData({
+        showIntro : true
+      })
+      my.setStorageSync({
+      key: 'isFirstTime',
+      data: {
+        value: true,
+      }
+      });
     }
   },
   getToken() {

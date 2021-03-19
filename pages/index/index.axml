@@ -30,6 +30,17 @@
       <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};"/>
     </movable-view>
   </movable-area>
+  <view class="intro-view" style="display:{{showIntro?'block':'none'}};">
+    <text class="intro-title">欢迎进入新手引导</text>
+    <button class="skipBtn" size="default" type="primary" hover-class="none" onTap="confirmBtnTapped">跳过</button>
+    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">1 点击任意场馆</text>
+    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 38px;">进入本场馆运动挑战</text>
+     <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">2 点击按钮</text>
+    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 40px;">查看同种运动类型相关的场馆</text>
+    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 40px;">这些场馆将会同时高亮显示</text>
+    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">快来参与挑战吧！</text>
+    <button size="default" type="primary" class="confirm-btn" hover-class="none" onTap="confirmBtnTapped">确认</button>
+  </view>
   <view id="1" class="route-button" onTap="routeTapped" style="left:2%;background-color:{{water_bgc}};">水上比赛</view>
   <view id="2" class="route-button" onTap="routeTapped" style="left:26.5%;background-color:{{ball_bgc}};">球类比赛</view>
   <view id="3" class="route-button" onTap="routeTapped" style="left:51%;background-color:{{com_bgc}};">竞技比赛</view>
