@@ -18,16 +18,16 @@
       </movable-view>
     </view>
     <movable-view class='movable-view'>
-      <image class="background" mode="widthFix" src="/image/water_route.png" style="pointer-events:none;display:{{water_visible?'block':'none'}};"/>
+      <image class="background" mode="widthFix" src="/image/water_route.png" style="pointer-events:none;display:{{water_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
     <movable-view class='movable-view'>
-      <image class="background" mode="widthFix" src="/image/ball_route.png" style="pointer-events:none;display:{{ball_visible?'block':'none'}};"/>
+      <image class="background" mode="widthFix" src="/image/ball_route.png" style="pointer-events:none;display:{{ball_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
     <movable-view class='movable-view'>
-      <image class="background" mode="widthFix" src="/image/com_route.png" style="pointer-events:none;display:{{com_visible?'block':'none'}};"/>
+      <image class="background" mode="widthFix" src="/image/com_route.png" style="pointer-events:none;display:{{com_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
     <movable-view class='movable-view'>
-      <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};"/>
+      <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
   </movable-area>
   <view class="intro-view" style="display:{{showIntro?'block':'none'}};">

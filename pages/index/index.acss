@@ -64,6 +64,11 @@
   width: 25px;
 }
 
+.movable-view {
+  height: 10px;
+  width: 130px;
+}
+
 .museumBtn {
   height: 90px;
   width: 130px;
@@ -77,11 +82,6 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   margin: 0px 50px 50px auto;
-}
-
-.movable-view {
-  height: 90px;
-  width: 130px;
 }
 
 .intro-view {
