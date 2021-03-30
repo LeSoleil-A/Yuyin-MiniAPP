@@ -87,11 +87,10 @@
 .intro-view {
   position: fixed;
   background-color:  rgba(0, 0, 0, 0.618);
-  top:15%;
-  left:8%;
-  right:8%;
-  bottom: 30%;
-  border-radius: 8px;
+  top:0%;
+  left:0%;
+  right:0%;
+  bottom: 0%;
   /* width:75%; */
 }
 
@@ -99,15 +98,17 @@
   /* 欢迎进入新手引导 */
 
   /* position: absolute; */
-  width: 210px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   height: 23px;
-  margin-top: 56px;
-  margin-left: 22px;
-
+  margin-top: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-family: PingFang TC;
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 20px;
   line-height: 34px;
   display: flex;
   align-items: center;
@@ -116,12 +117,12 @@
 }
 
 .intro-text {
-  /* 1 点击任意场馆 进入本场馆运动挑战 */
-  /* position: absolute; */
+  position: fixed;
   width: 210.56px;
   height: 44.8px;
   margin-left: 22px;
-  margin-top: 10px;
+  top:68%;
+  left:18%;
 
   font-family: PingFang SC;
   font-style: normal;
@@ -134,75 +135,25 @@
   color: #FFFFFF;
 }
 
-.skipBtn {
-  /* 跳过 */
-  position: absolute;
-  width: 36px;
-  height: 20px;
-  right: 7%;
-  top: 6%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.0);
-
-  font-family: PingFang SC;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 28px;
-  /* identical to box height */
-  display: flex;
-  align-items: center;
-
-  color: #FFFFFF;
-}
-
-.confirm-btn {
-  /* Rectangle 89 */
-  /* width: 86px; */
-  height: 45px;
-  /* width: 90px; */
-  left: 35%;
-  right: 35%;
-  position: fixed;
-  bottom: 35%;
-  /* justify-content: center; */
-  /* margin-top: 40px; */
-
-  background: #FF9088;
-  border-radius: 8px;  
-  /* 确认 */
-  border: none;
-  font-family: PingFang SC;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 18px;
-  line-height: 42px;
-  /* display: flex; */
-  align-items: center;
-  text-align: center;
-
-  color: #FFFFFF;
-}
-
 .route-button {
-  color: white;
   position: fixed;
   top:75%;
-  width:22.5%;
-  height:40px;
+  width:78px;
+  height:34px;
   font-size: 13px;
   font-weight: 400;
   text-align: center;
-  line-height: 40px;
+  line-height: 36px;
   border-radius: 8px;
-  border: none;
-  background-color: #FF9088;
+  background-repeat: no-repeat;
 }
+
+
 
 .bottom-circle-button {
   color: white;
   position: fixed;
-  top: 85%;
+  top: 83%;
   width: 80px;
   height: 80px;
   font-size: 13px;
@@ -212,4 +163,41 @@
   border-radius: 800px;
   border: none;
   background-image: linear-gradient(#FF9088, #F850B0);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-image {
+  position: absolute;
+  height: 24px;
+  width: 30px;
+  top: 20%;
+  left:31%;
+}
+
+.arrow {
+  position: fixed;
+  top:70%;
+  left:11%;
+  width: 41px;
+  height: 49px;
+}
+
+.join-button  {
+  position: fixed;
+  top:85%;
+  width:100%;
+  height:61px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('/image/join.png');
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }

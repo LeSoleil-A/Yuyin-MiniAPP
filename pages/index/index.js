@@ -17,10 +17,14 @@ Page({
     showMedal: false,
     show: false,
     curr_isLit: false,
-    water_bgc:"#FF9088",
-    ball_bgc:"#FF9088",
-    com_bgc:"#FF9088",
-    rivalry_bgc:"#FF9088",
+    water_bg:'/image/water_e.png',
+    ball_bg:'/image/ball_e.png',
+    com_bg:'/image/com_e.png',
+    rivalry_bg:'/image/rivalry_e.png',
+    water_color: '#3C54EF',
+    ball_color: '#00CA90',
+    com_color: '#FD7A34',
+    rivalry_color: '#EC0887',
     water_visible:false,
     ball_visible:false,
     com_visible:false,
@@ -256,7 +260,7 @@ Page({
       showMedal: false,
     });
   },
-  confirmBtnTapped() {
+  joinBtnTapped() {
     this.setData({
       showIntro: false,
     });
@@ -268,8 +272,10 @@ Page({
     if (this.data.medal_id >= 0) {
       this.fetchMedalDetail(this.data.medal_id)
     }
+    // Every time for debug
     my.clearStorageSync();
     let res = my.getStorageSync({ key: 'isFirstTime' });
+    console.log(res);
     if (res.data == null) {
       this.setData({
         showIntro : true
@@ -356,10 +362,14 @@ Page({
     var tap_id = e.currentTarget.id;
     if (tap_id == 1) {
       this.setData({
-        water_bgc:"#F850B0",
-        ball_bgc:"#FF9088",
-        com_bgc:"#FF9088",
-        rivalry_bgc:"#FF9088",
+        water_bg:'/image/water_f.png',
+        ball_bg:'/image/ball_e.png',
+        com_bg:'/image/com_e.png',
+        rivalry_bg:'/image/rivalry_e.png',
+        water_color: '#FFFFFF',
+        ball_color: '#00CA90',
+        com_color: '#FD7A34',
+        rivalry_color: '#EC0887',
         water_visible:true,
         ball_visible:false,
         com_visible:false,
@@ -367,10 +377,14 @@ Page({
       })
     } else if (tap_id == 2) {
       this.setData({
-        ball_bgc:"#F850B0",
-        water_bgc:"#FF9088",
-        com_bgc:"#FF9088",
-        rivalry_bgc:"#FF9088",
+        water_bg:'/image/water_e.png',
+        ball_bg:'/image/ball_f.png',
+        com_bg:'/image/com_e.png',
+        rivalry_bg:'/image/rivalry_e.png',
+        water_color: '#3C54EF',
+        ball_color: '#FFFFFF',
+        com_color: '#FD7A34',
+        rivalry_color: '#EC0887',
         water_visible:false,
         ball_visible:true,
         com_visible:false,
@@ -378,10 +392,14 @@ Page({
       })
     } else if (tap_id == 3) {
       this.setData({
-        com_bgc:"#F850B0",
-        water_bgc:"#FF9088",
-        ball_bgc:"#FF9088",
-        rivalry_bgc:"#FF9088",
+      water_bg:'/image/water_e.png',
+      ball_bg:'/image/ball_e.png',
+      com_bg:'/image/com_f.png',
+      rivalry_bg:'/image/rivalry_e.png',
+      water_color: '#3C54EF',
+      ball_color: '#00CA90',
+      com_color: '#FFFFFF',
+      rivalry_color: '#EC0887',
         water_visible:false,
         ball_visible:false,
         com_visible:true,
@@ -389,10 +407,14 @@ Page({
       })
     } else if (tap_id == 4) {
       this.setData({
-        rivalry_bgc:"#F850B0",
-        water_bgc:"#FF9088",
-        ball_bgc:"#FF9088",
-        com_bgc:"#FF9088",
+      water_bg:'/image/water_e.png',
+      ball_bg:'/image/ball_e.png',
+      com_bg:'/image/com_e.png',
+      rivalry_bg:'/image/rivalry_f.png',
+      water_color: '#3C54EF',
+      ball_color: '#00CA90',
+      com_color: '#FD7A34',
+      rivalry_color: '#FFFFFF',
         water_visible:false,
         ball_visible:false,
         com_visible:false,

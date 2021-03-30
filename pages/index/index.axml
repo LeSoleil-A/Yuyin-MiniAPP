@@ -1,6 +1,6 @@
 <view class="section">
   <movable-area class="movable-area">
-    <image class="background" mode="widthFix" src="/image/background.png"/>
+  <image class="background" mode="widthFix" src="/image/background.png"/>
     <view a:for="{{museums}}" a:key="*this">
       <movable-view class='movable-view' x="{{item.x}}" y="{{item.y}}">
           <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id}}" style="display:{{item.isLit?'none':'block'}};">
@@ -30,27 +30,28 @@
       <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
   </movable-area>
-  <view class="intro-view" style="display:{{showIntro?'block':'none'}};">
-    <text class="intro-title">欢迎进入新手引导</text>
-    <button class="skipBtn" size="default" type="primary" hover-class="none" onTap="confirmBtnTapped">跳过</button>
-    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">1 点击任意场馆</text>
-    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 38px;">进入本场馆运动挑战</text>
-     <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">2 点击按钮</text>
-    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 40px;">查看同种运动类型相关的场馆</text>
-    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;margin-top: -20px;margin-left: 40px;">这些场馆将会同时高亮显示</text>
-    <text class="intro-text" space="ensp" style="word-break: keep-all; word-wrap: break-word;">快来参与挑战吧！</text>
-    <button size="default" type="primary" class="confirm-btn" hover-class="none" onTap="confirmBtnTapped">确认</button>
-  </view>
-  <view id="1" class="route-button" onTap="routeTapped" style="left:2%;background-color:{{water_bgc}};">水上比赛</view>
-  <view id="2" class="route-button" onTap="routeTapped" style="left:26.5%;background-color:{{ball_bgc}};">球类比赛</view>
-  <view id="3" class="route-button" onTap="routeTapped" style="left:51%;background-color:{{com_bgc}};">竞技比赛</view>
-  <view id="4" class="route-button" onTap="routeTapped" style="left:75.5%;background-color:{{rivalry_bgc}};">对抗比赛</view>
+  <view id="1" class="route-button" onTap="routeTapped" style="left:3%;background-image: url({{water_bg}});color: {{water_color}};">水上比赛</view>
+  <view id="2" class="route-button" onTap="routeTapped" style="left:27.5%;background-image: url({{ball_bg}});color: {{ball_color}}">球类比赛</view>
+  <view id="3" class="route-button" onTap="routeTapped" style="left:52%;background-image: url({{com_bg}});color: {{com_color}};">竞技比赛</view>
+  <view id="4" class="route-button" onTap="routeTapped" style="left:76.5%;background-image: url({{rivalry_bg}});color: {{rivalry_color}};">对抗比赛</view>
 
   <view id="1" class="bottom-circle-button" onTap="videoPlaygroundTapped" style="left:20%;background-color:{{rivalry_bgc}};">
-    视频广场
+    <image class="icon-image" mode="scaleToFill" src="/image/video_playground.png"/>
+    <text style="margin-top: 5px;">视频广场</text>
   </view>
   <view id="1" class="bottom-circle-button" style="right:20%;background-color:{{rivalry_bgc}};" onTap="jumpToMyPage">
-    我的
+    <image class="icon-image" mode="scaleToFill" src="/image/my_page.png"/>
+    <text style="margin-top: 5px;">我的</text>
+  </view>
+  <view class="intro-view" style="display:{{showIntro?'block':'none'}};">
+    <image class="arrow" mode="scaleToFill" src="/image/arrow.png"/>
+    <text class="intro-title">欢迎进入新手引导</text>
+    <image class="arrow" mode="scaleToFill" src="/image/arrow.png" style="top:270px;left:185px;"/>
+    <text class="intro-text" style="top:250px;left:210px;">① 点击任意场馆，</text>
+    <text class="intro-text" style="top:275px;left:235px;">查看运动挑战</text>
+    <text class="intro-text">② 点击按钮，</text>
+    <text class="intro-text" style="top:71%;left:23.5%;">查看不同运动类型的场馆</text>
+    <button class="join-button" size="default" type="primary" hover-class="none" onTap="joinBtnTapped">参与挑战，秀出精彩！</button>
   </view>
   <modal
     class="modalVenue"
