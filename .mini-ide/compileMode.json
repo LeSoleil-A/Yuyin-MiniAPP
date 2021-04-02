@@ -23,6 +23,20 @@
     {
       "title": "test1",
       "page": "pages/TeachingPage/TeachingPage"
+    },
+    {
+      "title": "chooseVideo",
+      "page": "pages/ChosenVideoPage/ChosenVideoPage"
+    },
+    {
+      "title": "FinishPage",
+      "page": "pages/FinishPage/FinishPage",
+      "pageQuery": "venueId=1"
+    },
+    {
+      "title": "CameraPage",
+      "page": "pages/CameraPage/CameraPage",
+      "pageQuery": "venueId=1"
     }
   ]
 }

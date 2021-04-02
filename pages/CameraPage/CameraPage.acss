@@ -1,0 +1,77 @@
+.yuyin-camera-wrap {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+.yuyin-camera {
+  width: 720rpx;
+  height: 1280rpx;
+  left: 15rpx;
+  top: 15rpx;
+  position: absolute;
+}
+.yuyin-camera-mask {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 220vw;
+  position: absolute; 
+}
+.yuyin-camera-dark-mask {
+  width: 100vw;
+  height: 240rpx;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.default-btn {
+  background: linear-gradient(180deg, #FF9088 0%, #F850B0 100%);
+  border: 0;
+  border-radius: 20rpx;
+  color: white;
+  font-weight: bold;
+  width: 320rpx;
+  margin: 40rpx auto;
+}
+
+.yuyin-camera-switch-btn {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  left: 70rpx;
+  bottom: 70rpx;
+}
+.yuyin-camera-btn {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  left: 295rpx;
+  bottom: 40rpx;
+  background-color: rgba(107, 32, 255, 255);
+  border: 60rpx solid white;
+  border-radius: 50%;
+
+}
+.yuyin-camera-countdown {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  border-bottom: 10rpx solid rgba(0,0,0,0);
+  border-right: 10rpx solid rgba(0,0,0,0);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  left: 295rpx;
+  bottom: 40rpx;
+  pointer-events: none;
+}
+.yuyin-camera-countdown.color {
+  border-top: 10rpx solid rgba(107, 32, 255, 255);
+  border-left: 10rpx solid rgba(107, 32, 255, 255);
+}
+.yuyin-camera-countdown.white {
+  border-top: 10rpx solid white;
+  border-left: 10rpx solid white;
+}
