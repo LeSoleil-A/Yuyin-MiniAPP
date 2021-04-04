@@ -27,7 +27,7 @@ Page({
     })
     console.log('venueId: ', query.venueId)
     this.setData({
-      venueId: query.venueId
+      venueId: Number(query.venueId)
     })
   },
   // 切换前后摄像头
@@ -87,8 +87,10 @@ Page({
           videoSrc: res.tempVideoPath,
           hasVideo: true
         })
-        this.videoCtx.play()
-        this.listener.stop()
+        // this.videoCtx.play()
+        // this.listener.stop()
+        // 录制完毕跳转下一步
+        this.nextStep()
       },
       fail: err => {
         console.log('stopRecording fail', err)
@@ -114,6 +116,9 @@ Page({
       }
     })
   },
+  nextStep() {
+    my.navigateTo({ url: `/pages/VideoCutPage/VideoCutPage?src=${ this.data.videoSrc }&duration=${ this.data.duration }&venueId=${ this.data.venueId }` })
+  },
   // 将ms时长格式转换为点分时间格式
   toTimerStr(duration) {
     let ms = Math.floor(duration % 1000 / 100)
@@ -121,6 +126,7 @@ Page({
     s = s < 10 ? '0' + s : String(s)
     return s + ':' + ms
   },
+  // 更新倒计时图标样式
   updateCountdown(perc) {
     if(perc < 0.5) {
       this.setData({

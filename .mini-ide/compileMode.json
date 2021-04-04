@@ -37,6 +37,11 @@
       "title": "CameraPage",
       "page": "pages/CameraPage/CameraPage",
       "pageQuery": "venueId=1"
+    },
+    {
+      "title": "VideoCut",
+      "page": "pages/VideoCutPage/VideoCutPage",
+      "pageQuery": "src=testSRC&duration=10000&venueId=1"
     }
   ]
 }

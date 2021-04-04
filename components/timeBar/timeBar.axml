@@ -1,0 +1,14 @@
+<view class="cutting-bar-wrap" style="width: {{ cWidth }}rpx;">
+  <!--canvas
+    id="canvas"
+    class="progress-canvas"
+    canvas-id="canvas"
+    type="webgl"
+    width=cWidth
+    height=120>
+  </canvas-->
+  <view class="duration-flag" style="left: {{ startPos / duration * cWidth + flagWidth }}rpx; right: {{ cWidth - endPos / duration * cWidth + flagWidth }}rpx;"></view>
+  <view class="start-flag" style="left: {{ startPos / duration * cWidth }}rpx; width: {{ flagWidth }}rpx;" onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="videostart"></view>
+  <view class="end-flag" style="left: {{ endPos / duration * cWidth - flagWidth }}rpx; width: {{ flagWidth }}rpx;" onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="videoend"></view>
+  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx"></view>
+</view>

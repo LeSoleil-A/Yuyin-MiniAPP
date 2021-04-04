@@ -1,0 +1,130 @@
+:root {
+  --bar-color: #ADADAD;
+  --bg-color: #CDCDCD;
+}
+
+.audio-bar-wrap-empty {
+  width: 600rpx;
+  height: 80rpx;
+  border: 1px dashed white;
+  border-radius: 8rpx;
+  background-color: rgba(255,255,255,0.4);
+  margin: 20rpx auto;
+  color: white;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.audio-bar-wrap-empty > image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+
+.audio-bar-wrap {
+  width: 600rpx;
+  height: 80rpx;
+  background-color: var(--bg-color);
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  position: relative;
+}
+.audio-bar {
+  position: absolute;
+  height: 60rpx;
+  margin: 10rpx 0;
+  line-height: 60rpx;
+  background-color: var(--bar-color);
+  border-radius: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.side-btn {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  margin: 20rpx;
+  left: -70rpx;
+}
+.progress-bar {
+  width: 4rpx;
+  height: 40rpx;
+  position: absolute;
+}
+.select-bar-wrap {
+  width: 100vw;
+  height: 600rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  background-color: plum;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  transition: 500ms ease;
+}
+.select-bar-wrap.on {
+  bottom: 0;
+}
+.select-bar-wrap.off {
+  bottom: -600rpx;
+}
+.audio-effects-type-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+.audio-effects-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.audio-effects-type-card > image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.audio-effects-type-title.unselected {
+  padding: 8rpx 20rpx;
+  border-radius: 8rpx;
+  color: white;
+}
+.audio-effects-type-title.selected {
+  padding: 8rpx 20rpx;
+  border-radius: 8rpx;
+  background-color: white;
+  color: purple;
+}
+
+.audio-effects-wrap {
+  height: 100%;
+  margin: 0 20rpx;
+  border-radius: 16rpx 16rpx 0 0;
+  background-color: thistle;
+  overflow: scroll;
+}
+.audio-effect-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10rpx 20rpx;
+}
+.audio-effect-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.audio-effect-info > image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.add-audio-btn {
+  background-color: violet;
+  padding: 8rpx 20rpx;
+  color: white;
+  border-radius: 8rpx;
+}

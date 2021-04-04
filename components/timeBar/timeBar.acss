@@ -1,0 +1,47 @@
+:root {
+  --bar-color: #ADADAD;
+  --bg-color: #CDCDCD;
+}
+
+.cutting-bar-wrap {
+  height: 120rpx;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+.start-flag {
+  height: 120rpx;
+  position: absolute;
+  background-color: var(--bar-color);
+  top: 0;
+  border-radius: 20rpx 0 0 20rpx;
+}
+.end-flag {
+  height: 120rpx;
+  position: absolute;
+  background-color: var(--bar-color);
+  top: 0;
+  border-radius: 0 20rpx 20rpx 0;
+}
+.progress-bar {
+  width: 4rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  position: absolute;
+  background-color: rgba(107, 32, 255, 255);
+}
+.progress-canvas {
+  width: 600rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.duration-flag {
+  height: 110rpx;
+  position: absolute;
+  border: 5rpx solid var(--bar-color);
+  background-color: var(--bg-color);
+}

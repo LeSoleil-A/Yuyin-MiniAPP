@@ -9,7 +9,7 @@
     max-duration=15
     onError="cameraError">
   </camera>
-  <video
+  <!--video
     id="video"
     class="yuyin-camera"
     style="visibility: {{ hasVideo ? 'normal' : 'hidden' }};"
@@ -23,7 +23,7 @@
     show-fullscreen-btn="{{ false }}"
     show-thin-progress-bar="{{ true }}"
     ref="getVideoLabel">
-  </video>
+  </video-->
   <image class="yuyin-camera-mask" mode="aspectFit" src="/image/camera/video-mask.png"/>
 
   <view class="yuyin-camera-dark-mask"></view>

@@ -26,6 +26,6 @@
   border-radius: 20rpx;
   color: white;
   font-weight: bold;
-  width: 320rpx;
-  margin: 40rpx auto;
+  width: 240rpx;
+  margin: auto;
 }

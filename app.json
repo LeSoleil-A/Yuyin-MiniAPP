@@ -9,7 +9,9 @@
     "pages/MedalTestPage/MedalTestPage",
     "pages/getMedalTest/getMedalTest",
     "pages/FinishPage/FinishPage",
-    "pages/CameraPage/CameraPage"
+    "pages/CameraPage/CameraPage",
+    "pages/VideoCutPage/VideoCutPage",
+    "pages/VideoAudioPage/VideoAudioPage"
   ],
   "window": {
     "transparentTitle": "always",

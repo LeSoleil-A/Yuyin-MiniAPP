@@ -5,8 +5,7 @@ Page({
     venueId: ''
   },
   onLoad(query) {
-    // 获取camera和video组件
-    this.cameraCtx = my.createCameraContext('camera')
+    // 获取video组件
     this.videoCtx = my.createVideoContext('video')
     // 获取屏幕高度信息
     my.getSystemInfo({
@@ -19,7 +18,7 @@ Page({
     })
     console.log('venueId: ', query.venueId)
     this.setData({
-      venueId: query.venueId
+      venueId: Number(query.venueId)
     })
   },
   gotoCamera() {
