@@ -30,6 +30,16 @@ Page({
       venueId: Number(query.venueId)
     })
   },
+  onShow() {
+    this.setData({
+      hasVideo: false,
+      videoSrc: '',
+      onAir: false,
+      duration: 0, // 录制时长
+      timer: '00:0', // 显示时长
+      countdownCtrl: [-45, 135, 135, 1]
+    })
+  },
   // 切换前后摄像头
   switchCamera() {
     this.setData({

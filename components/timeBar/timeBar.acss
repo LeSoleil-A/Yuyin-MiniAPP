@@ -1,36 +1,35 @@
-:root {
-  --bar-color: #ADADAD;
-  --bg-color: #CDCDCD;
-}
-
 .cutting-bar-wrap {
   height: 120rpx;
   margin: 0 auto;
   position: relative;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 20rpx;
+  background-color: rgba(0,0,0,0.4);
 }
 .start-flag {
   height: 120rpx;
   position: absolute;
-  background-color: var(--bar-color);
+  background-color: #FF9088;
   top: 0;
-  border-radius: 20rpx 0 0 20rpx;
 }
 .end-flag {
   height: 120rpx;
   position: absolute;
-  background-color: var(--bar-color);
+  background-color: #F850B0;
   top: 0;
-  border-radius: 0 20rpx 20rpx 0;
 }
 .progress-bar {
   width: 4rpx;
   height: 120rpx;
   margin: 0 auto;
   position: absolute;
-  background-color: rgba(107, 32, 255, 255);
+  background-color: white;
+}
+.progress-pointer {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  position: absolute;
+  left: -8rpx;
 }
 .progress-canvas {
   width: 600rpx;
@@ -40,8 +39,8 @@
   top: 0;
 }
 .duration-flag {
-  height: 110rpx;
+  height: 120rpx;
   position: absolute;
-  border: 5rpx solid var(--bar-color);
-  background-color: var(--bg-color);
+  background: linear-gradient(90deg, #FF9088 0%, #F850B0 100%);
+  opacity: 0.6;
 }

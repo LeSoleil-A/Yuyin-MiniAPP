@@ -1,24 +1,22 @@
 <!-- 顶部高度填充，其中statusBarHeight和titleBarHeight在onload中获得 -->
 <view style="height: {{ statusBarHeight + titleBarHeight }}px;"></view>
 
-<view class="yuyin-video-wrap">
-  <video
-    id="video"
-    class="yuyin-video"
-    src="{{ videoSrc }}"
-    autoplay="{{ true }}"
-    loop="{{ true }}" 
-    show-play-btn="{{ false }}"
-    controls="{{ false }}"
-    show-center-play-btn="{{ false }}"
-    show-mute-btn="{{ false }}"
-    show-fullscreen-btn="{{ false }}"
-    show-thin-progress-bar="{{ true }}"
-    ref="getVideoLabel">
-  </video>
-  <image class="yuyin-video-mask" mode="aspectFit" src="/image/camera/video-mask.png"/>
+<view class="loading-wrap" a:if="{{ loadingProgress < 100 }}">
+  <view style="font-size: 36rpx;">所有素材与服务均来自浙大余音AI</view>
+  <view class="loading-bar">
+    <view class="loading-bar-text" style="left: {{ loadingProgress * 5 }}rpx;">{{ loadingProgress }}%</view>
+  </view>
+  <view style="font-size: 28rpx;">视频将为您保存到本地</view>
 </view>
-<view style="padding: 0 60rpx; margin-top: 40rpx; color: white;">
-  水瓶、衣服……只有想不到没有做不到，比一比谁的投篮更有创意吧。只要动作帅，“万物皆可投”！
+
+<view>
+  <view class="video-canvas-wrap" style="width: {{ canvasWidth }}rpx; height: {{ canvasHeight }}rpx;">
+    <canvas id="{{ canvasId }}" class="video-canvas"
+            style="width: {{ canvasWidth }}rpx; height: {{ canvasHeight }}rpx;"
+            width="{{ 574 }}" height="{{ 1096 }}"></canvas>
+  </view>
+  <view style="font-size: 24rpx; text-align: center; color: white; margin: 20rpx auto;">发布抖音#亚运vlog大赛 ，让更多人看到你的视频</view>
+  <button class="default-btn" onTap="downloadVideo">发布抖音</button>
+  <button class="default-btn" onTap="sharePage">一键分享</button>
+  <button class="default-btn" onTap="goBack">返回首页</button>
 </view>
-<button class="default-btn" onTap="gotoCamera">上传视频</button>

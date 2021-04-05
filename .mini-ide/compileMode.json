@@ -47,6 +47,15 @@
       "title": "videoAudio",
       "page": "pages/VideoAudioPage/VideoAudioPage",
       "pageQuery": "src=tempSrc&duration=10000&venueId=1&start=1000&end=9000"
+    },
+    {
+      "title": "testPage",
+      "page": "pages/testPage/testPage"
+    },
+    {
+      "title": "FinishPage",
+      "page": "pages/FinishPage/FinishPage",
+      "pageQuery": "id=-1"
     }
   ]
 }

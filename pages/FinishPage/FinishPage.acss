@@ -1,23 +1,21 @@
-.yuyin-video-wrap {
-  width: 630rpx;
-  height: 1120rpx;
-  margin: 0 auto;
+.loading-wrap {
+  color: white;
+  text-align: center;
+  margin: 30vh auto;
+}
+.loading-bar {
+  width: 650rpx;
+  height: 40rpx;
+  border-radius: 25rpx;
+  background: linear-gradient(90deg, #FF9088 0%, #F850B0 100%);
+  margin: 40rpx auto;
   position: relative;
-  overflow: hidden;
-  border-radius: 20rpx;
 }
-.yuyin-video {
-  width: 630rpx;
-  height: 1120rpx;
-  left: 0;
-  top: 0;
-  position: absolute; 
-}
-.yuyin-video-mask {
-  width: 630rpx;
-  height: 1383rpx;
-  position: absolute; 
-  pointer-events: none;
+.loading-bar-text {
+  position: absolute;
+  width: 150rpx;
+  line-height: 40rpx;
+  transition: ease 200ms;
 }
 
 .default-btn {
@@ -25,7 +23,16 @@
   border: 0;
   border-radius: 20rpx;
   color: white;
-  font-weight: bold;
   width: 320rpx;
-  margin: 40rpx auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 600;
+  margin: 20rpx auto;
+}
+
+.video-canvas-wrap {
+  margin: 0 auto;
+}
+.video-canvas {
+  border-radius: 20rpx;
 }

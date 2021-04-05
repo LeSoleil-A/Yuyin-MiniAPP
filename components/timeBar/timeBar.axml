@@ -10,5 +10,8 @@
   <view class="duration-flag" style="left: {{ startPos / duration * cWidth + flagWidth }}rpx; right: {{ cWidth - endPos / duration * cWidth + flagWidth }}rpx;"></view>
   <view class="start-flag" style="left: {{ startPos / duration * cWidth }}rpx; width: {{ flagWidth }}rpx;" onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="videostart"></view>
   <view class="end-flag" style="left: {{ endPos / duration * cWidth - flagWidth }}rpx; width: {{ flagWidth }}rpx;" onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="videoend"></view>
-  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx"></view>
+  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx">
+    <view class="progress-pointer" style="top: -8rpx;"></view>
+    <view class="progress-pointer" style="bottom: -8rpx;"></view>
+  </view>
 </view>

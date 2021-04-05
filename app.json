@@ -11,7 +11,8 @@
     "pages/FinishPage/FinishPage",
     "pages/CameraPage/CameraPage",
     "pages/VideoCutPage/VideoCutPage",
-    "pages/VideoAudioPage/VideoAudioPage"
+    "pages/VideoAudioPage/VideoAudioPage",
+    "pages/VideoGuidePage/VideoGuidePage"
   ],
   "window": {
     "transparentTitle": "always",

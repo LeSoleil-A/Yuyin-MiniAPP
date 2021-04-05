@@ -1,5 +1,6 @@
 import { VideoModel } from '/models/videomodel'
 var videoModel = new VideoModel()
+
 Page({
   data: {
     statusBarHeight: 0,
@@ -93,7 +94,6 @@ Page({
       video_start: this.data.startPos,
       video_end: this.data.endPos
     }
-    console.log(videoData)
     
     my.uploadFile({
       url: 'https://yuyin.zeguantech.com/yuyinnode/v1/video/upload',
@@ -103,30 +103,16 @@ Page({
       formData: videoData,
       success: async res => {
         console.log('uploadVideo Success', JSON.parse(res.data))
-        this.id = JSON.parse(res.data).id
-        // 这里发请求
-        my.showLoading()
-        setTimeout(() => {
-          console.log('makeRequest timeout')
-          this.itv = setInterval(async () => {
-            const res = await videoModel.getInfo(this.id)
-            console.log('a request has been received', res)
-            if (res.state) {
-              clearInterval(this.itv)
-              my.hideLoading()
-              // 此处执行接下去的逻辑，展示视频等
-              my.setStorageSync({
-                key: 'videoSrc',
-                data: {
-                  videoSrc: res.url
-                }
-              })
-              my.navigateTo({ url: '/pages/result/result' })
-            }
-          }, 1000)
-        }, 2000)
-    },fail:err=>{
-      console.log("err",err)
+        // this.id = JSON.parse(res.data).id
+        my.navigateTo({ url: `/pages/FinishPage/FinishPage?id=${ JSON.parse(res.data).id }` })
+    },
+    fail: err => {
+      console.warn('uploadFile Error', err)
+      my.alert({
+        title: '错误',
+        content: JSON.stringify(err),
+        buttonText: '我知道了'
+      })
     }
   })
 }
