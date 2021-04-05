@@ -88,13 +88,18 @@ Component({
           })
         }
       } else {
-        if (info.duration < this.props.duration)
+        if (info.duration < this.props.duration) {
           this.setData({
             audioEffects: [{
               audioId: info.audioId, title: info.title,
               startPos: 0, duration: info.duration
             }]
           })
+          this.props.onUpdate({
+            effects: this.data.audioEffects,
+            music: this.data.selectedMusic
+          })
+        }
         else {
           my.alert({
             title: '温馨提示',

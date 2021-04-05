@@ -1,9 +1,14 @@
 {
-  "current": null,
+  "current": 1,
   "modes": [
     {
       "title": "视频剪辑测试",
       "page": "pages/canvas/canvas/canvas"
+    },
+    {
+      "title": "video",
+      "page": "pages/VideoAudioPage/VideoAudioPage",
+      "pageQuery": "src=tempSrc&duration=10000&venueId=1&start=1000&end=9000"
     }
   ]
 }

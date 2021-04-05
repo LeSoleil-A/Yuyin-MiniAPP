@@ -26,3 +26,4 @@
   <audio-effects onUpdate="updated" duration="{{ 8000 }}" cWidth="{{ 630 }}" />
 </view>
 <button class="long-bottom-btn" onTap="generateVideo">生成视频</button>
+<button class="long-bottom-btn" onTap="chooseVideo">上传</button>
