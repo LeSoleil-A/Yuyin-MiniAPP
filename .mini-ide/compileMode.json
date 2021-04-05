@@ -42,6 +42,11 @@
       "title": "VideoCut",
       "page": "pages/VideoCutPage/VideoCutPage",
       "pageQuery": "src=testSRC&duration=10000&venueId=1"
+    },
+    {
+      "title": "videoAudio",
+      "page": "pages/VideoAudioPage/VideoAudioPage",
+      "pageQuery": "src=tempSrc&duration=10000&venueId=1&start=1000&end=9000"
     }
   ]
 }

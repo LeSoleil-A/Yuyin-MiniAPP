@@ -1,21 +1,33 @@
 const effectsList = require('./effectsList.json')
+const musicList = require('./musicList.json')
+const musicTypes = require('./musicTypes.json')
 
 Component({
   mixins: [],
   data: {
     audioEffectsLib: effectsList,
     audioEffectsSelected: 0,
-    audioEffectsOn: false,
+    audioPanelOn: false,
+    audioPanelType: "effects",
     audioEffects: [
-      // { audioId: 0, title: '打球哒哒声', startPos: 0, duration: 4000 },
-      // { audioId: 1, title: '水花声', startPos: 6000, duration: 2000 },
-      // { audioId: 1, title: '水花声', startPos: 9000, duration: 500 }
-    ]
+      // { audioId: 0, title: '打球哒哒声', startPos: 0, duration: 4000 }
+    ],
+    musicTypes: musicTypes,
+    musicTypeSelected: {
+      beat: 0,
+      mood: 0,
+      style: 0
+    },
+    musicFilteredList: [],
+    selectedMusic: null
   },
   props: {
-    duration: 1000
+    duration: 1000,
+    cWidth: 600,
+    currentPos: 0,
+    onUpdate: res => res
   },
-  onInit() {
+  didMount() {
     my.getSystemInfo({
       success: res => {
         this.setData({
@@ -25,13 +37,10 @@ Component({
       }
     })
   },
-  didMount() {},
-  didUpdate() {},
-  didUnmount() {},
   methods: {
     onMove(res) {
       let move = (res.changedTouches[0].clientX - this.offset) * 750 / this.data.windowWidth
-      move = move * this.props.duration / 600
+      move = move * this.props.duration / this.props.cWidth
       let id = parseInt(res.target.dataset.id || 0)
       let boundary = this.getAudioEffectBoundary(id)
       if (move + this.pos >= boundary[0] && move + this.pos <= boundary[1]) {
@@ -67,6 +76,10 @@ Component({
           this.setData({
             audioEffects: this.data.audioEffects
           })
+          this.props.onUpdate({
+            effects: this.data.audioEffects,
+            music: this.data.selectedMusic
+          })
         } else {
           my.alert({
             title: '温馨提示',
@@ -90,11 +103,32 @@ Component({
           })
         }
       }
-      this.showAudioEffects()
+      this.showAudioPanel()
+    },
+    addMusic(res) {
+      this.setData({
+        selectedMusic: res.target.dataset.info
+      })
+      this.props.onUpdate({
+        effects: this.data.audioEffects,
+        music: this.data.selectedMusic
+      })
+      this.showAudioPanel()
     },
     switchAudioEffectsType(res) {
       this.setData({
         audioEffectsSelected: parseInt(res.target.dataset.id)
+      })
+    },
+    switchMusicType(res) {
+      var selected = this.data.musicTypeSelected
+      const type = this.data.musicTypes
+      selected[res.target.dataset.type] = parseInt(res.target.dataset.id)
+      this.setData({ 
+        musicTypeSelected: selected,
+        musicFilteredList: musicList.filter(d => {
+          return d.beat == type.beat[selected.beat] && d.mood == type.mood[selected.mood] && d.style == type.style[selected.style]
+        })
       })
     },
     getAudioEffectBoundary(id) {
@@ -103,10 +137,17 @@ Component({
       else if (id === this.data.audioEffects.length - 1) return [this.data.audioEffects[id - 1].startPos + this.data.audioEffects[id - 1].duration, this.props.duration - this.data.audioEffects[id].duration]
       else return [this.data.audioEffects[id - 1].startPos + this.data.audioEffects[id - 1].duration, this.data.audioEffects[id + 1].startPos - this.data.audioEffects[id].duration]
     },
-    showAudioEffects() {
-      this.setData({
-        audioEffectsOn: !this.data.audioEffectsOn
-      })
+    showAudioPanel(res) {
+      if(this.data.audioPanelOn) {
+        this.setData({
+          audioPanelOn: false
+        })
+      } else {
+        this.setData({
+          audioPanelOn: true,
+          audioPanelType: res.target.dataset.type
+        })
+      }
     }
   }
 })

@@ -54,7 +54,7 @@ Page({
   },
   nextStep() {
     my.navigateTo({ url: `/pages/VideoAudioPage/VideoAudioPage?src=${ this.data.videoSrc }`
-    + `&duration=${ this.data.duration }&venueId=${ this.data.venueId }`
+    + `&duration=${ this.data.videoDuration }&venueId=${ this.data.venueId }`
     + `&start=${ this.data.startPos }&end=${ this.data.endPos }` })
   }
 })

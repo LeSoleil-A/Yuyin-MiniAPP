@@ -1,30 +1,30 @@
 [
   {
-    "type": "竞技", "coverUrl": "/images/effect-cover/cover.png", "effects": [
+    "type": "竞技", "coverUrl": "/components/audioEffects/images/effects-cover/cover.png", "effects": [
       { "audioId": 0, "title": "打球哒哒声", "duration": 4000, "durationStr": "00:04" },
       { "audioId": 1, "title": "水花声", "duration": 2000, "durationStr": "00:02" }
     ]
   },
   {
-    "type": "球类", "coverUrl": "/images/effect-cover/cover.png", "effects": [
+    "type": "球类", "coverUrl": "/components/audioEffects/images/effects-cover/cover.png", "effects": [
       { "audioId": 2, "title": "哈哈声", "duration": 3000, "durationStr": "00:03" },
       { "audioId": 3, "title": "哈哈哈", "duration": 1000, "durationStr": "00:01" }
     ]
   },
   {
-    "type": "对抗", "coverUrl": "/images/effect-cover/cover.png", "effects": [
+    "type": "对抗", "coverUrl": "/components/audioEffects/images/effects-cover/cover.png", "effects": [
       { "audioId": 0, "title": "打球哒哒声", "duration": 4000, "durationStr": "00:04" },
       { "audioId": 1, "title": "水花声", "duration": 2000, "durationStr": "00:02" }
     ]
   },
   {
-    "type": "水上", "coverUrl": "/images/effect-cover/cover.png", "effects": [
+    "type": "水上", "coverUrl": "/components/audioEffects/images/effects-cover/cover.png", "effects": [
       { "audioId": 0, "title": "打球哒哒声", "duration": 4000, "durationStr": "00:04" },
       { "audioId": 1, "title": "水花声", "duration": 2000, "durationStr": "00:02" }
     ]
   },
   {
-    "type": "欢呼", "coverUrl": "/images/effect-cover/cover.png", "effects": [
+    "type": "欢呼", "coverUrl": "/components/audioEffects/images/effects-cover/cover.png", "effects": [
       { "audioId": 0, "title": "打球哒哒声", "duration": 4000, "durationStr": "00:04" },
       { "audioId": 1, "title": "水花声", "duration": 2000, "durationStr": "00:02" }
     ]

@@ -1,29 +1,68 @@
-<view class="effect-bar-wrap"></view>
-<view class="audio-bar-wrap-empty" onTap="showAudioEffects" a:if="{{ !audioEffects.length }}">
-  <image src="/images/add-btn.png" mode="aspectFit" />
-  <text>添加气氛音效</text>
+<!-- ========== 添加亚运音乐（空白） ========== -->
+<view class="audio-bar-wrap-empty" onTap="showAudioPanel" data-type="music" a:if="{{ !selectedMusic }}"
+      style="width: {{ cWidth }}rpx;">
+  <image src="/components/audioEffects/images/add-btn.png" mode="aspectFit" />
+  <text>添加亚运音乐</text>
+  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx;"></view>
 </view>
-<view class="audio-bar-wrap" a:if="{{ audioEffects.length }}">
-  <image class="side-btn" src="/images/add-btn.png" mode="aspectFit" onTap="showAudioEffects" />
-  <view class="audio-bar" a:for="{{ audioEffects }}"
-        style="width: {{ item.duration / duration * 600 }}rpx; left: {{ item.startPos / duration * 600 }}rpx;"
-        onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="audioeffect" data-id="{{ index }}">{{ item.title }}</view>
-  <view class="progress-bar" style="left: {{ currentPos / duration * 600 }}rpx;"></view>
+<!-- ========== 亚运音乐 ========== -->
+<view class="audio-bar-wrap music" a:if="{{ selectedMusic }}"
+      style="width: {{ cWidth }}rpx;">
+  <text>{{ selectedMusic.title }}</text>
+  <image class="side-btn" src="/components/audioEffects/images/switch-btn.png" mode="aspectFit" onTap="showAudioPanel" data-type="music" />
 </view>
 
-<view class="select-bar-mask {{ audioEffectsOn ? 'on' : 'off' }}" onTap="showAudioEffects"></view>
-<view class="select-bar-wrap {{ audioEffectsOn ? 'on' : 'off' }}">
-  <view class="audio-effects-type-wrap">
+
+<!-- ========== 添加气氛音效（空白） ========== -->
+<view class="audio-bar-wrap-empty" onTap="showAudioPanel" data-type="effects" a:if="{{ !audioEffects.length }}"
+      style="width: {{ cWidth }}rpx;">
+  <image src="/components/audioEffects/images/add-btn.png" mode="aspectFit" />
+  <text>添加气氛音效</text>
+  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx;"></view>
+</view>
+<!-- ========== 气氛音效 ========== -->
+<view class="audio-bar-wrap effects" a:if="{{ audioEffects.length }}"
+      style="width: {{ cWidth }}rpx;">
+  <image class="side-btn" src="/components/audioEffects/images/add-btn.png" mode="aspectFit" onTap="showAudioPanel" data-type="effects" />
+  <view class="audio-bar" a:for="{{ audioEffects }}"
+        style="width: {{ item.duration / duration * cWidth }}rpx; left: {{ item.startPos / duration * cWidth }}rpx;"
+        onTouchStart="startMove" onTouchMove="onMove" onTouchEnd="endMove" data-type="audioeffect" data-id="{{ index }}">{{ item.title }}</view>
+  <view class="progress-bar" style="left: {{ currentPos / duration * cWidth }}rpx;"></view>
+</view>
+
+<view class="select-bar-mask {{ audioPanelOn ? 'on' : 'off' }}" onTap="showAudioPanel"></view>
+<view class="select-bar-wrap {{ audioPanelOn ? 'on' : 'off' }}">
+  <!-- ========== 亚运音乐 ========== -->
+  <view a:for="{{musicTypeSelected}}" a:for-item="selected" a:for-index="type" a:if="{{ audioPanelType == 'music' }}">
+    <view style="overflow: scroll;"><view class="music-type-wrap" style="width: {{ 104 * musicTypes[type].length }}rpx;" >
+      <view class="music-type-title {{ selected == index ? 'selected' : 'unselected' }}" a:for="{{ musicTypes[type] }}"
+            onTap="switchMusicType" data-type="{{ type }}" data-id="{{ index }}">{{ item }}</view>
+    </view></view>
+  </view>
+  <view class="audio-row-wrap" a:if="{{ audioPanelType == 'music' }}">
+    <view class="audio-row-bar" a:for="{{ musicFilteredList }}" onTap="addMusic" data-info="{{ item }}">
+      <view class="audio-row-info">
+        <image src="/components/audioEffects/images/play-btn-red.png" mode="aspectFit" />
+        <view style="margin: 0 20rpx;">{{ item.title }}</view>
+        <view style="color: gray;">{{ item.durationStr }}</view>
+      </view>
+      <view class="add-audio-btn">使用</view>
+    </view>
+  </view>
+
+
+  <!-- ========== 气氛音效 ========== -->
+  <view class="audio-effects-type-wrap" a:if="{{ audioPanelType == 'effects' }}">
     <view class="audio-effects-type-card" onTap="switchAudioEffectsType" data-id="{{ index }}" a:for="{{ audioEffectsLib }}">
       <image src="{{ item.coverUrl }}" mode="aspectFit" />
       <view class="audio-effects-type-title {{ audioEffectsSelected == index ? 'selected' : 'unselected' }}">{{ item.type }}</view>
     </view>
   </view>
-  <view class="audio-effects-wrap">
-    <view class="audio-effect-bar" a:for="{{ audioEffectsLib[audioEffectsSelected].effects }}"
+  <view class="audio-row-wrap" a:if="{{ audioPanelType == 'effects' }}">
+    <view class="audio-row-bar" a:for="{{ audioEffectsLib[audioEffectsSelected].effects }}"
           onTap="addAudioEffect" data-info="{{ item }}">
-      <view class="audio-effect-info">
-        <image src="/images/play-btn-red.png" mode="aspectFit" />
+      <view class="audio-row-info">
+        <image src="/components/audioEffects/images/play-btn-red.png" mode="aspectFit" />
         <view style="margin: 0 20rpx;">{{ item.title }}</view>
         <view style="color: gray;">{{ item.durationStr }}</view>
       </view>

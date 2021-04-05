@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "audio-effects": "/components/audioEffects/audioEffects"
+  }
+}
