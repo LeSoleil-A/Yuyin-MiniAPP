@@ -23,7 +23,7 @@
   {{ useMask ? '长按取消亚运映画' : '长按添加亚运映画' }}
 </view>
 <view style="margin: 20rpx 0;">
-  <audio-effects onUpdate="updated" duration="{{ 8000 }}" cWidth="{{ 630 }}" />
+  <audio-effects onUpdate="updated" duration="{{ videoDuration }}" cWidth="{{ 630 }}" />
 </view>
 <button class="long-bottom-btn" onTap="generateVideo">生成视频</button>
 
