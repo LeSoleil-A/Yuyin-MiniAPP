@@ -45,13 +45,8 @@ Page({
         console.log('a request has been received', res)
         if (res.state) {
           clearInterval(this.itv)
-          // 此处执行接下去的逻辑，展示视频等
-          this.setData({
-            videoSrc: res.url,
-            keyFrameSrc: '',
-            loadingProgress: 100
-          })
-          this.drawCanvas()
+          // 下载文件
+          this.downloadVideo(res.url, res.imageUrl)
         }
       }, interval)
     }, timeout)
@@ -102,7 +97,7 @@ Page({
         })
       }
     })
-    
+
   },
   // 返回到首页（清空页面栈）
   goBack() {
@@ -111,7 +106,40 @@ Page({
     })
   },
   // 将视频保存到本地
-  downloadVideo() {
+  downloadVideo(videoSrc, imageSrc) {
+    // 下载视频文件
+    my.downloadFile({
+      url: videoSrc,
+      header: {
+        'Content-Type': 'video/video'
+      },
+      success({ apFilePath }) {
+        console.log('downloadVideo success', apFilePath)
+        this.setData({
+          videoSrc: apFilePath
+        })
+        // 下载关键帧图片
+        my.downloadFile({
+          url: imageSrc,
+          success({ apFilePath }) {
+            console.log('downloadKeyframe success', apFilePath)
+            this.setData({
+              keyFrameSrc: apFilePath,
+              loadingProgress: 100
+            })
+            this.drawCanvas()
+          },
+          fail(err) {
+            console.warn('downloadKeyframe fail', err)
+          },
+        })
+      },
+      fail(err) {
+        console.warn('downloadFile fail', err)
+      }
+    })
+  },
+  saveVideo() {
     my.saveFile({
       apFilePath: this.data.videoSrc,
       success: () => {

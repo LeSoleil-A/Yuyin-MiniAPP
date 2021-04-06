@@ -16,7 +16,7 @@
             width="{{ 574 }}" height="{{ 1096 }}"></canvas>
   </view>
   <view style="font-size: 24rpx; text-align: center; color: white; margin: 20rpx auto;">发布抖音#亚运vlog大赛 ，让更多人看到你的视频</view>
-  <button class="default-btn" onTap="downloadVideo">发布抖音</button>
+  <button class="default-btn" onTap="saveVideo">发布抖音</button>
   <button class="default-btn" onTap="sharePage">一键分享</button>
   <button class="default-btn" onTap="goBack">返回首页</button>
 </view>
