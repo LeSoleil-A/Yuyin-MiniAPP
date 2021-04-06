@@ -31,17 +31,16 @@ Page({
     if (this.data.videoId > 0) {
       this.loadVideo()
     }
-    this.drawCanvas()
   },
   loadVideo(timeout = 2000, interval = 1000) {
     setTimeout(() => {
       this.itv = setInterval(async () => {
         if (this.data.loadingProgress < 95) {
           this.setData({
-            loadingProgress: this.data.loadingProgress + Math.floor(Math.random() * 5)
+            loadingProgress: this.data.loadingProgress + Math.floor(Math.random() * 2)
           })
         }
-        const res = await videoModel.getInfo(this.id)
+        const res = await videoModel.getInfo(this.data.videoId)
         console.log('a request has been received', res)
         if (res.state) {
           clearInterval(this.itv)
@@ -70,8 +69,7 @@ Page({
     // 绘制场馆图片
     this.ctx.drawImage('/image/video/test-venue.png', this.data.canvasWidth / 2 - 60, 180, 120, 120)
     // 绘制关键帧
-    // this.data.keyframeSrc
-    this.ctx.drawImage('/image/video/test-keyframe.png', this.data.canvasWidth / 2 - 180, 420, 360, 660)
+    this.ctx.drawImage(this.data.keyFrameSrc, this.data.canvasWidth / 2 - 180, 420, 360, 660)
 
     this.ctx.draw()
   },
@@ -107,6 +105,7 @@ Page({
   },
   // 将视频保存到本地
   downloadVideo(videoSrc, imageSrc) {
+    var that = this
     // 下载视频文件
     my.downloadFile({
       url: videoSrc,
@@ -115,19 +114,22 @@ Page({
       },
       success({ apFilePath }) {
         console.log('downloadVideo success', apFilePath)
-        this.setData({
+        that.setData({
           videoSrc: apFilePath
         })
         // 下载关键帧图片
         my.downloadFile({
           url: imageSrc,
+          header: {
+            'Content-Type': 'video/video'
+          },
           success({ apFilePath }) {
             console.log('downloadKeyframe success', apFilePath)
-            this.setData({
+            that.setData({
               keyFrameSrc: apFilePath,
               loadingProgress: 100
             })
-            this.drawCanvas()
+            that.drawCanvas()
           },
           fail(err) {
             console.warn('downloadKeyframe fail', err)
@@ -140,16 +142,21 @@ Page({
     })
   },
   saveVideo() {
-    my.saveFile({
-      apFilePath: this.data.videoSrc,
-      success: () => {
-        my.showToast({
-          type: 'success',
-          content: '保存成功',
-          duration: 1000
-        })
-      },
+    my.alert({
+      title: '温馨提示',
+      content: '暂时不支持保存到手机以及发布抖音。反正你视频没了，请联系：沈吕可晟 31******44',
+      buttonText: '我知道了'
     })
+    // my.saveFile({
+    //   apFilePath: this.data.videoSrc,
+    //   success: () => {
+    //     my.showToast({
+    //       type: 'success',
+    //       content: '保存成功',
+    //       duration: 1000
+    //     })
+    //   },
+    // })
   },
   // 分享页面的参数
   onShareAppMessage() {

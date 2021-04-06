@@ -91,8 +91,8 @@ Page({
       bgmusic_id: this.data.audio.music.id,
       musics: JSON.stringify({ musics: newMusics }).replace(/"/g, '/').replace(/'/g, '/').replace(/,/g, '*'),
       template_id: this.data.useMask ? this.data.venueId : -1,
-      video_start: this.data.startPos,
-      video_end: this.data.endPos
+      video_start: Math.floor(this.data.startPos),
+      video_end: Math.floor(this.data.endPos)
     }
     
     my.uploadFile({

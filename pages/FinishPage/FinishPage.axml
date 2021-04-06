@@ -9,7 +9,7 @@
   <view style="font-size: 28rpx;">视频将为您保存到本地</view>
 </view>
 
-<view>
+<view a:if="{{ loadingProgress >= 100 }}">
   <view class="video-canvas-wrap" style="width: {{ canvasWidth }}rpx; height: {{ canvasHeight }}rpx;">
     <canvas id="{{ canvasId }}" class="video-canvas"
             style="width: {{ canvasWidth }}rpx; height: {{ canvasHeight }}rpx;"

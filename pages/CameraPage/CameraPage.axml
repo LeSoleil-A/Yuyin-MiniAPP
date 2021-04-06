@@ -35,3 +35,5 @@
   <view class="yuyin-camera-countdown white" style="transform: rotate({{ countdownCtrl[1] }}deg);"></view>
   <view class="yuyin-camera-countdown color" style="transform: rotate({{ countdownCtrl[2] }}deg); visibility: {{ countdownCtrl[3] ? 'normal' : 'hidden' }};"></view>
 </view>
+
+<button size="mini" type="default" onTap="chooseVideo" style="position: fixed; top: 240rpx; right: 40rpx;">调试：直接上传视频</button>
