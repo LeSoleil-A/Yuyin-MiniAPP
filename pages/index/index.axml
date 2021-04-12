@@ -29,6 +29,12 @@
     <movable-view class='movable-view'>
       <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};margin-top:100px;"/>
     </movable-view>
+    <movable-view style="display:{{first_click?'none':'block'}};">
+      <view class="have-a-try" style="top:{{bubble_x}};left:{{bubble_y}};">
+        <text class="have-a-try-text">点我试试吧</text>
+        <image class="bubble" mode="scaleToFill" src="/image/bubble.png"/>
+      </view>
+    </movable-view>
   </movable-area>
   <view id="1" class="route-button" onTap="routeTapped" style="left:3%;background-image: url({{water_bg}});color: {{water_color}};">水上比赛</view>
   <view id="2" class="route-button" onTap="routeTapped" style="left:27.5%;background-image: url({{ball_bg}});color: {{ball_color}}">球类比赛</view>
@@ -43,6 +49,7 @@
     <image class="icon-image" mode="scaleToFill" src="/image/my_page.png"/>
     <text style="margin-top: 5px;">我的</text>
   </view>
+
   <view class="intro-view" style="display:{{showIntro?'block':'none'}};">
     <image class="arrow" mode="scaleToFill" src="/image/arrow.png"/>
     <text class="intro-title">欢迎进入新手引导</text>

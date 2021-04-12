@@ -10,6 +10,9 @@ var medalModel = new MedalModel()
 
 Page({
   data: {
+    first_click: true,
+    bubble_x: '100px',
+    bubble_y: '100px',
     showIntro: false,
     medal_id: -1,
     medalName: "勋章名称",
@@ -273,9 +276,8 @@ Page({
       this.fetchMedalDetail(this.data.medal_id)
     }
     // Every time for debug
-    my.clearStorageSync();
+    // my.clearStorageSync();
     let res = my.getStorageSync({ key: 'isFirstTime' });
-    console.log(res);
     if (res.data == null) {
       this.setData({
         showIntro : true
@@ -286,6 +288,24 @@ Page({
         value: true,
       }
       });
+    }
+    let c_res = my.getStorageSync({ key: 'isFirstTimeClick' });
+    console.log("Hello");
+    console.log(c_res);
+    if (c_res.data == null) {
+      this.setData({
+        first_click : false
+      })
+      my.setStorageSync({
+      key: 'isFirstTimeClick',
+      data: {
+        value: false,
+      }
+      });
+    } else {
+      this.setData({
+        first_click : c_res.data['value']
+      })
     }
   },
   getToken() {
@@ -347,6 +367,15 @@ Page({
   museumButtonTapped (e) {
     console.log(e.currentTarget.id)
     this.showCard(e.currentTarget.id)
+    this.setData({
+        first_click : true
+      })
+      my.setStorageSync({
+      key: 'isFirstTimeClick',
+      data: {
+        value: true,
+      }
+    });
   },
   videoPlaygroundTapped (e) {
     console.log(e);
