@@ -1,29 +1,20 @@
-### 目前的问题
+﻿### 0602更新——结合拍呗第一版
 
-2. 场馆信息设计了一个自定义组件，本来应该在首页显示，但由于没找到效果相同的组件，所以暂时将自定义组件放置在了一个临时界面：TempStadium；
-3. 拍摄视频预览页面还没有设计裁剪时长功能；
-
-
-
-### 代码文件说明
-
-#### 页面文件说明：（pages文件夹）
+#### 主要页面文件说明：（pages文件夹）
 
 1. 首页：index；
 
-2. 点击场馆（场馆介绍）： TempStadium（应改为index上的蒙层，而非单独的界面）；
+2. 地图页： MapPage；
 
-3. 上传视频界面：TeachingPage；
+3. 场馆介绍：VenueDetail；
 
-4. 我的主页：MinePage；
+4. 选择音乐标签：MusicTagPage；
 
-5. 勋章墙：MedalWallPage；
+5. 上传页面：UploadPage；
 
-6. 已（未）获得勋章详情：MedalTestPage（应改为“我的页面”上的蒙层，而非单独的界面）；
+6. 上传结束（点亮页面）：LitPage；
 
-7. 获得勋章（主页）：getMedalTest（应改为index上的蒙层，而非单独的界面）；
-
-8. ChosenVideoPage：暂时用来展示所选择或拍摄的视频；
+7. 我的页面：MinePage；
 
    
 

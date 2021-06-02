@@ -1,32 +1,8 @@
 {
   "modes": [
     {
-      "title": "FromCard",
-      "page": "pages/TempStadium/TempStadium"
-    },
-    {
-      "title": "test",
-      "page": "pages/TeachingPage/TeachingPage"
-    },
-    {
-      "title": "wall",
-      "page": "pages/MedalWallPage/MedalWallPage"
-    },
-    {
-      "title": "medalDetail",
-      "page": "pages/MedalTestPage/MedalTestPage"
-    },
-    {
       "title": "minePage",
       "page": "pages/MinePage/MinePage"
-    },
-    {
-      "title": "test1",
-      "page": "pages/TeachingPage/TeachingPage"
-    },
-    {
-      "title": "chooseVideo",
-      "page": "pages/ChosenVideoPage/ChosenVideoPage"
     },
     {
       "title": "FinishPage",
@@ -49,13 +25,16 @@
       "pageQuery": "src=tempSrc&duration=10000&venueId=1&start=1000&end=9000"
     },
     {
-      "title": "testPage",
-      "page": "pages/testPage/testPage"
+      "title": "test_vd",
+      "page": "pages/VenueDetail/VenueDetail"
     },
     {
-      "title": "FinishPage",
-      "page": "pages/FinishPage/FinishPage",
-      "pageQuery": "id=-1"
+      "title": "test_up",
+      "page": "pages/UploadPage/UploadPage"
+    },
+    {
+      "title": "test_lp",
+      "page": "pages/LitPage/LitPage"
     }
   ]
 }

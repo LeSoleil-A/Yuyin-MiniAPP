@@ -3,7 +3,7 @@ Page({
   onLoad() {},
   tapBtn() {
     my.navigateTo({
-      url: '/pages/MapPage/MapPage'
+      url: '/pages/LitPage/LitPage'
     });
   }
 });

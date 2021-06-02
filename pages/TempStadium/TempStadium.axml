@@ -1,3 +1,0 @@
-<view class="temp">
-  <my-card class="wrapper" Detail="{{venueDetail.venue_description}}" name="{{venueDetail.venue_name}}" ImageSrc="{{venueDetail.venue_color_pic}}" itemIcon="{{venueDetail.venue_template_icon}}" itemName="{{venueDetail.venue_sports}}"></my-card>
-</view>

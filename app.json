@@ -1,18 +1,18 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/TempStadium/TempStadium",
-    "pages/TeachingPage/TeachingPage",
-    "pages/ChosenVideoPage/ChosenVideoPage",
+    "pages/MapPage/MapPage",
     "pages/MinePage/MinePage",
     "pages/MedalWallPage/MedalWallPage",
-    "pages/MedalTestPage/MedalTestPage",
-    "pages/getMedalTest/getMedalTest",
     "pages/FinishPage/FinishPage",
     "pages/CameraPage/CameraPage",
     "pages/VideoCutPage/VideoCutPage",
     "pages/VideoAudioPage/VideoAudioPage",
-    "pages/VideoGuidePage/VideoGuidePage"
+    "pages/VideoGuidePage/VideoGuidePage",
+    "pages/VenueDetail/VenueDetail",
+    "pages/UploadPage/UploadPage",
+    "pages/LitPage/LitPage",
+    "pages/MusicTagPage/MusicTagPage"
   ],
   "window": {
     "transparentTitle": "always",

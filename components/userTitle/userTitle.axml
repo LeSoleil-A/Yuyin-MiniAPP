@@ -2,8 +2,7 @@
 <view class="avatar" a:if="{{!canIUse}}">
 <button open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='userInfo'>
   点击获取头像
-  <!-- <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/> -->
-</button>
+ </button>
   
   <text class="user-name">{{nickName}}</text>
 </view>
