@@ -1,0 +1,151 @@
+<view a:if="{{!showMask}}" class="wrapper">
+  <view class="titleZone">
+    <image class="user-image" mode="scaleToFill"/>
+    <view class="detailZone">
+      <text class="user-name">支付宝用户名</text>
+      <view class="numZone">
+        <view class="firZone">
+          <text class="number">12</text><text class="numText">作品</text>
+        </view>
+        <view class="secZone">
+          <text class="number">8</text><text class="numText">勋章</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <tabs class="tabZone"
+    activeCls="tabText"
+    tabs="{{tabs}}"
+    tabsName="activeTab"
+    activeTab="{{activeTab}}"
+    tabBarUnderlineColor="#ED078A"
+    tabBarActiveTextColor="#ED078A"
+    tabBarInactiveTextColor="#9A9A9A"
+    swipeable="{{false}}"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange">
+    <block a:for="{{tabs}}">
+    
+      <!-- 我的视频部分 -->
+      <tab-content key="{{index}}"
+        tabId="{{index}}"
+        activeTab="{{activeTab}}"
+        a:if="{{index === 0}}">
+        <view class="tabContentOne">
+          <picker onChange="bindPickerChange" value="{{videoTypeIndex}}" range="{{videoTypeArray}}" range-key="name">
+            <view class="sportType">
+              <view class="sportText">{{videoType}}</view>
+              <view class="triangle"></view>
+            </view>
+          </picker>
+        </view>
+
+      </tab-content>
+
+      <!-- 我的勋章部分 -->
+      <tab-content key="{{index}}"
+        tabId="{{index}}"
+        activeTab="{{activeTab}}"
+        a:else>
+        <view class="tabContentTwo">
+          <view style="width:100vw; height:1vh;"></view>
+          <view class="firstZone">
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">日积月累</view>
+            <view class="medalFirst">
+              <view class="medal" a:for="{{arrayTestOne}}">
+                <wall-medal 
+                  medalId="{{item.medalId}}" 
+                  medalIsLit="{{item.medalIsLit}}"
+                  medalLitVenue="{{item.medalLitVenue}}"
+                  onTapMedal="onTapMedal">
+                </wall-medal>
+              </view>
+              <view class="medal"></view>
+            </view>
+          </view>
+          
+          <view class="line"></view>
+
+          <view class="secondZone">
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">漫步杭城</view>
+            <view class="medalSecond">
+              <view class="medal" a:for="{{arrayTestTwo}}">
+                <wall-medal 
+                  medalId="{{item.medalId}}" 
+                  medalIsLit="{{item.medalIsLit}}"
+                  medalLitVenue="{{item.medalLitVenue}}"
+                  onTapMedal="onTapMedal">
+                </wall-medal>
+              </view>
+              <view class="medal"></view>
+              <view class="medal"></view>
+            </view>
+          </view>
+
+          <view class="line"></view>
+
+          <view class="firstZone">
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">全能选手</view>
+            <view class="medalFirst">
+              <view class="medal" a:for="{{arrayTestThird}}">
+                <wall-medal 
+                  medalId="{{item.medalId}}" 
+                  medalIsLit="{{item.medalIsLit}}"
+                  medalLitVenue="{{item.medalLitVenue}}"
+                  onTapMedal="onTapMedal">
+                </wall-medal>
+              </view>
+              <view class="medal"></view>
+              <view class="medal"></view>
+            </view>
+          </view>
+
+          <view style="width:100vw; height:1vh;"></view>
+        </view>
+
+      </tab-content>
+    </block>
+  </tabs>
+
+  <modal
+    class="modalMedal"
+		show="{{showModal}}"
+		onModalClose="onModalClose"
+    onMaskClick="onModalClose"
+    showClose="{{true}}"
+    disableScroll="{{ false }}"
+		>
+    <my-medal class="card" 
+      medalName="{{medalNameTap}}" 
+      medalImgSrc="{{medalImgSrcTap}}" 
+      medalCondition="{{medalConditionTap}}" 
+      venueLitList={{venueLitTap}}
+      venueNotLitList={{venueNotLitTap}}  >
+    </my-medal>
+
+    <button class="btnShare" onTap="tapShare">一键分享</button>
+	</modal>
+</view>
+
+
+<!-- 勋章点击部分 -->
+<view a:elif="{{showMask}}" class="wrapper">
+  <mask type="market" show="{{showMask}}" maskZindex="10" onMaskTap="maskClick"></mask>
+  <view class="picZone">
+    <view class="medalName">漫步杭城 · 西子湖畔</view>
+    <image class="medalImg" mode="scaleToFill" src="{{medalImgSrcTap}}"/>
+  </view>
+
+  <view class="medalCondition">{{medalConditionTap}} (5/5)</view>
+
+  <view class="venueZone">
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+  </view>
+
+  <button class="btn">
+    <view class="btnText" onTap="tapBtn">分享勋章</view>
+  </button>
+</view>

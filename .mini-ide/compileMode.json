@@ -35,6 +35,10 @@
     {
       "title": "test_lp",
       "page": "pages/LitPage/LitPage"
+    },
+    {
+      "title": "test_hm",
+      "page": "pages/HomePage/HomePage"
     }
   ]
 }

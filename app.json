@@ -12,7 +12,8 @@
     "pages/VenueDetail/VenueDetail",
     "pages/UploadPage/UploadPage",
     "pages/LitPage/LitPage",
-    "pages/MusicTagPage/MusicTagPage"
+    "pages/MusicTagPage/MusicTagPage",
+    "pages/HomePage/HomePage"
   ],
   "window": {
     "transparentTitle": "always",
