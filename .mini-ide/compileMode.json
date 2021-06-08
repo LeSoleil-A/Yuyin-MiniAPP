@@ -39,6 +39,10 @@
     {
       "title": "test_hm",
       "page": "pages/HomePage/HomePage"
+    },
+    {
+      "title": "test_tag",
+      "page": "pages/MusicTagPage/MusicTagPage"
     }
   ]
 }

@@ -12,4 +12,15 @@
     </button>
 
   </view>
+
+  <modal
+		show="{{modalOpened}}"
+    showClose="{{false}}"
+    onButtonClick="onButtonClick"
+    buttons="{{buttons}}"
+	>
+		<view slot="header">注意</view>
+		放弃此次操作，你的编辑将会丢失。
+	</modal>
+
 </view>

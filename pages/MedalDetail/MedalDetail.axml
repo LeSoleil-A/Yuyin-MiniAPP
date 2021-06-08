@@ -1,0 +1,20 @@
+<!-- 勋章点击部分 -->
+<view class="wrapper">
+  <mask type="market" show="{{true}}" maskZindex="10"></mask>
+  <view class="picZone">
+    <view class="medalName">漫步杭城 · 西子湖畔</view>
+    <image class="medalImg" mode="scaleToFill" src="{{medalImgSrcTap}}"/>
+  </view>
+
+  <view class="medalCondition">{{medalConditionTap}} (5/5)</view>
+
+  <view class="venueZone">
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+  </view>
+
+  <button class="btn">
+    <view class="btnText" onTap="tapBtn">分享勋章</view>
+  </button>
+</view>

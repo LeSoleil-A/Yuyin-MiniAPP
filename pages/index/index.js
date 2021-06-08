@@ -10,7 +10,7 @@ Page({
   onReady() {
     this.animation = my.createAnimation({delay: 80, duration: 500});
     // 文字飞入效果
-    this.animation.translateY(217).step();
+    this.animation.translateX(250).step();
     this.setData({animation: this.animation.export()})
   },
   tapBtn() {

@@ -14,7 +14,7 @@
 
 6. 上传结束（点亮页面）：LitPage；
 
-7. 我的页面：MinePage；
+7. 我的页面：HomePage；
 
    
 

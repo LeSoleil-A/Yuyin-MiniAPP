@@ -39,6 +39,15 @@
               <view class="triangle"></view>
             </view>
           </picker>
+
+          <view class="videoZone">
+            <scroll-view scroll-y="{{true}}" class="videoArray">
+              <view class="videoItem" a:for="{{15}}">
+                <view class="videoPic"></view>
+                <view class="videoDate">2021.05.11</view>
+              </view>
+            </scroll-view>
+          </view>
         </view>
 
       </tab-content>
@@ -148,4 +157,7 @@
   <button class="btn">
     <view class="btnText" onTap="tapBtn">分享勋章</view>
   </button>
+
+  <image class="cross" mode="scaleToFill" src="cross.png" onTap="maskClick"/>
+  
 </view>

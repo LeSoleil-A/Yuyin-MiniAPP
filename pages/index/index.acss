@@ -12,7 +12,8 @@
   border-color: white; */
   height: 100px;
   width: 100vw;
-  margin-top: -110px;
+  margin-top: 110px;
+  margin-left: -250px;
   display: flex;
   flex-direction: column; 
   justify-content: space-between;

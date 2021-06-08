@@ -20,12 +20,12 @@ Page({
     activeTab: 0,
 
     // 视频部分
-    videoType: '全部视频',
+    videoType: '全部运动',
     videoTypeIndex: 0,
     videoTypeArray: [
       {
         id: 0,
-        name: '全部视频',
+        name: '全部运动',
       },{
         id: 1,
         name: '对抗运动',
