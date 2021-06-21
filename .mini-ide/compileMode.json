@@ -35,6 +35,11 @@
     {
       "title": "test_lp",
       "page": "pages/LitPage/LitPage"
+    },
+    {
+      "title": "MapPage",
+      "page": "pages/MapPage/MapPage",
+      "update": false
     }
   ]
 }
