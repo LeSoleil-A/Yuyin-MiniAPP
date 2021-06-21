@@ -37,9 +37,18 @@
       "page": "pages/LitPage/LitPage"
     },
     {
+<<<<<<< HEAD
       "title": "MapPage",
       "page": "pages/MapPage/MapPage",
       "update": false
+=======
+      "title": "test_hm",
+      "page": "pages/HomePage/HomePage"
+    },
+    {
+      "title": "test_tag",
+      "page": "pages/MusicTagPage/MusicTagPage"
+>>>>>>> master
     }
   ]
 }

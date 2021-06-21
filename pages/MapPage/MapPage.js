@@ -388,7 +388,7 @@ Page({
   jumpToMyPage () {
     console.log("navigate");
     my.navigateTo({
-      url: '../MinePage/MinePage'
+      url: '../HomePage/HomePage'
     });
   },
   museumButtonTapped (e) {

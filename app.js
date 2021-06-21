@@ -1,4 +1,5 @@
 App({
+  // 分区更新后
   globalData: {
      medalTotal: [{
       medalId: 1,
@@ -72,51 +73,41 @@ App({
       venueList: [1, 2, 3, 4]
     },{
       medalId: 15,
-      medalWallName: "皋亭山顶",
-      medalCondition: "点亮所有江干区运动场馆",
-      venueList: [6, 7]
-    },{
-      medalId: 16,
       medalWallName: "白马湖心",
       medalCondition: "点亮所有滨江区运动场馆",
       venueList: [8, 9]
     },{
-      medalId: 17,
-      medalWallName: "良渚古城",
-      medalCondition: "点亮所有余杭区运动场馆",
-      venueList: [11, 12]
-    },{
-      medalId: 18,
+      medalId: 16,
       medalWallName: "钱江潮涌",
       medalCondition: "点亮所有萧山区运动场馆",
       venueList: [13, 14, 15]
     },{
-      medalId: 19,
+      medalId: 17,
       medalWallName: "富春桃源",
       medalCondition: "点亮所有富阳区运动场馆",
       venueList: [16, 17]
     },{
-      medalId: 20,
+      medalId: 18,
       medalWallName: "杭州印象",
       medalCondition: "点亮所有杭州运动场馆",
       venueList: []
     },{
-      medalId: 21,
+      medalId: 19,
       medalWallName: "球球作战",
       medalCondition: "点亮所有球类运动场馆",
       venueList: [1, 2, 6, 10, 12]
     },{
-      medalId: 22,
+      medalId: 20,
       medalWallName: "激流勇将",
       medalCondition: "点亮所有水上运动场馆",
       venueList: [4, 9, 6]
     },{
-      medalId: 23,
+      medalId: 21,
       medalWallName: "制霸赛场",
       medalCondition: "点亮所有竞技性运动场馆",
       venueList: [3, 8, 13, 14, 17]
     },{
-      medalId: 24,
+      medalId: 22,
       medalWallName: "不服solo",
       medalCondition: "点亮所有对抗性运动场馆",
       venueList: [5, 7, 11, 15, 18]
