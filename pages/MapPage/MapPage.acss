@@ -90,14 +90,14 @@
     top: 23.8%;
     bottom: 0px;
     /* background-color: #5ed5d1; */
-    border-radius: 20px 20px 0 0;
+    /* border-radius: 20px 20px 0 0; */
 }
 
 .movable-area {
   height: 1410px;
   width: 2187px;
   /* background-color: #5ed5d1; */
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .museum_text {
@@ -157,7 +157,7 @@
 .background {
   height: 1410px;
   width: 2187px;
-  border-radius: 20px 20px 0 0;
+  /* border-radius: 20px 20px 0 0; */
 }
 
 .museumImg {

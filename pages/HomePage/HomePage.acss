@@ -22,7 +22,6 @@
   width: 70px;
   height: 70px;
   border-radius: 100%;
-  background-color: aqua;
 }
 .detailZone{
   width: 200px;
@@ -168,12 +167,12 @@
   border:1px solid #EAEAEA;
 }
 .medal{
-  height: 86px;
+  height: 21vw;
   width: 18vw;
 }
 .firstZone{
   width: 86vw;
-  height: 120px;
+  height: 30vw;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -181,7 +180,7 @@
   justify-content: space-between;
 }
 .medalFirst{
-  height: 90px;
+  height: 21vw;
   width: 86vw;
   display: flex;
   flex-direction: row;
@@ -193,7 +192,7 @@
 
 .secondZone{
   width: 86vw;
-  height: 210px;
+  height: 50vw;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -201,7 +200,7 @@
   justify-content: space-between;
 }
 .medalSecond{
-  height: 180px;
+  height: 41vw;
   width: 86vw;
   display: flex;
   flex-direction: row;

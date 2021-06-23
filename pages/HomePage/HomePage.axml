@@ -1,8 +1,8 @@
 <view a:if="{{!showMask}}" class="wrapper">
   <view class="titleZone">
-    <image class="user-image" mode="scaleToFill"/>
+    <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/>
     <view class="detailZone">
-      <text class="user-name">支付宝用户名</text>
+      <text class="user-name">{{nickName}}</text>
       <view class="numZone">
         <view class="firZone">
           <text class="number">12</text><text class="numText">作品</text>

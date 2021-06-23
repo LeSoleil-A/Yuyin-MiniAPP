@@ -1,0 +1,164 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.videoZone {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.mainZone {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 35vh;
+  background-color: black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-style: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.textZone {
+  width: 90vw;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title {
+  height: 28px;
+  width: 85px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26.06px;
+  letter-spacing: 1px;
+}
+.nextBtn {
+  height: 28px;
+  width: 70px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26.06px;
+  letter-spacing: 1px;
+}
+.tagZone {
+  height: 25vh;
+  width: 90vw;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.tagTypeFirst{
+  height: 17px;
+  width: 30px;
+  margin-top: 0.2vh;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.38px;
+}
+.tagType{
+  height: 17px;
+  width: 30px;
+  margin-top: 0.8vh;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.38px;
+}
+.tagItem {
+  height: 3vh;
+  width: 14vw;
+  margin: auto auto;
+}
+.tagChosen {
+  height: 3vh;
+  width: 14vw;
+  border-radius: 4px;
+  background: linear-gradient(273.58deg, #C800FF 0%, #ED078A 79.74%, #FF4D5B 100%), #FFFFFF;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 3vh;
+  margin: auto auto;
+}
+.tagUnchosen {
+  height: 3vh;
+  width: 14vw;
+  border-radius: 4px;
+  background: #FFFFFF;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 3vh;
+  margin: auto auto;
+}
+.blankItem{
+  height: 3vh;
+  width: 14vw;
+  border-radius: 4px;
+  margin: auto auto;
+}
+
+.tempoZone {
+  height: 3vh;
+  width: 90vw;
+  margin: auto auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tempoTags {
+  height: 3vh;
+  width: 78vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.motionZone {
+  height: 8vh;
+  width: 90vw;
+  margin: auto auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.motionTags{
+  height: 8vh;
+  width: 78vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sceneZone {
+  height: 8vh;
+  width: 90vw;
+  margin: auto auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sceneTags{
+  height: 8vh;
+  width: 78vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+

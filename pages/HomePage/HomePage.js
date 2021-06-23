@@ -8,6 +8,10 @@ var medalModel = new MedalModel()
 
 Page({
   data: {
+    // 用户信息
+    nickName: "支付宝用户名",
+    userImageSrc: "",
+
     // 横向选项卡部分
     tabs: [
       {

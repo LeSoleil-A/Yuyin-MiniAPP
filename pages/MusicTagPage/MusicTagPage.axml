@@ -1,3 +1,54 @@
-<view >
-  New Page
+<view class="wrapper">
+  <video class="videoZone"
+    src="XNDM0OTQzMDc2OA=="
+    controls="{{false}}"
+    autoplay="{{true}}"
+    loop="{{true}}"
+    show-fullscreen-btn="{{false}}"
+    show-play-btn="{{false}}"
+    show-center-play-btn="{{false}}"
+    show-mute-btn="{{false}}"
+    show-thin-progress-btn="{{false}}"
+  />
+  
+
+  <view class="mainZone">
+    <view class="textZone">
+      <view class="title">配乐选择</view>
+      <view class="nextBtn" onTap="nextStep">下一步</view>
+    </view>
+
+    <view class="tagZone">
+      <view class="tempoZone">
+        <view class="tagTypeFirst">节奏</view>
+        <view class="tempoTags">
+          <view class="tagItem" a:for="{{tempoTypes}}" key="{{item.id}}">
+            <view a:if="{{item.id == tempoId}}" class="tagChosen">{{item.name}}</view>
+            <view a:else class="tagUnchosen" onTap="changeTempoId" data-value="{{item.id}}">{{item.name}}</view>
+          </view>
+          <view class="blankItem"></view>
+          <view class="blankItem"></view>
+        </view>
+      </view>
+      <view class="motionZone">
+        <view class="tagType">情感</view>
+        <view class="motionTags">
+          <view class="tagItem" a:for="{{motionTypes}}" key="{{item.id}}">
+            <view a:if="{{item.id == motionId}}" class="tagChosen">{{item.name}}</view>
+            <view a:else class="tagUnchosen" onTap="changeMotionId" data-value="{{item.id}}">{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="sceneZone">
+        <view class="tagType">场景</view>
+        <view class="sceneTags">
+          <view class="tagItem" a:for="{{sceneTypes}}" key="{{item.id}}">
+            <view a:if="{{item.id == sceneId}}" class="tagChosen">{{item.name}}</view>
+            <view a:else class="tagUnchosen" onTap="changeSceneId" data-value="{{item.id}}">{{item.name}}</view>
+          </view>
+          <view class="blankItem"></view>
+        </view>
+      </view> 
+    </view>
+  </view>
 </view>

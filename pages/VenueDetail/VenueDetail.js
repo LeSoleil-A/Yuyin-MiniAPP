@@ -1,24 +1,19 @@
+// import invokeMediaEditor from '@alipay/creator'
+
 Page({
   data: {},
   onLoad() {},
 
-  tapBtn() {
+  async tapBtn() {
     my.navigateTo({
       url: '/pages/UploadPage/UploadPage'
     });
 
-    // my.navigateToMiniProgram({
-    //   appId: 'xxxx',
-    //   path: 'pages/index/index',
-    //   extraData:{
-    //     "data1":"test"
-    //   },
-    //   success: (res) => {
-    //     console.log(JSON.stringify(res))
-    //   },
-    //   fail: (res) => {
-    //     console.log(JSON.stringify(res))
+    // const response = await invokeMediaEditor({
+    //   bizId: 'sceneCode',
+    //   params: {
+    //     skipEdit: true,
     //   }
-    // });
+    // })
   }
 });

@@ -8,7 +8,7 @@ Page({
   },
   onReady() {
     if (my.canIUse('hideBackHome')) {
-      my.hideHomeButton()
+      my.hideBackHome()
     }
   },
   // onUnload() {
