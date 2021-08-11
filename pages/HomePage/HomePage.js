@@ -11,6 +11,8 @@ Page({
     // 用户信息
     nickName: "支付宝用户名",
     userImageSrc: "",
+    videoNum: 0,
+    medalNum: 0,
 
     // 横向选项卡部分
     tabs: [
@@ -61,68 +63,6 @@ Page({
     medalLitVenueTap: [],
     venueLitTap: [],
     venueNotLitTap: [],
-
-    arrayTestOne: [
-      {
-        medalId: 8,
-        medalIsLit: true,
-        medalLitVenue: []
-      },{
-        medalId: 1,
-        medalIsLit: true,
-        medalLitVenue: []
-      },{
-        medalId: 5,
-        medalIsLit: true,
-        medalLitVenue: []
-      },
-    ],
-    arrayTestTwo: [
-      {
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 13,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      }
-    ],
-    arrayTestThird: [
-      {
-        medalId: 19,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 19,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 19,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      },{
-        medalId: 19,
-        medalIsLit: true,
-        medalLitVenue: [1]
-      }
-    ],
   },
 
   onLoad() {},
@@ -151,6 +91,18 @@ Page({
     
     // 获取勋章的点亮信息
     const listMedal = await userModel.getLitMedal()
+    console.log("medal: ", listMedal)
+
+    // 计算获得的勋章总数
+    const tempGet= []
+    listMedal.forEach((item) => {
+      if (item.isLit==true){
+        tempGet.push(item) 
+      }
+    });
+    this.setData({
+      medalNum: tempGet.length
+    })
 
     // 获取各个列表
     let tempFirst = []
@@ -342,5 +294,11 @@ Page({
       showMask: false
     })
   },
+
+  tapTest() {
+    my.navigateTo({
+      url: '/pages/MapPage/MapPage'
+    })
+  }
 
 });

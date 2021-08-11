@@ -8,7 +8,7 @@
           <text class="number">12</text><text class="numText">作品</text>
         </view>
         <view class="secZone">
-          <text class="number">8</text><text class="numText">勋章</text>
+          <text class="number">{{medalNum}}</text><text class="numText">勋章</text>
         </view>
       </view>
     </view>
@@ -43,7 +43,16 @@
           <view class="videoZone">
             <scroll-view scroll-y="{{true}}" class="videoArray">
               <view class="videoItem" a:for="{{15}}">
-                <view class="videoPic"></view>
+                <video class="videoPic" 
+                  src="XNTE3NTE5Mzc3Mg=="
+                  autoplay="{{false}}"
+                  show-fullscreen-btn="{{false}}"
+                  controls="{{false}}"
+                  show-play-btn="{{false}}"
+                  show-center-play-btn="{{false}}"
+                  show-mute-btn="{{false}}"
+                  show-thin-progress-btn="{{false}}"
+                  object-fit="fill"></video>
                 <view class="videoDate">2021.05.11</view>
               </view>
             </scroll-view>
@@ -62,7 +71,7 @@
           <view class="firstZone">
             <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">日积月累</view>
             <view class="medalFirst">
-              <view class="medal" a:for="{{arrayTestOne}}">
+              <view class="medal" a:for="{{arrayFirst}}">
                 <wall-medal 
                   medalId="{{item.medalId}}" 
                   medalIsLit="{{item.medalIsLit}}"
@@ -79,7 +88,7 @@
           <view class="secondZone">
             <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">漫步杭城</view>
             <view class="medalSecond">
-              <view class="medal" a:for="{{arrayTestTwo}}">
+              <view class="medal" a:for="{{arraySecond}}">
                 <wall-medal 
                   medalId="{{item.medalId}}" 
                   medalIsLit="{{item.medalIsLit}}"
@@ -97,7 +106,7 @@
           <view class="firstZone">
             <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">全能选手</view>
             <view class="medalFirst">
-              <view class="medal" a:for="{{arrayTestThird}}">
+              <view class="medal" a:for="{{arrayThird}}">
                 <wall-medal 
                   medalId="{{item.medalId}}" 
                   medalIsLit="{{item.medalIsLit}}"
@@ -142,16 +151,28 @@
 <view a:elif="{{showMask}}" class="wrapper">
   <mask type="market" show="{{showMask}}" maskZindex="10" onMaskTap="maskClick"></mask>
   <view class="picZone">
-    <view class="medalName">漫步杭城 · 西子湖畔</view>
+    <view class="medalName">{{medalNameTap}}</view>
     <image class="medalImg" mode="scaleToFill" src="{{medalImgSrcTap}}"/>
   </view>
 
-  <view class="medalCondition">{{medalConditionTap}} (5/5)</view>
+  <view class="medalCondition">{{medalConditionTap}}</view>
 
   <view class="venueZone">
-    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
-    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
-    <image class="venueTest" mode="aspectFit" src="zjdxzjgxqtyg.png"/>
+    <!-- <image class="venueTest" mode="aspectFit" src="../../image/zjdxzjgxqtyg.png" onTap="tapTest"/>
+    <image class="venueTest" mode="aspectFit" src="../../image/zjshltyzxtyg.png"/>
+    <image class="venueTest" mode="aspectFit" src="../../image/zjshltyzxyytsg.png"/> -->
+    <view class="venueView" a:for="{{venueLitTap}}">
+        <venueimg 
+          class="venueItem" 
+          srcImg="{{item.venue_punch_color_image}}" 
+          venueId="{{item.venue_id}}"/>
+      </view>
+      <view class="venueView" a:for="{{venueNotLitTap}}">
+        <venueimg 
+          class="venueItem" 
+          srcImg="{{item.venue_punch_gray_image}}" 
+          venueId="{{item.venue_id}}"/>
+      </view>
   </view>
 
   <button class="btn">

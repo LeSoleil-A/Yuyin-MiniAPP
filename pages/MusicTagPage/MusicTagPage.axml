@@ -1,6 +1,6 @@
 <view class="wrapper">
   <video class="videoZone"
-    src="XNDM0OTQzMDc2OA=="
+    src="XNTE3NTE5Mzc3Mg=="
     controls="{{false}}"
     autoplay="{{true}}"
     loop="{{true}}"

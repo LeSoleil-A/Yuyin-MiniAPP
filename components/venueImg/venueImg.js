@@ -12,7 +12,7 @@ Component({
     tapImg(){
       console.log('venueImg: ', this.props.venueId)
       my.reLaunch({
-        url: '../../pages/index/index?venueId='+this.props.venueId
+        url: '../../pages/MapPage/MapPage?type=vunueImg&venueId='+this.props.venueId
       });
     }
   },

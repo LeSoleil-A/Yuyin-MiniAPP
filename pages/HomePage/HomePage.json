@@ -6,6 +6,7 @@
     "wall-medal":"/components/wall-medal/wall-medal",
     "modal": "mini-ali-ui/es/modal/index",
     "my-medal": "/components/my-medal/my-medal",
-    "mask": "mini-ali-ui/es/mask/index"
+    "mask": "mini-ali-ui/es/mask/index",
+    "venueimg": "/components/venueImg/venueImg"
   }
 }

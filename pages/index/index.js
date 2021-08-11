@@ -1,3 +1,7 @@
+var app = getApp()
+import { UserModel } from '/models/usermodel'
+var userModel = new UserModel()
+
 Page({
   data: {
     props: {
@@ -5,14 +9,36 @@ Page({
       nickName: "",
       userImageSrc: ""
     },
+
+    // 后端传入数据
+    userNumber: 0,
   },
   onLoad() {},
+  onShow(query) {
+    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+    this.getToken()
+    // Every time for debug
+    // my.clearStorageSync();
+  },
+
   onReady() {
     this.animation = my.createAnimation({delay: 80, duration: 500});
     // 文字飞入效果
     this.animation.translateX(250).step();
     this.setData({animation: this.animation.export()})
   },
+
+  getToken() {
+    my.getAuthCode({
+      scopes: 'auth_user',
+      success: async (res) => {
+        let result = await userModel.getToken(res.authCode)
+        my.setStorageSync({ key:'auth_code', data: res.authCode })
+        my.setStorageSync({key:'token',data:result.token})
+      },
+    })
+  },
+
   tapBtn() {
       my.getOpenUserInfo({
         fail: (res) => {
@@ -33,7 +59,7 @@ Page({
               canIUse: true
             })
             my.navigateTo({
-              url: '/pages/MapPage/MapPage'
+              url: '/pages/MapPage/MapPage?type=index'
             });
           }
         },

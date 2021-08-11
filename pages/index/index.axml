@@ -3,7 +3,7 @@
     <view class="YuyinText">创作亚运短视频</view>
     <view class="YuyinText">用运动点亮亚运场馆</view>
     <view class="numLine">
-      <text class="numText">已有</text><text class="number">221325</text><text class="numText">人成为运动之星</text>
+      <text class="numText">已有</text><text class="number">{{userNumber}}</text><text class="numText">人成为运动之星</text>
     </view>
   </view>
 

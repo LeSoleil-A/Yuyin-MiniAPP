@@ -9,7 +9,16 @@
         <view class="txtMin">的运动之星</view>
       </view>
 
-      <image class="videoImg"/>
+      <video class="videoImg"
+        src="XNTE3NTE5Mzc3Mg=="
+        controls="{{false}}"
+        autoplay="{{false}}"
+        show-fullscreen-btn="{{false}}"
+        show-play-btn="{{false}}"
+        show-center-play-btn="{{false}}"
+        show-mute-btn="{{false}}"
+        show-thin-progress-btn="{{false}}"
+      />
     </view>
 
     <view class="btnZone">

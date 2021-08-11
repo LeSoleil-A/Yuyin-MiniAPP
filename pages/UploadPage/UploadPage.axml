@@ -1,11 +1,11 @@
 <view class="wrapper">
   <view class="videoCard">
     <view class="titleZone">
-      <image class="user-image" mode="scaleToFill"/>
-      <view class="userName">支付宝用户名</view>
+      <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/>
+      <view class="userName">{{nickName}}</view>
     </view>
 
-    <video class="video" src="XNDM0OTQzMDc2OA=="></video>
+    <video class="video" src="XNTE3NTE5Mzc3Mg=="></video>
     
     <button class="btn">
       <view class="btnText" onTap="tapBtn">一键发布</view>

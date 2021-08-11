@@ -20,7 +20,7 @@
   justify-content: space-around;
 }
 .titleZone{
-  width: 150px;
+  width: 200px;
   height: 58px;
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +29,7 @@
   justify-content: space-between;
 }
 .sportTitle {
-  width: 96px;
+  width: 156px;
   height: 35px;
   margin-left: auto;
   margin-right: auto;
@@ -40,7 +40,7 @@
   color: #ED078A;
 }
 .venueName {
-  width: 120px;
+  width: 180px;
   height: 17px;
   margin-left: auto;
   margin-right: auto;

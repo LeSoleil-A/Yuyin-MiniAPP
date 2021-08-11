@@ -1,13 +1,13 @@
 <view class="wrapper">
   <view class="venueCard">
     <view class="titleZone">
-      <view class="sportTitle">创意射门</view>
-      <view class="venueName">江干区体育中心体育场</view>
+      <view class="sportTitle">{{challengeName}}</view>
+      <view class="venueName">{{venueName}}</view>
     </view>
 
     <view class="videoZone">
-      <video class="video" src="XNDM0OTQzMDc2OA=="></video>
-      <view class="videoDetail">用任何工具模仿做出足球射门动作，看看谁的脑洞更有创意。</view>
+      <video class="video" src="XNTE3NTI0MDg5Ng=="></video>
+      <view class="videoDetail">{{challengeInfo}}</view>
     </view>
 
     <button class="btn">

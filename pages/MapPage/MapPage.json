@@ -4,5 +4,6 @@
     "modal": "mini-ali-ui/es/modal/index",
     "my-card":"/components/my-card/my-card",
     "getmedal":"/components/getMedal/getMedal"
-  }
+  },
+  "allowsBounceVertical": "NO"
 }

@@ -107,5 +107,8 @@ Page({
     console.log("tempoId: ", this.data.tempoId);
     console.log("motionId: ", this.data.motionId);
     console.log("sceneId: ", this.data.sceneId);
+    my.navigateTo({
+      url: '/pages/UploadPage/UploadPage'
+    });
   }
 });

@@ -16,8 +16,11 @@ Component({
     medalIsLit: "",
     medalLitVenue: []
   },
+  
   async didMount(){
     const res = await medalModel.getMedalDetail(this.props.medalId)
+    // console.log("medalId: ", this.props.medalId)
+    // console.log("medalDetail: ", res)
     this.setData({
       medalDetail: res,
       medalName: res.medal_name,
@@ -34,6 +37,7 @@ Component({
       });
     }
   },
+
   didUnmount() {},
   methods: {
     toTapMedal(e){

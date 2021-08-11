@@ -140,7 +140,6 @@
   border-radius: 8px;
   height: 50vw;
   width: 38vw; 
-  background-color: aqua;
 }
 .videoDate{
   margin-top: 6px;
@@ -268,7 +267,7 @@
   flex-direction: row;
   justify-content: center;
 }
-.venueTest{
+.venueView{
   flex: 1;
   height: 45px;
 }

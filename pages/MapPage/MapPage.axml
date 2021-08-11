@@ -93,52 +93,46 @@
       </view>
       <text class="slogan_poeple_number_text" style="left: {{(white_board_number) * (3 + white_board_width) + 45}}px;">人成为运动之星</text>
     </view>
+
     <view class="map_content">
-      <movable-area class="movable-area">
+      <movable-area class="movable-area" out-of-bounds="{{false}}">
       <image class="background" mode="widthFix" src="/image/background.png"/>
         <view a:for="{{museums}}" a:key="*this">
-          <movable-view class='movable-view' x="{{item.x}}" y="{{item.y}}" style="align-items:center;justify-content:center;align-content: center;text-align: center;">
-              <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id}}" style="display:{{item.isLit?'none':'block'}};">
+          <movable-view class='movable-view' x="{{item.x}}" y="{{item.y}}" out-of-bounds="{{false}}" style="align-items:center;justify-content:center;align-content: center;text-align: center;">
+              <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" x="{{item.x}}" style="display:{{LitVenue[item.id-1].isLit?'none':'block'}};">
                 <image mode="aspectFit" src="/image/{{item.img}}_gray.png" class="museumImg"/>
               </button>
-              <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id}}" style="display:{{item.isLit?'block':'none'}};">
+              <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" style="display:{{LitVenue[item.id-1].isLit?'block':'none'}};">
                 <image mode="aspectFit" src="/image/{{item.img}}.png" class="museumImg"/>
               </button>
-              <text class="museum_text" style="color: {{item.isLit? '#6423FF':'gray'}};">{{item.name}}</text>
-              <button class="museumDot" hover-class="none" onTap="museumButtonTapped" id="{{item.id}}" style="display:{{item.isLit?'block':'none'}};">
+              <text class="museum_text" style="color: {{LitVenue[item.id-1].isLit? '#6423FF':'gray'}};">{{item.name}}</text>
+              <button class="museumDot" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" style="display:{{item.id-1==chosenIndex?'block':'none'}};">
                 <image mode="aspectFit" src="/image/dot.png" class="dotImg"/>
               </button>
-              <button class="museumDot" hover-class="none" onTap="museumButtonTapped" id="{{item.id}}" style="display:{{item.isLit?'none':'block'}};">
+              <button class="museumDot" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" style="display:{{item.id-1==chosenIndex?'none':'block'}};">
                 <image mode="aspectFit" src="/image/dot_gray.png" class="dotImg"/>
               </button>
           </movable-view>
         </view>
-        <movable-view class='movable-view'>
-          <image class="background" mode="widthFix" src="/image/water_route.png" style="pointer-events:none;display:{{water_visible?'block':'none'}};margin-top:100px;"/>
-        </movable-view>
-        <movable-view class='movable-view'>
-          <image class="background" mode="widthFix" src="/image/ball_route.png" style="pointer-events:none;display:{{ball_visible?'block':'none'}};margin-top:100px;"/>
-        </movable-view>
-        <movable-view class='movable-view'>
-          <image class="background" mode="widthFix" src="/image/com_route.png" style="pointer-events:none;display:{{com_visible?'block':'none'}};margin-top:100px;"/>
-        </movable-view>
-        <movable-view class='movable-view'>
-          <image class="background" mode="widthFix" src="/image/rivalry_route.png" style="pointer-events:none;display:{{rivalry_visible?'block':'none'}};margin-top:100px;"/>
-        </movable-view>
+  
         <movable-view style="display:{{first_click?'none':'block'}};" x="{{have_a_try_x}}" y="{{have_a_try_y}}">
           <view class="have-a-try" style="top:{{bubble_x}};left:{{bubble_y}};">
-            <image class="bubble" mode="scaleToFill" src="/image/bubble.png"/>
-            <text class="have-a-try-text">发现挑战：创意射门</text>
-            <image class="symbol" mode="widthFix" src="/image/symbol.png"/>
+            <view class="bubble">
+              <image class="sportImg" mode="scaleToFill"/>
+              <text class="have-a-try-text">发现挑战：{{challengeName}}</text>
+            </view>
+            <view class="symbol" animation="{{animation}}">
+              <image class="symbol" mode="widthFix" src="/image/symbol.png"/>
+            </view>
           </view>
         </movable-view>
       </movable-area>
       
-      <view id="1" class="shot-button" onTap="routeTapped">
+      <view id="1" class="shot-button" onTap="jumpToVenue">
         记录运动瞬间
       </view>
 
-      <view id="1" class="shot-button" onTap="routeTapped" style="width: 50px;left: 81%;box-shadow: 0px 0px 8px rgba(65, 0, 105, 0.2);font-size: 12px;">
+      <view id="1" class="shot-button" onTap="jumpToMyPage" style="width: 54px; height:54px; left: 81%;box-shadow: 0px 0px 8px rgba(65, 0, 105, 0.2);font-size: 13px;">
         主页
       </view>
 

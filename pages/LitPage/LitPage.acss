@@ -79,7 +79,6 @@
 .videoImg{
   width: 40vw;
   height: 33vh;
-  background-color: aqua;
   margin-left: auto;
   margin-right: auto; 
 }
