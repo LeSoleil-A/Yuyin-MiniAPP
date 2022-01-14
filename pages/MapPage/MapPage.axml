@@ -96,14 +96,14 @@
 
     <view class="map_content">
       <movable-area class="movable-area" out-of-bounds="{{false}}">
-      <image class="background" mode="widthFix" src="/image/background.png"/>
+      <image class="background" mode="widthFix" src="http://www.next.zju.edu.cn/share/yuyin/background.png"/>
         <view a:for="{{museums}}" a:key="*this">
           <movable-view class='movable-view' x="{{item.x}}" y="{{item.y}}" out-of-bounds="{{false}}" style="align-items:center;justify-content:center;align-content: center;text-align: center;">
               <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" x="{{item.x}}" style="display:{{LitVenue[item.id-1].isLit?'none':'block'}};">
-                <image mode="aspectFit" src="/image/{{item.img}}_gray.png" class="museumImg"/>
+                <image mode="aspectFit" src="{{item.img}}_gray.png" class="museumImg"/>
               </button>
               <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" style="display:{{LitVenue[item.id-1].isLit?'block':'none'}};">
-                <image mode="aspectFit" src="/image/{{item.img}}.png" class="museumImg"/>
+                <image mode="aspectFit" src="{{item.img}}.png" class="museumImg"/>
               </button>
               <text class="museum_text" style="color: {{LitVenue[item.id-1].isLit? '#6423FF':'gray'}};">{{item.name}}</text>
               <button class="museumDot" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" style="display:{{item.id-1==chosenIndex?'block':'none'}};">
@@ -118,7 +118,7 @@
         <movable-view style="display:{{first_click?'none':'block'}};" x="{{have_a_try_x}}" y="{{have_a_try_y}}">
           <view class="have-a-try" style="top:{{bubble_x}};left:{{bubble_y}};">
             <view class="bubble">
-              <image class="sportImg" mode="scaleToFill"/>
+              <image class="sportImg" mode="heightFix" src="{{challengeImg}}"/>
               <text class="have-a-try-text">发现挑战：{{challengeName}}</text>
             </view>
             <view class="symbol" animation="{{animation}}">

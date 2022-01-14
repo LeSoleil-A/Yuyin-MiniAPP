@@ -23,6 +23,7 @@ Page({
     // 选择的场馆ID
     chosenIndex: 17,
     challengeName: "天地太极",
+    challengeImg: "http://www.next.zju.edu.cn/share/yuyin/teakwondo.png",
 
     first_click: false,
     bubble_x: '100px',
@@ -214,6 +215,7 @@ Page({
     });
   },
 
+  // 处理亚运场馆的点击事件
   museumButtonTapped (e) {
     console.log("Tap museum: ", this.data.museums[e.currentTarget.id])
 
@@ -221,10 +223,12 @@ Page({
     const tapX = this.data.museums[e.currentTarget.id].x
     const tapY = this.data.museums[e.currentTarget.id].y
     const tapChallenge = this.data.museums[e.currentTarget.id].templete_name
+    const tapImage = this.data.museums[e.currentTarget.id].templete_img
 
     this.setData({
       chosenIndex: tapIndex,
       challengeName: tapChallenge,
+      challengeImg: tapImage,
       have_a_try_x: tapX-30,
       have_a_try_y: tapY-110,
     })

@@ -334,10 +334,10 @@
 }
 
 .sportImg {
-  border-style: solid;
-  border-color: black;
+  /* border-style: solid;
+  border-color: black; */
   height: 60px;
-  width: 60px;
+  /* width: 60px; */
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto; 

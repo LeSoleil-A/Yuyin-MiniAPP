@@ -6,7 +6,8 @@
     </view>
 
     <view class="videoZone">
-      <video class="video" src="XNTE3NTI0MDg5Ng=="></video>
+      <video class="video" src="{{challengeVideo}}"></video>
+      <!-- <video class="video" src="XNTgzMTY5NTAyMA=="></video> -->
       <view class="videoDetail">{{challengeInfo}}</view>
     </view>
 
