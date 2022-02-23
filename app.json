@@ -18,5 +18,12 @@
   "window": {
     "transparentTitle": "always",
     "disableScroll": true
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "*", 
+      "provider": "2021002158617757"
+    }
   }
+
 }

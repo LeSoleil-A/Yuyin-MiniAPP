@@ -1,8 +1,18 @@
+var app = getApp();
+const plugin = requirePlugin('myPlugin');
+
 Page({
   data: {
+    venueId: "",
+
     tempoId: "1",
     motionId: "1",
     sceneId: "1",
+
+    getRes: false,
+    mediaResponse: null,
+    chosenVideoPath: "",
+    bizIdChosen: "",
 
     tempoTypes: [
       {
@@ -82,7 +92,35 @@ Page({
       },
     ],
   },
-  onLoad() {},
+
+  onLoad(options) {
+    console.log("venueId: ", options.venueId);
+    console.log("venueName: ",app.globalData.museums[options.venueId-1].name);
+    this.setData({
+      venueId: options.venueId,
+      bizIdChosen: app.globalData.museums[options.venueId-1].bizId
+    })
+    console.log("bizId: ", this.data.bizIdChosen);
+  },
+
+  async onReady() {
+    const response = await plugin.invokeMediaEditor({
+      bizId: this.data.bizIdChosen,
+      showLoading: true,
+      scrType: 'camera' | 'album',
+      params: {
+        skipEdit: true,
+      },
+    });
+    console.log("response:");
+    console.log(response);
+    console.log(response.data.medias[0].videoPath);
+    this.setData({
+      getRes: true,
+      mediaResponse: response,
+      chosenVideoPath: response.data.medias[0].videoPath,
+    });
+  },
 
   changeTempoId(e) {
     const { value } = e.target.dataset;
@@ -107,8 +145,9 @@ Page({
     console.log("tempoId: ", this.data.tempoId);
     console.log("motionId: ", this.data.motionId);
     console.log("sceneId: ", this.data.sceneId);
+    const passRes = JSON.stringify(this.data.mediaResponse);
     my.navigateTo({
-      url: '/pages/UploadPage/UploadPage'
+      url: '/pages/UploadPage/UploadPage?venueId=' + this.data.venueId + '&passRes=' + passRes
     });
   }
 });

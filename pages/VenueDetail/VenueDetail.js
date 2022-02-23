@@ -1,5 +1,4 @@
 var app = getApp()
-// import invokeMediaEditor from '@alipay/creator'
 
 Page({
   data: {
@@ -24,7 +23,7 @@ Page({
 
   async tapBtn() {
     my.navigateTo({
-      url: '/pages/MusicTagPage/MusicTagPage'
+      url: '/pages/MusicTagPage/MusicTagPage?venueId=' + this.data.venueId
     });
 
     // const response = await invokeMediaEditor({

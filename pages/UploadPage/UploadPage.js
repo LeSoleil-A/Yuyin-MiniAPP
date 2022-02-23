@@ -1,9 +1,20 @@
+var app = getApp();
+const plugin = requirePlugin('myPlugin');
+
 Page({
   data: {
+    venueId: "",
+
     // 用户信息
     nickName: "支付宝用户名",
     userImageSrc: "",
     canIUse: "",
+    videoEditedPath: "",
+
+    response: null,
+
+    getEdited: false,
+    editedResponse: null,
 
     modalOpened: false,
     buttons: [
@@ -11,6 +22,15 @@ Page({
       { text: '确定', extClass: 'buttonBold' },
     ],
   },
+
+  onLoad(options) {
+    const getRes = JSON.parse(options.passRes);
+    this.setData({
+      response: getRes,
+      venueId: options.venueId,
+    });
+  },
+
   async onShow(){
     // 获取用户信息，之后要改为直接从前面获取
     my.getOpenUserInfo({
@@ -33,27 +53,32 @@ Page({
         },
     });
   },
-  onReady() {
+
+
+  async onReady() {
     if (my.canIUse('hideBackHome')) {
       my.hideBackHome()
-    }
+    };
+
+    const editedResult = await plugin.openEditPage({
+      bizId: app.globalData.museums[this.data.venueId-1].bizId,
+      showLoading: true,
+      params: {
+        mediaData: this.data.response.data.medias[0],
+        middleEditResult: this.data.response.data.middleEditResult,
+        enableEditor: true,
+      },
+    });
+
+    console.log("editedResult:");
+    console.log(editedResult);
+    this.setData({
+      editedResponse: editedResult,
+      videoEditedPath: editedResult.data.medias[0].videoPath,
+      getEdited: true
+    })
   },
-  // onUnload() {
-  //   // this.setData({
-  //   //   modalOpened: true,
-  //   // })
-  //   my.confirm({
-  //     title: '温馨提示',
-  //     content: '您是否想查询快递单号：\n1234567890',
-  //     confirmButtonText: '马上查询',
-  //     cancelButtonText: '暂不需要',
-  //     success: (result) => {
-  //       my.alert({
-  //         title: `${result.confirm}`,
-  //       });
-  //     },
-  //   });
-  // },
+  
   onButtonClick(e) {
     const { target: { dataset } } = e;
     this.setData({
@@ -64,9 +89,12 @@ Page({
       buttonText: '关闭',
     });
   },
+
+
   tapBtn() {
+    const passRes = JSON.stringify(this.data.editedResponse);
     my.navigateTo({
-      url: '/pages/LitPage/LitPage'
+      url: '/pages/LitPage/LitPage?resultVideo=' + passRes + '&venueId=' + this.data.venueId
     });
   }
 });

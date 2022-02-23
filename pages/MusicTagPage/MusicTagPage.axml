@@ -1,6 +1,10 @@
-<view class="wrapper">
+<view class="wrapper" a:if="{{getRes==false}}">
+  
+</view>
+
+<view class="wrapper" a:else>
   <video class="videoZone"
-    src="XNTE3NTE5Mzc3Mg=="
+    src="{{chosenVideoPath}}"
     controls="{{false}}"
     autoplay="{{true}}"
     loop="{{true}}"

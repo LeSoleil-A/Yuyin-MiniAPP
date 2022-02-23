@@ -1,11 +1,15 @@
-<view class="wrapper">
+<view class="wrapper" a:if="{{getEdited==false}}">
+  
+</view>
+
+<view class="wrapper" a:else>
   <view class="videoCard">
     <view class="titleZone">
       <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/>
       <view class="userName">{{nickName}}</view>
     </view>
 
-    <video class="video" src="XNTE3NTE5Mzc3Mg=="></video>
+    <video class="video" src="{{videoEditedPath}}"></video>
     
     <button class="btn">
       <view class="btnText" onTap="tapBtn">一键发布</view>
@@ -19,7 +23,8 @@
     onButtonClick="onButtonClick"
     buttons="{{buttons}}"
 	>
-		<view slot="header">注意</view>
+  
+  <view slot="header">注意</view>
 		放弃此次操作，你的编辑将会丢失。
 	</modal>
 

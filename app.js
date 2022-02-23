@@ -1,3 +1,7 @@
+// if (!my.canIUse('plugin.dynamic')) {
+//   my.ap && my.ap.updateAlipayClient && my.ap.updateAlipayClient();
+// }
+
 App({
   // 分区更新后
   globalData: {
@@ -128,6 +132,7 @@ App({
         "templete_intro":"水瓶、衣服……只有想不到没有做不到，比一比谁的投篮更有创意吧。只要动作帅，“万物皆可投”！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/zjdxzjgxqtyg",
+        "bizId":"S20210608145543704",
       },
       {
         "id":"2",
@@ -143,6 +148,7 @@ App({
         "templete_intro":"在地上围个圈，用任意工具模仿高尔夫击球动作，尽力让球停在圈内吧！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/xhgjgefqc",
+        "bizId":"S20210608145707778"
       },
       {
         "id":"3",
@@ -158,6 +164,7 @@ App({
         "templete_intro":"使用丝带、床单、卷纸等任意道具，一起跳舞吧！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/zjshltyzxtyg",
+        "bizId":"S20210608145906339"
       },
       {
         "id":"4",
@@ -173,6 +180,7 @@ App({
         "templete_intro":"和搭档尝试陆上“不落水传球（干传）”动作，看看能够坚持多少趟对传。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/zjshltyzxyytsg",
+        "bizId":"S20210608150031250"
       },
       {
         "id":"5",
@@ -188,6 +196,7 @@ App({
         "templete_intro":"展示你出其不意的拳击招数，成为一拳超人！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/hzstyg",
+        "bizId":"S20210608150135853"
       },
       {
         "id":"6",
@@ -203,6 +212,7 @@ App({
         "templete_intro":"用任何工具模仿做出足球射门动作，看看谁的脑洞更有创意。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/jgqtyzxtyc",
+        "bizId":"S20210608150202471"
       },
       {
         "id":"7",
@@ -218,6 +228,7 @@ App({
         "templete_intro":"伞、棍子等任意工具都可以是你的剑。心中无杂念，拔剑自然神！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/hzdzkjdxtyg",
+        "bizId":"S20210608150600685"
       },
       {
         "id":"8",
@@ -233,6 +244,7 @@ App({
         "templete_intro":"最好的风景，在路上。记录下你慢跑时的沿途风景吧！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/hzatblcztyc",
+        "bizId":"S20210608150629826"
       },
       {
         "id":"9",
@@ -248,6 +260,7 @@ App({
         "templete_intro":"在床上或者垫子上模仿练习各种泳姿，动作一定要标准哦。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/hzatzxyyg",
+        "bizId":"S20210608150654317"
       },
       {
         "id":"10",
@@ -263,6 +276,7 @@ App({
         "templete_intro":"真正的“球神”不受限制，即使没有球拍，书本、锅铲、水瓶也能让你一展风采。尝试用日常工具打球吧！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/gsqyhyygytyg",
+        "bizId":"S20210608150737631"
       },
       {
         "id":"11",
@@ -278,6 +292,7 @@ App({
         "templete_intro":"尝试空手道手刀动作。不管是瓦片木片还是纸片，都能一手劈开！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/yhqtyzxtyg",
+        "bizId":"S20210608150804848"
       },
       {
         "id":"12",
@@ -293,6 +308,7 @@ App({
         "templete_intro":"最“默契”的搭档在哪里？两个人一起拿上球练习对传吧！没有球或许也可以尝试凭空比动作哦。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/hzsfdxcqxqtyg",
+        "bizId":"S20210608151846778"
       },
       {
         "id":"13",
@@ -308,6 +324,7 @@ App({
         "templete_intro":"用举重的姿势举起一件身边随处可见的“重物”吧。物品越小，反差越大，效果越精彩哦。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/xsqtyzxtyg",
+        "bizId":"S20210608151929067"
       },
       {
         "id":"14",
@@ -323,6 +340,7 @@ App({
         "templete_intro":"长拳、南拳和太极，无论是哪一种拳派，动作潇洒，就是“拳皇”！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/xsqglwtzxtyg",
+        "bizId":"S20210608153024647"
       },
       {
         "id":"15",
@@ -338,6 +356,7 @@ App({
         "templete_intro":"挑战柔术基本功之一“墙上行走”，看看你能走多远！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/xsqlftyg",
+        "bizId":"S20210608153056953"
       },
       {
         "id":"16",
@@ -353,6 +372,7 @@ App({
         "templete_intro":"找几根“桨”和朋友们一起赛艇吧。动作一定要整齐划一，加上口号更显团队气势！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/fyqssydzx",
+        "bizId":"S20210608153130999"
       },
       {
         "id":"17",
@@ -368,6 +388,7 @@ App({
         "templete_intro":"即使没有八倍镜，你也可以是“狙神”。做出最帅气的射击动作吧！",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/fyqsjsjg",
+        "bizId":"S20210608153159867"
       },
       {
         "id":"18",
@@ -383,7 +404,9 @@ App({
         "templete_intro":"礼仪廉耻、忍耐克己、百折不屈，练习品势动作，感受跆拳道精神。",
         "isLit":false,
         "img":"http://www.next.zju.edu.cn/share/yuyin/lawthzzx",
+        "bizId":"S20210608153249476"
       },
+
     ]
   },
   
