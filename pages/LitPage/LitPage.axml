@@ -5,7 +5,7 @@
         <view class="txtMin">你是第</view>
         <view class="txtNum">21873个</view>
         <view class="txtMin">点亮</view>
-        <view class="txtName">江干区体育中心体育场</view>
+        <view class="txtName">{{venueName}}</view>
         <view class="txtMin">的运动之星</view>
       </view>
 

@@ -1,5 +1,5 @@
-<view class="wrapper" a:if="{{getEdited==false}}">
-  
+<view class="wrapper-white" a:if="{{getEdited==false}}">
+
 </view>
 
 <view class="wrapper" a:else>

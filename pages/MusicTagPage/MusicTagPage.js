@@ -107,26 +107,35 @@ Page({
     const response = await plugin.invokeMediaEditor({
       bizId: this.data.bizIdChosen,
       showLoading: true,
-      scrType: 'camera' | 'album',
+      // scrType: 'camera' | 'album',
       params: {
         skipEdit: true,
       },
     });
     console.log("response:");
     console.log(response);
-    console.log(response.data.medias[0].videoPath);
-    this.setData({
-      getRes: true,
-      mediaResponse: response,
-      chosenVideoPath: response.data.medias[0].videoPath,
-    });
+    // console.log(response.data.medias[0].videoPath);
+
+    // 如果用户没有选择视频，则返回原来的页面
+    if(response.success == false) {
+      console.log("没有视频！");
+      my.navigateBack();
+    }
+
+    else {
+      this.setData({
+        getRes: true,
+        mediaResponse: response,
+        chosenVideoPath: response.data.medias[0].videoPath,
+      });
+    }
   },
 
   changeTempoId(e) {
     const { value } = e.target.dataset;
     this.setData({
       tempoId: value,
-    })
+    });
   },
   changeMotionId(e) {
     const { value } = e.target.dataset;

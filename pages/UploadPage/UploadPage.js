@@ -72,11 +72,19 @@ Page({
 
     console.log("editedResult:");
     console.log(editedResult);
-    this.setData({
-      editedResponse: editedResult,
-      videoEditedPath: editedResult.data.medias[0].videoPath,
-      getEdited: true
-    })
+
+    if(editedResult.success == false){
+      console.log("放弃编辑！");
+      my.navigateBack();
+    }
+
+    else {
+      this.setData({
+        editedResponse: editedResult,
+        videoEditedPath: editedResult.data.medias[0].videoPath,
+        getEdited: true
+      });
+    }
   },
   
   onButtonClick(e) {

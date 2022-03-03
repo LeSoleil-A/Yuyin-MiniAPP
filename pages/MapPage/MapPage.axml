@@ -81,22 +81,13 @@
 	</modal>
 </view> -->
 
-<view class="section">
-    <image class='background-image' src='/image/map_b.png'></image>
-    <view class="slogan_content">
-      <text class="slogan_text">创作亚运短视频\n用运动点亮亚运场馆</text>
-      <text class="slogan_poeple_number_text">已有</text>
-      <view a:for="{{white_board_info}}" a:key="*this">
-        <view class="counter" style="width: {{white_board_width}}px;height: {{wihte_board_height}}px;left: {{45 + (item.no - 1) * (3 + white_board_width)}}px;">
-          <text class="slogan_poeple_number">{{item.number}}</text>
-        </view>
-      </view>
-      <text class="slogan_poeple_number_text" style="left: {{(white_board_number) * (3 + white_board_width) + 45}}px;">人成为运动之星</text>
-    </view>
+<view class="wrapper">
 
     <view class="map_content">
-      <movable-area class="movable-area" out-of-bounds="{{false}}">
-      <image class="background" mode="widthFix" src="http://www.next.zju.edu.cn/share/yuyin/background.png"/>
+      <movable-area class="movable-area" out-of-bounds="{{false}}" inertia="{{false}}" disable-scroll="{{true}}">
+        <movable-view class='movable-view' inertia="{{false}}" x=0 y=0>
+          <image class="background" mode="widthFix" src="http://www.next.zju.edu.cn/share/yuyin/background.png"/>
+        </movable-view>
         <view a:for="{{museums}}" a:key="*this">
           <movable-view class='movable-view' x="{{item.x}}" y="{{item.y}}" out-of-bounds="{{false}}" style="align-items:center;justify-content:center;align-content: center;text-align: center;">
               <button class="museumBtn" hover-class="none" onTap="museumButtonTapped" id="{{item.id-1}}" x="{{item.x}}" style="display:{{LitVenue[item.id-1].isLit?'none':'block'}};">
@@ -127,8 +118,20 @@
           </view>
         </movable-view>
       </movable-area>
+
+      <view class="slogan_content">
+        <text class="slogan_text">创作亚运短视频\n用运动点亮亚运场馆</text>
+        <text class="slogan_people_number_text">已有</text>
+        <view a:for="{{white_board_info}}" a:key="*this">
+          <view class="counter" style="width: {{white_board_width}}px;height: {{white_board_height}}px;left: {{45 + (item.no - 1) * (3 + white_board_width)}}px;">
+            <text class="slogan_people_number">{{item.number}}</text>
+          </view>
+        </view>
+        <text class="slogan_people_number_text" style="left: {{(white_board_number) * (3 + white_board_width) + 45}}px;">人成为运动之星</text>
+      </view>
       
       <view id="1" class="shot-button" onTap="jumpToVenue">
+        <!-- <image class="vector" mode="scaleToFill" src="/image/camera.png" /> -->
         记录运动瞬间
       </view>
 

@@ -13,7 +13,7 @@ Page({
     people_number: 1,
     white_board_number: 1,
     white_board_width: 16,
-    wihte_board_height: 25,
+    white_board_height: 25,
     white_board_info: [
     ],
 

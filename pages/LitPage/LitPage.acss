@@ -66,7 +66,7 @@
   color: #FFFFFF;
 }
 .txtName {
-  width: 212px;
+  width: 280px;
   height: 30px;
   margin-left: auto;
   margin-right: auto; 

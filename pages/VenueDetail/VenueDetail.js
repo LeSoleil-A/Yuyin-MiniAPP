@@ -25,12 +25,5 @@ Page({
     my.navigateTo({
       url: '/pages/MusicTagPage/MusicTagPage?venueId=' + this.data.venueId
     });
-
-    // const response = await invokeMediaEditor({
-    //   bizId: 'sceneCode',
-    //   params: {
-    //     skipEdit: true,
-    //   }
-    // })
   }
 });

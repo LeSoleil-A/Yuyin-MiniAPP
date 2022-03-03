@@ -39,6 +39,7 @@ Page({
     })
   },
 
+  // 获取用户授权、跳转到地图界面
   tapBtn() {
       my.getOpenUserInfo({
         fail: (res) => {

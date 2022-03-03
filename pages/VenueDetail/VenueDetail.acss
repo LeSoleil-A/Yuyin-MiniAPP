@@ -62,7 +62,7 @@
   justify-content: space-between;
 }
 .video {
-  width: 70vw;
+  max-width: 70vw;
   height: 58vh;
   border-radius: 8px;
   margin-left: auto;
