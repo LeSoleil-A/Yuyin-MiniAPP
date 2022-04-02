@@ -1,0 +1,31 @@
+<view class="wrapper">
+  <video class="videoZone"
+    id="myVideo"
+    src="{{chosenVideoPath}}"
+    controls="{{false}}"
+    autoplay="{{true}}"
+    loop="{{videoLoop}}"
+    muted="{{true}}"
+    show-fullscreen-btn="{{false}}"
+    show-play-btn="{{false}}"
+    show-center-play-btn="{{false}}"
+    show-mute-btn="{{false}}"
+    show-thin-progress-btn="{{false}}"
+    onEnded="onEnded"
+  />
+
+  <view class="mainZone">
+    <view class="textZone">
+      <view class="title">音乐</view>
+      <view class="nextBtn" onTap="toMusicChose">完成</view>
+    </view>
+
+    <view class="musicZone">
+      <view class="musicItem" onTap="musicEvent">
+        <view class="musicImg" style="border-style:{{borderStyle}}; border-color:aliceblue; border-width: 1px;"></view>
+        <view class="musicName">测试音频</view>
+      </view>
+    </view>
+  </view>
+
+</view>

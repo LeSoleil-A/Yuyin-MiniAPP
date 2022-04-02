@@ -2,7 +2,7 @@
   
 </view>
 
-<view class="wrapper" a:else>
+<view class="wrapper" a:elif="{{canChoose}}">
   <video class="videoZone"
     src="{{chosenVideoPath}}"
     controls="{{false}}"
@@ -19,7 +19,8 @@
   <view class="mainZone">
     <view class="textZone">
       <view class="title">配乐选择</view>
-      <view class="nextBtn" onTap="nextStep">下一步</view>
+      <!-- <view class="nextBtn" onTap="nextStep">下一步</view> -->
+      <view class="nextBtn" onTap="toChose">选定</view>
     </view>
 
     <view class="tagZone">
@@ -55,4 +56,56 @@
       </view> 
     </view>
   </view>
+
 </view>
+
+<view class="wrapper" a:elif="{{canChoose==false}}">
+  <video class="videoZone" style="z-index:1;"
+    src="{{chosenVideoPath}}"
+    controls="{{false}}"
+    autoplay="{{true}}"
+    loop="{{true}}"
+    show-fullscreen-btn="{{false}}"
+    show-play-btn="{{false}}"
+    show-center-play-btn="{{false}}"
+    show-mute-btn="{{false}}"
+    show-thin-progress-btn="{{false}}"
+  />
+
+  <mask type="{{type}}" show="{{true}}" maskZindex="10"></mask>
+
+  <view class="loadZone" style="z-index:100;">
+    <image class="mascot" mode="scaleToFill" src="/image/blueMascot.png"/>
+    <view class="loadText">为您进行配乐推荐...</view>
+    <view class="purpleBubble1"></view>
+    <view class="purpleBubble2"></view>
+    <view class="purpleBubble3"></view>
+    <view class="purpleBubble4"></view>
+    <view class="purpleBubble5"></view>
+  </view>
+</view>
+
+<!-- <view class="wrapper" a:elif="{{canShake==true}}">
+  <video class="videoZone"
+    src="{{chosenVideoPath}}"
+    controls="{{false}}"
+    autoplay="{{true}}"
+    loop="{{true}}"
+    show-fullscreen-btn="{{false}}"
+    show-play-btn="{{false}}"
+    show-center-play-btn="{{false}}"
+    show-mute-btn="{{false}}"
+    show-thin-progress-btn="{{false}}"
+  />
+
+    <modal
+      show="{{true}}"
+	  	onModalClick="onModalClick"
+		  onModalClose="onModalClose"
+  	>
+	  	<view slot="header">摇一摇</view>
+  		  看看能摇出怎样的亚运配乐吧！
+	  	<view slot="footer">再选一下</view>
+    </modal>
+    
+</view> -->

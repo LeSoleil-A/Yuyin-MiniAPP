@@ -7,6 +7,8 @@
   height: 85px; */
   width: 14vw; 
   height: 20vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .img{
   /* height: 67px;

@@ -18,6 +18,7 @@
     activeCls="tabText"
     tabs="{{tabs}}"
     tabsName="activeTab"
+    tabBarBackgroundColor="None"
     activeTab="{{activeTab}}"
     tabBarUnderlineColor="#ED078A"
     tabBarActiveTextColor="#ED078A"
@@ -69,7 +70,7 @@
         <view class="tabContentTwo">
           <view style="width:100vw; height:1vh;"></view>
           <view class="firstZone">
-            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">日积月累</view>
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px; margin-left:2vw;">日积月累</view>
             <view class="medalFirst">
               <view class="medal" a:for="{{arrayFirst}}">
                 <wall-medal 
@@ -86,7 +87,7 @@
           <view class="line"></view>
 
           <view class="secondZone">
-            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">漫步杭城</view>
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px; margin-left:2vw;">漫步杭城</view>
             <view class="medalSecond">
               <view class="medal" a:for="{{arraySecond}}">
                 <wall-medal 
@@ -104,7 +105,7 @@
           <view class="line"></view>
 
           <view class="firstZone">
-            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px;">全能选手</view>
+            <view style="width:72px; height:26px; font-size:18px; font-weight:bold; line-height:26px; margin-left:2vw;">全能选手</view>
             <view class="medalFirst">
               <view class="medal" a:for="{{arrayThird}}">
                 <wall-medal 
@@ -158,21 +159,18 @@
   <view class="medalCondition">{{medalConditionTap}}</view>
 
   <view class="venueZone">
-    <!-- <image class="venueTest" mode="aspectFit" src="../../image/zjdxzjgxqtyg.png" onTap="tapTest"/>
-    <image class="venueTest" mode="aspectFit" src="../../image/zjshltyzxtyg.png"/>
-    <image class="venueTest" mode="aspectFit" src="../../image/zjshltyzxyytsg.png"/> -->
     <view class="venueView" a:for="{{venueLitTap}}">
-        <venueimg 
-          class="venueItem" 
-          srcImg="{{item.venue_punch_color_image}}" 
-          venueId="{{item.venue_id}}"/>
-      </view>
-      <view class="venueView" a:for="{{venueNotLitTap}}">
-        <venueimg 
-          class="venueItem" 
-          srcImg="{{item.venue_punch_gray_image}}" 
-          venueId="{{item.venue_id}}"/>
-      </view>
+      <venueimg 
+        class="venueItem" 
+        srcImg="{{item.venue_punch_color_image}}" 
+        venueId="{{item.venue_id}}"/>
+    </view>
+    <view class="venueView" a:for="{{venueNotLitTap}}">
+      <venueimg 
+        class="venueItem" 
+        srcImg="{{item.venue_punch_gray_image}}" 
+        venueId="{{item.venue_id}}"/>
+    </view>
   </view>
 
   <button class="btn">

@@ -68,6 +68,12 @@ Page({
         middleEditResult: this.data.response.data.middleEditResult,
         enableEditor: true,
       },
+      selectedMaterials: [{
+        type: 'music',
+        code: 'M220220311144307683',
+        url: 'https://mdn.alipayobjects.com/antmedia/afts/file/A*lv2JQabMI4oAAAAAAAAAAAAAARInAQ',
+      }],
+
     });
 
     console.log("editedResult:");

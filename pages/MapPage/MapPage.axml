@@ -131,12 +131,12 @@
       </view>
       
       <view id="1" class="shot-button" onTap="jumpToVenue">
-        <!-- <image class="vector" mode="scaleToFill" src="/image/camera.png" /> -->
-        记录运动瞬间
+        <image class="vector" mode="scaleToFill" src="/image/camera.png" style="width: 25px; height:22px; right: 5px;"/>
+        <view class="shot-text">记录运动瞬间</view>
       </view>
 
-      <view id="1" class="shot-button" onTap="jumpToMyPage" style="width: 54px; height:54px; left: 81%;box-shadow: 0px 0px 8px rgba(65, 0, 105, 0.2);font-size: 13px;">
-        主页
+      <view id="1" class="home-button" onTap="jumpToMyPage" style="box-shadow: 0px 0px 8px rgba(65, 0, 105, 0.2);">
+        <image class="home-icon" mode="scaleToFill" src="/image/home.png" style="width: 21px; height:25px;"/>
       </view>
 
     </view>

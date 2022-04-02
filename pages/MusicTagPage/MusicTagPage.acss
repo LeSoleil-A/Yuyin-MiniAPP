@@ -6,7 +6,6 @@
 .videoZone {
   width: 100vw;
   height: 100vh;
-  z-index: 0;
 }
 .mainZone {
   position: absolute;
@@ -35,19 +34,21 @@
   height: 28px;
   width: 85px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 26.06px;
   letter-spacing: 1px;
+  text-align: left;
 }
 .nextBtn {
   height: 28px;
   width: 70px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 26.06px;
   letter-spacing: 1px;
+  text-align: right;
 }
 .tagZone {
   height: 25vh;
@@ -162,3 +163,87 @@
   flex-wrap: wrap;
 }
 
+
+/* 显示缓冲图片 */
+.loadZone {
+  /* border-style: solid;
+  border-color:white; */
+  width:100vw; 
+  height:170px;
+  position: fixed;
+  top: 41vh;
+  display: flex; 
+  flex-direction:column; 
+  justify-content:space-between;
+}
+.mascot {
+  /* border-style: solid;
+  border-color:white; */
+  width:160px; 
+  height:165.6px;
+  margin:auto auto;
+}
+.loadText{
+  width: 100vw;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing:1px;
+  color: white;
+  margin-top: -30px;
+  font-weight: 300;
+}
+.purpleBubble1 {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 49vh;
+  left: 33vw;
+  
+  background: linear-gradient(333.24deg, #6423FF 38.36%, #C800FF 70.46%, #ED078A 87.8%, #FF4D5B 100%), #6423FF;
+  opacity: 0.4;
+  border-radius: 40px;
+}
+.purpleBubble2 {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  top: 43vh;
+  left: 30vw;
+  
+  background: linear-gradient(333.24deg, #6423FF 38.36%, #C800FF 70.46%, #ED078A 87.8%, #FF4D5B 100%), #6423FF;
+  opacity: 0.7;
+  border-radius: 40px;
+}
+.purpleBubble3 {
+  position: fixed;
+  width: 17px;
+  height: 17px;
+  top: 42.5vh;
+  left: 40vw;
+  
+  background: linear-gradient(333.24deg, #6423FF 38.36%, #C800FF 70.46%, #ED078A 87.8%, #FF4D5B 100%), #6423FF;
+  opacity: 0.7;
+  border-radius: 40px;
+}
+.purpleBubble4 {
+  position: fixed;
+  width: 21px;
+  height: 21px;
+  top: 43.5vh;
+  left: 60vw;
+  
+  background: linear-gradient(333.24deg, #6423FF 38.36%, #C800FF 70.46%, #ED078A 87.8%, #FF4D5B 100%), #6423FF;
+  opacity: 0.4;
+  border-radius: 40px;
+}
+.purpleBubble5 {
+  position: fixed;
+  width: 34px;
+  height: 34px;
+  top: 46.5vh;
+  left: 61.5vw;
+  
+  background: linear-gradient(333.24deg, #6423FF 38.36%, #C800FF 70.46%, #ED078A 87.8%, #FF4D5B 100%), #6423FF;
+  opacity: 0.7;
+  border-radius: 40px;
+}

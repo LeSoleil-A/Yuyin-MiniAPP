@@ -2,18 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/MapPage/MapPage",
-    "pages/MinePage/MinePage",
-    "pages/MedalWallPage/MedalWallPage",
-    "pages/FinishPage/FinishPage",
-    "pages/CameraPage/CameraPage",
-    "pages/VideoCutPage/VideoCutPage",
-    "pages/VideoAudioPage/VideoAudioPage",
-    "pages/VideoGuidePage/VideoGuidePage",
     "pages/VenueDetail/VenueDetail",
     "pages/UploadPage/UploadPage",
     "pages/LitPage/LitPage",
     "pages/MusicTagPage/MusicTagPage",
-    "pages/HomePage/HomePage"
+    "pages/HomePage/HomePage",
+    "pages/AddMusicPage/AddMusicPage"
   ],
   "window": {
     "transparentTitle": "always",
@@ -25,5 +19,4 @@
       "provider": "2021002158617757"
     }
   }
-
 }

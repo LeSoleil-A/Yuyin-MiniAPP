@@ -1,4 +1,4 @@
-<view class="wrapper">
+<!-- <view class="wrapper">
   <view class="outCard">
     <view class="inCard">
       <view class="txtZone">
@@ -24,5 +24,34 @@
   </view>
 
   <view class="btmText">发布抖音#亚运vlog大赛 ，让更多人看到你的作品</view>
+
+</view> -->
+
+<view class="wrapper">
+
+  <canvas class="canvasZone" id="canvas" a:if="{{false}}"></canvas>
+
+  <image class="videoImg" mode="heightFix" src="{{videoThumbnail}}"/>
+
+  <image class="peoplePic" mode="scaleToFill" style="opacity:0.5;"  src="/image/people.png"/>
+
+  <view class="txtZone">
+    <view class="txtMin">你是第</view>
+    <view class="txtNum">21873个</view>
+    <view class="txtMin">点亮</view>
+    <view class="txtName">{{venueName}}</view>
+    <view class="txtMin">的运动之星</view>
+  </view>
+
+  <!-- <view class="gifZone" a:if="{{showGif}}">
+    <image class="gifPic" mode="scaleToFill" src="/image/IMG_0545.gif"/>
+  </view> -->
+
+  <view class="shareZone">
+    <button class="share-button" type="primary" open-type="share">
+      <image class="share-icon" mode="scaleToFill" src="/image/shareIcon.png"/>
+    </button>
+    <view class="home-text" open-type="share" onTap="backToMap">返回首页，点亮更多场馆>></view>
+  </view>
 
 </view>

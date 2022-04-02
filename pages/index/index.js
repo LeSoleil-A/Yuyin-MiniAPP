@@ -13,7 +13,9 @@ Page({
     // 后端传入数据
     userNumber: 0,
   },
-  onLoad() {},
+
+  onLoad() {    },
+  
   onShow(query) {
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
     this.getToken()

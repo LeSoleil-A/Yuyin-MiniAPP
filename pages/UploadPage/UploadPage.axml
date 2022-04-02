@@ -3,7 +3,7 @@
 </view>
 
 <view class="wrapper" a:else>
-  <view class="videoCard">
+  <!-- <view class="videoCard">
     <view class="titleZone">
       <image class="user-image" mode="scaleToFill" src="{{userImageSrc}}"/>
       <view class="userName">{{nickName}}</view>
@@ -15,7 +15,15 @@
       <view class="btnText" onTap="tapBtn">一键发布</view>
     </button>
 
-  </view>
+  </view> -->
+
+  <video class="video" src="{{videoEditedPath}}"></video>
+
+  <view class="userName">@{{nickName}}</view>
+    
+  <button class="btn">
+    <view class="btnText" onTap="tapBtn">一键发布</view>
+  </button>
 
   <modal
 		show="{{modalOpened}}"
@@ -24,7 +32,7 @@
     buttons="{{buttons}}"
 	>
   
-  <view slot="header">注意</view>
+    <view slot="header">注意</view>
 		放弃此次操作，你的编辑将会丢失。
 	</modal>
 

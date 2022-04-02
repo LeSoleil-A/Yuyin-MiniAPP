@@ -48,6 +48,10 @@
     {
       "title": "test_map",
       "page": "pages/MapPage/MapPage"
+    },
+    {
+      "title": "test_music",
+      "page": "pages/AddMusicPage/AddMusicPage"
     }
   ]
 }
